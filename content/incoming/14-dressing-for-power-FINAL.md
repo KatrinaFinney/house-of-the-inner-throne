@@ -1,0 +1,106 @@
+---
+title: Dressing for Power
+lessonNumber: 14
+volumeNumber: 2
+volumeOrder: 4
+slug: dressing-for-power
+ritualNote: Preparing ritual tools strengthens intention before the ritual begins.
+excerpt: Candle dressings focus intention through symbolic materials such as oils, herbs, and written petitions.
+spiritualIntelligence:
+  cycle: Divine Authority & Sacred Order
+  energy: Imhotep
+  current: Ritual Intelligence
+  optimalMoonPhase: Waxing Crescent
+status: published
+---
+
+## The Inner Law
+
+Preparation strengthens intention.
+
+Before a ritual begins, the practitioner prepares their tools so that every element supports the desired outcome.
+
+This preparation itself becomes part of the ritual.
+
+## A Mirror for the Practitioner
+
+Many people rush into ritual action without preparing the environment or their tools.
+
+Preparation slows the process and allows attention to settle. As the practitioner prepares the candle, the mind begins aligning with the purpose of the work.
+
+## The Hidden Mechanism
+
+Symbolic materials reinforce intention.
+
+Oils, herbs, and written petitions act as physical reminders of the goal being pursued. Each element added to the candle strengthens the association between the ritual tool and the practitioner's intention.
+
+The candle becomes a vessel for focused attention.
+
+## Where This Appears in Daily Life
+
+Preparation influences outcomes everywhere.
+
+Athletes warm up before competition. Musicians tune their instruments. Architects draft plans before construction begins.
+
+Ritual preparation follows the same principle.
+
+## The Discipline of Preparation
+
+When the practitioner dresses a candle slowly and deliberately, the act becomes meditation.
+
+Attention gathers. The mind becomes steady. By the time the candle is lit, the practitioner is already aligned with the work.
+
+## The Language of Color
+
+Orange represents creative momentum and initiative.
+
+An **orange candle** supports new ventures and the beginning of creative work.
+
+## Returning to the Inner Throne
+
+Preparation clarifies intention.
+
+The practitioner who prepares their tools carefully approaches ritual with discipline and focus.
+
+## The Rite of Alignment
+
+### The Intelligence Behind the Lesson
+
+Imhotep, the Egyptian architect and scholar, symbolizes mastery through knowledge and careful preparation. He is remembered as both builder and healer, someone who shaped the world through disciplined intelligence.
+
+Within the Inner Throne system, Imhotep represents the intelligence of ritual design — the ability to prepare spiritual work with precision.
+
+### Energetic Current
+
+The ritual intelligence current strengthens:
+
+• thoughtful preparation  
+• structural clarity  
+• mastery of symbolic tools  
+• disciplined execution of ritual work
+
+When this current becomes active, ritual becomes more organized and effective.
+
+### Communion Ritual
+
+Place an **orange candle** before you.
+
+If available, place a small amount of **oil or herb** beside the candle.
+
+Before lighting the candle, hold the oil or herb in your hand and reflect on the intention of your ritual work.
+
+Apply a small amount of oil to the candle or place the herb beside it.
+
+As you prepare the candle, imagine your intention becoming clearer and more focused.
+
+Light the candle slowly.
+
+Speak quietly:
+
+“May my preparation strengthen my purpose.”
+
+Sit quietly observing the flame for several minutes.
+
+### The Lunar Gate
+
+The **Waxing Crescent Moon** supports preparation and early-stage development. Rituals performed during this phase strengthen new intentions and emerging plans.

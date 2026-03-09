@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum TeachingStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+model Volume {
+  id          String   @id @default(cuid())
+  key         String   @unique
+  number      Int      @unique
+  title       String
+  subtitle    String?
+  focus       String
+  description String?
+
+  teachings   Teaching[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Teaching {
+  id           String         @id @default(cuid())
+  slug         String         @unique
+  lessonNumber Int            @unique
+  volumeOrder  Int
+  title        String
+  shortTitle   String?
+  subtitle     String?
+  excerpt      String?
+  ritualNote   String?        @db.Text
+  status       TeachingStatus @default(DRAFT)
+
+  volumeId     String
+  volume       Volume         @relation(fields: [volumeId], references: [id], onDelete: Restrict)
+
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  publishedAt  DateTime?
+
+  @@unique([volumeId, volumeOrder])
+  @@index([status])
+}
