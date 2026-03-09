@@ -31,23 +31,23 @@ export function GateCopy({ isEntering, onEnter }: GateCopyProps) {
       </h1>
 
       <motion.p
-  initial={{ opacity: 0, y: 8 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.25, duration: 0.6 }}
-  className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-(--muted) sm:text-xl"
->
-  The Sacred House of Ritual Sovereignty
-</motion.p>
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.25, duration: 0.6 }}
+        className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-(--muted) sm:text-xl"
+      >
+        The Sacred House of Ritual Sovereignty
+      </motion.p>
 
       <div className="mt-8 flex items-center justify-center">
-        <button
-          type="button"
-          onClick={onEnter}
-          disabled={isEntering}
-          className="min-w-47.5 rounded-full border border-(--gold) bg-(--gold) px-7 py-3 text-sm font-medium tracking-[0.08em] text-black transition hover:opacity-90 disabled:cursor-default disabled:opacity-80"
-        >
-          Enter the House
-        </button>
+      <button
+  type="button"
+  onClick={onEnter}
+  disabled={isEntering}
+  className="min-w-[190px] rounded-full border border-[var(--gold)] bg-[var(--gold)] px-7 py-3 text-sm font-medium tracking-[0.08em] text-black transition hover:opacity-90 disabled:cursor-default disabled:opacity-80"
+>
+  Enter the House
+</button>
       </div>
     </motion.div>
   );
