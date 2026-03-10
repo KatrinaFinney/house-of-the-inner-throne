@@ -18,13 +18,13 @@ export function GateCopy({ isEntering, onEnter }: GateCopyProps) {
         y: 0,
       }}
       transition={{ duration: 0.45, ease: "easeOut" }}
-      className="mx-auto mt-8 max-w-4xl text-center md:mt-10"
+      className="mx-auto mt-7 max-w-3xl text-center sm:mt-8 md:mt-9"
     >
-      <p className="mb-4 font-display text-[11px] uppercase tracking-[0.42em] text-(--gold) sm:text-xs">
+      <p className="mb-3 font-display text-[10px] uppercase tracking-[0.28em] text-[var(--gold)] sm:text-[11px]">
         Protection · Power · Prosperity
       </p>
 
-      <h1 className="mx-auto max-w-4xl text-4xl leading-[0.95] sm:text-5xl md:text-6xl lg:text-[4.5rem]">
+      <h1 className="mx-auto max-w-[14ch] text-[1.75rem] leading-[0.95] tracking-[0.02em] sm:text-[2.15rem] md:text-[2.55rem] lg:text-[2.9rem]">
         House of the
         <br />
         Inner Throne
@@ -34,21 +34,26 @@ export function GateCopy({ isEntering, onEnter }: GateCopyProps) {
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.25, duration: 0.6 }}
-        className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-(--muted) sm:text-xl"
+        className="mx-auto mt-3 max-w-md text-[0.98rem] leading-7 text-[var(--muted)] sm:text-[1.02rem]"
       >
         The Sacred House of Ritual Sovereignty
       </motion.p>
 
-      <div className="mt-8 flex items-center justify-center">
-      <button
-  type="button"
-  onClick={onEnter}
-  disabled={isEntering}
-  className="min-w-[190px] rounded-full border border-[var(--gold)] bg-[var(--gold)] px-7 py-3 text-sm font-medium tracking-[0.08em] text-black transition hover:opacity-90 disabled:cursor-default disabled:opacity-80"
->
-  Enter the House
-</button>
+      <div className="mt-5 flex items-center justify-center">
+        <button
+          type="button"
+          onClick={onEnter}
+          disabled={isEntering}
+          className="min-w-[164px] rounded-full border border-[var(--gold)] bg-[var(--gold)] px-5 py-2.5 text-[0.68rem] font-medium uppercase tracking-[0.18em] text-black shadow-[0_8px_24px_rgba(202,169,107,0.12)] transition hover:brightness-[1.04] disabled:cursor-default disabled:opacity-80"
+        >
+          Enter the House
+        </button>
       </div>
+
+      <div
+        aria-hidden="true"
+        className="pointer-events-none mx-auto mt-8 h-px w-28 bg-[linear-gradient(90deg,transparent,rgba(202,169,107,0.24),transparent)]"
+      />
     </motion.div>
   );
 }

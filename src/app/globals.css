@@ -1,8 +1,30 @@
 @import "tailwindcss";
 
 :root {
+  /* Core temple palette */
   --bg: #0a0a08;
   --text: #f2eadb;
+  --muted: #c9bda6;
+
+  /* Gold system */
+  --gold: #caa96b;
+  --gold-soft: rgba(202, 169, 107, 0.28);
+  --gold-faint: rgba(202, 169, 107, 0.12);
+
+  /* Optional surface helpers for homepage/interior */
+  --surface-dark: rgba(255, 255, 255, 0.05);
+  --surface-dark-strong: rgba(255, 255, 255, 0.08);
+  --border-soft: rgba(255, 255, 255, 0.1);
+
+  /* Archive palette */
+  --archive-paper: #f8f4ed;
+  --archive-paper-deep: #efe7dc;
+  --archive-ink: rgb(17 24 39);
+  --archive-body: rgb(68 64 60);
+  --archive-muted: rgb(87 83 78);
+  --archive-line: rgba(120, 113, 108, 0.18);
+  --archive-border: rgba(94, 78, 50, 0.12);
+  --archive-border-strong: rgba(94, 78, 50, 0.24);
 }
 
 html {
@@ -17,6 +39,9 @@ body {
     linear-gradient(180deg, #0b0b09 0%, #090908 100%);
   color: var(--text);
   font-family: var(--font-body), serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
@@ -30,6 +55,17 @@ h4,
 .font-display {
   font-family: var(--font-display), serif;
   letter-spacing: 0.04em;
+}
+
+a {
+  color: inherit;
+}
+
+/* Selection */
+
+::selection {
+  background: rgba(202, 169, 107, 0.22);
+  color: var(--text);
 }
 
 /* Archive shell */
@@ -427,5 +463,16 @@ h4,
   .archive-ritual-note,
   .ritual-note {
     padding: 1rem;
+  }
+}
+@media (max-height: 820px) {
+  .threshold-door-compact {
+    transform: scale(0.9);
+    transform-origin: top center;
+  }
+
+  .threshold-copy-compact {
+    transform: scale(0.96);
+    transform-origin: top center;
   }
 }

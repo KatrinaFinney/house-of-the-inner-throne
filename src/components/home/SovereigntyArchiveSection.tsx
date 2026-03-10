@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export function SovereigntyCodexSection() {
+export function SovereigntyArchiveSection() {
   return (
     <section className="px-6 py-24">
       <div className="mx-auto max-w-6xl grid gap-12 lg:grid-cols-2 lg:items-center">
@@ -14,7 +14,7 @@ export function SovereigntyCodexSection() {
           className="rounded-3xl border border-white/10 bg-white/5 p-8"
         >
           <p className="text-xs uppercase tracking-[0.35em] text-(--gold)">
-            The Sovereignty Codex
+            The Sovereignty Archive
           </p>
 
           <p className="mt-4 text-lg text-(--muted)">
@@ -34,7 +34,7 @@ export function SovereigntyCodexSection() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-(--muted)">
-            The Codex contains teachings that guide the discipline of the
+            The Archive contains teachings that guide the discipline of the
             spirit and restore sovereignty to the individual.
           </p>
 
@@ -42,7 +42,7 @@ export function SovereigntyCodexSection() {
             className="mt-8 rounded-full border border-(--gold) px-8 py-3 text-sm tracking-widest text-(--gold) hover:bg-white/5 transition"
             type="button"
           >
-            Enter the Codex
+            Access the Archive
           </button>
         </motion.div>
       </div>
