@@ -24,7 +24,7 @@ export function GateCopy({ isEntering, onEnter }: GateCopyProps) {
         Protection · Power · Prosperity
       </p>
 
-      <h1 className="mx-auto max-w-[14ch] text-[1.75rem] leading-[0.95] tracking-[0.02em] sm:text-[2.15rem] md:text-[2.55rem] lg:text-[2.9rem]">
+      <h1 className="mx-auto max-w-[14ch] text-[1.95rem] leading-[0.94] tracking-[0.02em] sm:text-[2.35rem] md:text-[2.8rem] lg:text-[3.1rem]">
         House of the
         <br />
         Inner Throne
@@ -34,7 +34,7 @@ export function GateCopy({ isEntering, onEnter }: GateCopyProps) {
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.25, duration: 0.6 }}
-        className="mx-auto mt-3 max-w-md text-[0.98rem] leading-7 text-[var(--muted)] sm:text-[1.02rem]"
+        className="mx-auto mt-3 max-w-md text-[0.95rem] leading-7 text-[var(--muted)] sm:text-[1rem]"
       >
         The Sacred House of Ritual Sovereignty
       </motion.p>
