@@ -6,12 +6,12 @@ const tools = [
   "Ancestor Currency",
   "Petition Papers",
   "Temple Candles",
-  "Ritual Kits"
+  "Ritual Kits",
 ];
 
 export function RitualToolsSection() {
   return (
-    <section className="px-6 py-24">
+    <section className="px-6 py-24 md:py-28">
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
@@ -21,16 +21,17 @@ export function RitualToolsSection() {
           className="max-w-3xl"
         >
           <p className="text-xs uppercase tracking-[0.35em] text-(--gold)">
-            Ritual Tools
+            Treasury of Practice
           </p>
 
-          <h2 className="mt-4 text-4xl sm:text-5xl leading-tight">
-            Instruments of spiritual practice.
+          <h2 className="mt-4 text-4xl leading-tight sm:text-5xl">
+            Instruments prepared for sacred work.
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-(--muted)">
-            The House provides ritual tools designed to support devotion,
-            discipline, and sacred work.
+            Candles, petition papers, ancestor currency, and ritual tools set
+            apart for offering, remembrance, devotion, and disciplined
+            spiritual practice.
           </p>
         </motion.div>
 
@@ -38,18 +39,20 @@ export function RitualToolsSection() {
           {tools.map((tool) => (
             <div
               key={tool}
-              className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center"
+              className="rounded-[1.8rem] border border-[rgba(202,169,107,0.12)] bg-white/[0.04] p-4"
             >
-              <p>{tool}</p>
+              <div className="rounded-[1.3rem] border border-[rgba(202,169,107,0.14)] bg-black/20 p-6 text-center">
+                <p className="text-base">{tool}</p>
+              </div>
             </div>
           ))}
         </div>
 
         <button
-          className="mt-10 rounded-full border border-white/20 px-8 py-3 text-sm tracking-widest hover:bg-white/10 transition"
+          className="mt-10 rounded-full border border-white/20 px-8 py-3 text-sm uppercase tracking-[0.14em] hover:bg-white/10 transition"
           type="button"
         >
-          Enter the Ritual Shop
+          Enter the Treasury
         </button>
       </div>
     </section>

@@ -1,37 +1,47 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export function DailyDedicationSection() {
   return (
-    <section className="relative px-6 py-24">
-      <div className="mx-auto max-w-6xl grid gap-12 lg:grid-cols-2 lg:items-center">
+    <section className="relative px-6 py-24 md:py-28">
+      <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-xs uppercase tracking-[0.35em] text-(--gold)">
+          <p className="text-xs uppercase tracking-[0.35em] text-[var(--gold)]">
             Daily Dedication
           </p>
 
-          <h2 className="mt-4 text-4xl sm:text-5xl leading-tight">
-            Return to the discipline of the spirit.
+          <h2 className="mt-4 text-4xl leading-tight sm:text-5xl">
+            Join the Daily Dedication and practice with the House each day.
           </h2>
 
-          <p className="mt-6 max-w-xl text-lg leading-8 text-(--muted)">
-            The Daily Dedication is a simple ritual of alignment practiced once
-            each day. Through steady devotion the spirit grows stronger in
-            protection, power, and prosperity.
+          <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--muted)]">
+            The Daily Dedication is the shared rite of the House. Join through
+            our social channels each day to remain in rhythm with the work of
+            discipline, remembrance, prayer, and spiritual order.
           </p>
 
-          <button
-            className="mt-8 rounded-full border border-(--gold) bg-(--gold) px-8 py-3 text-sm tracking-widest text-black hover:opacity-90 transition"
-            type="button"
-          >
-            Learn the Daily Dedication
-          </button>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <Link
+              href="/daily-dedication"
+              className="inline-flex items-center justify-center rounded-full border border-[var(--gold)] bg-[var(--gold)] px-8 py-3 text-sm uppercase tracking-[0.14em] text-black transition hover:opacity-90"
+            >
+              Join the Daily Dedication
+            </Link>
+
+            <Link
+              href="/socials"
+              className="inline-flex items-center justify-center rounded-full border border-white/15 px-8 py-3 text-sm uppercase tracking-[0.14em] text-[var(--text)] transition hover:bg-white/5"
+            >
+              View Social Channels
+            </Link>
+          </div>
         </motion.div>
 
         <motion.div
@@ -39,36 +49,45 @@ export function DailyDedicationSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="rounded-3xl border border-white/10 bg-white/5 p-8"
+          className="rounded-[2rem] border border-[rgba(202,169,107,0.12)] bg-white/[0.04] p-5"
         >
-          <ol className="space-y-6">
-            <li>
-              <p className="text-(--gold) text-sm tracking-[0.2em] uppercase">
-                Step One
-              </p>
-              <p className="text-(--muted)">
-                Enter stillness and center your spirit.
-              </p>
-            </li>
+          <div className="rounded-[1.5rem] border border-[rgba(202,169,107,0.14)] bg-black/20 p-7">
+            <p className="text-sm uppercase tracking-[0.28em] text-[var(--gold)]">
+              Order of the Rite
+            </p>
 
-            <li>
-              <p className="text-(--gold) text-sm tracking-[0.2em] uppercase">
-                Step Two
-              </p>
-              <p className="text-(--muted)">
-                Make your offering with clarity and intention.
-              </p>
-            </li>
+            <ol className="mt-6 space-y-6">
+              <li>
+                <p className="text-sm uppercase tracking-[0.2em] text-[var(--gold)]">
+                  Gather
+                </p>
+                <p className="mt-1 text-[var(--muted)]">
+                  Enter the appointed daily space and come into stillness with
+                  the House.
+                </p>
+              </li>
 
-            <li>
-              <p className="text-(--gold) text-sm tracking-[0.2em] uppercase">
-                Step Three
-              </p>
-              <p className="text-(--muted)">
-                Leave the rite strengthened in authority and presence.
-              </p>
-            </li>
-          </ol>
+              <li>
+                <p className="text-sm uppercase tracking-[0.2em] text-[var(--gold)]">
+                  Align
+                </p>
+                <p className="mt-1 text-[var(--muted)]">
+                  Join the spoken or written act of devotion with clarity,
+                  attention, and spiritual presence.
+                </p>
+              </li>
+
+              <li>
+                <p className="text-sm uppercase tracking-[0.2em] text-[var(--gold)]">
+                  Continue
+                </p>
+                <p className="mt-1 text-[var(--muted)]">
+                  Leave strengthened, then carry the current of the rite into
+                  the rest of the day.
+                </p>
+              </li>
+            </ol>
+          </div>
         </motion.div>
       </div>
     </section>
