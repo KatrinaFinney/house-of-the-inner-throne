@@ -18,13 +18,13 @@ export function DailyDedicationSection() {
           </p>
 
           <h2 className="mt-4 text-4xl leading-tight sm:text-5xl">
-            Join the Daily Dedication and practice with the House each day.
+            Join the daily rite and remain in rhythm with the House.
           </h2>
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--muted)]">
-            The Daily Dedication is the shared rite of the House. Join through
-            our social channels each day to remain in rhythm with the work of
-            discipline, remembrance, prayer, and spiritual order.
+            The Daily Dedication is the shared devotional rhythm of the House.
+            Join through our social channels each day to remain close to the work
+            of discipline, remembrance, prayer, and spiritual order.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -62,8 +62,7 @@ export function DailyDedicationSection() {
                   Gather
                 </p>
                 <p className="mt-1 text-[var(--muted)]">
-                  Enter the appointed daily space and come into stillness with
-                  the House.
+                  Enter the appointed daily space and come into stillness with the House.
                 </p>
               </li>
 
@@ -82,8 +81,7 @@ export function DailyDedicationSection() {
                   Continue
                 </p>
                 <p className="mt-1 text-[var(--muted)]">
-                  Leave strengthened, then carry the current of the rite into
-                  the rest of the day.
+                  Leave strengthened, then carry the current of the rite into the rest of the day.
                 </p>
               </li>
             </ol>

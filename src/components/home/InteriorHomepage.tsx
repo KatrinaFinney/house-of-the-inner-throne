@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { PathOfSovereignty } from "./PathOfSovereignty";
+import { BeginWithinSection } from "./BeginWithinSection";
 import { DailyDedicationSection } from "./DailyDedicationSection";
-import { RitualToolsSection } from "./RitualToolsSection";
+import { StorehouseSection } from "./StorehouseSection";
+import { RitualFoundationsSection } from "./RitualFoundationsSection";
 import { IncenseSmoke } from "./IncenseSmoke";
 import { SovereigntyArchiveSection } from "./SovereigntyArchiveSection";
 
@@ -12,14 +13,17 @@ const pillars = [
   {
     title: "Protection",
     body: "Sacred boundaries, cleansing, and covering. Protection establishes the ground on which authority can stand.",
+    href: "/pillars/protection",
   },
   {
     title: "Power",
     body: "Command, devotion, alignment, and spiritual force. Power rises where the spirit is rightly seated.",
+    href: "/pillars/power",
   },
   {
     title: "Prosperity",
     body: "Flow, increase, offering, and rightful abundance. Prosperity is power made visible in life.",
+    href: "/pillars/prosperity",
   },
 ];
 
@@ -52,8 +56,13 @@ export function InteriorHomepage() {
             </h1>
 
             <p className="mt-6 max-w-xl text-base leading-8 text-(--muted) sm:text-lg">
-              Take your seat within. Enter a house of spiritual sovereignty, ancestral remembrance, and sacred
-              prosperity.
+              Take your seat within. Enter a house of spiritual sovereignty,
+              ancestral remembrance, ritual intelligence, and sacred prosperity.
+            </p>
+
+            <p className="mt-4 max-w-xl text-base leading-8 text-(--muted)">
+              Study the Archive, enter by pillar, or gather what supports your
+              practice. The House is structured, but your way within remains your own.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -65,10 +74,10 @@ export function InteriorHomepage() {
               </Link>
 
               <Link
-                href="/ritual-tools"
+                href="/begin-within"
                 className="inline-flex min-w-55 items-center justify-center rounded-full border border-[rgba(202,169,107,0.28)] bg-white/3 px-7 py-3 text-[0.78rem] font-medium uppercase tracking-[0.16em] text-(--text) transition hover:bg-white/6"
               >
-                Enter the Chambers
+                Begin Within
               </Link>
             </div>
           </motion.div>
@@ -88,9 +97,10 @@ export function InteriorHomepage() {
 
               <div className="mt-5 space-y-4">
                 {pillars.map((pillar) => (
-                  <div
+                  <Link
                     key={pillar.title}
-                    className="rounded-[1.4rem] border border-[rgba(202,169,107,0.1)] bg-[linear-gradient(180deg,rgba(0,0,0,0.22),rgba(0,0,0,0.12))] px-5 py-5 md:px-6"
+                    href={pillar.href}
+                    className="block rounded-[1.4rem] border border-[rgba(202,169,107,0.1)] bg-[linear-gradient(180deg,rgba(0,0,0,0.22),rgba(0,0,0,0.12))] px-5 py-5 transition hover:bg-white/[0.04] md:px-6"
                   >
                     <p className="mb-2 text-[10px] uppercase tracking-[0.32em] text-(--gold)/80">
                       Pillar
@@ -99,7 +109,10 @@ export function InteriorHomepage() {
                     <p className="mt-3 max-w-md text-[15px] leading-7 text-(--muted)">
                       {pillar.body}
                     </p>
-                  </div>
+                    <p className="mt-4 text-[11px] uppercase tracking-[0.22em] text-(--gold)">
+                      Enter {pillar.title}
+                    </p>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -107,10 +120,11 @@ export function InteriorHomepage() {
         </div>
       </section>
 
-      <PathOfSovereignty />
-      <DailyDedicationSection />
-      <RitualToolsSection />
+      <BeginWithinSection />
       <SovereigntyArchiveSection />
+      <RitualFoundationsSection />
+      <StorehouseSection />
+      <DailyDedicationSection />
     </main>
   );
 }

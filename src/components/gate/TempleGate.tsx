@@ -127,7 +127,7 @@ export function TempleGate() {
   }, [showInterior]);
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[var(--bg)] text-[var(--text)]">
+    <main className="relative min-h-screen overflow-hidden bg-(--bg) text-(--text)">
       <motion.div
         aria-hidden="true"
         className={`pointer-events-none absolute inset-0 transition-colors duration-1000 ${overlayClassName}`}
@@ -145,11 +145,11 @@ export function TempleGate() {
               duration: prefersReducedMotion ? 0 : 0.55,
               ease: "easeOut",
             }}
-            className="relative min-h-[100svh] px-5 sm:px-6"
+            className="relative min-h-svh px-5 sm:px-6"
           >
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute left-1/2 top-[50%] h-[24rem] w-[32rem] -translate-x-1/2 -translate-y-1/2 opacity-40"
+              className="pointer-events-none absolute left-1/2 top-[50%] h-96 w-lg -translate-x-1/2 -translate-y-1/2 opacity-40"
               style={{
                 background:
                   "radial-gradient(ellipse at center, rgba(120,70,18,0.12) 0%, rgba(120,70,18,0.06) 28%, rgba(0,0,0,0) 68%)",
@@ -157,7 +157,7 @@ export function TempleGate() {
               }}
             />
 
-            <div className="mx-auto flex min-h-[100svh] w-full max-w-5xl items-center justify-center px-2 pt-6 pb-6 sm:pt-8 sm:pb-8 md:pt-10 md:pb-10">
+            <div className="mx-auto flex min-h-svh w-full max-w-5xl items-center justify-center px-2 pt-6 pb-6 sm:pt-8 sm:pb-8 md:pt-10 md:pb-10">
               <div className="flex w-full flex-col items-center justify-center gap-5 sm:gap-6 md:gap-7 threshold-door-compact threshold-copy-compact">
                 <DoorFrame isEntering={isEntering} />
                 <GateCopy isEntering={isEntering} onEnter={handleEnter} />
