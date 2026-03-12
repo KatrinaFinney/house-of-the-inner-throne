@@ -68,289 +68,6 @@ a {
   color: var(--text);
 }
 
-/* Archive shell */
-
-.archive-shell {
-  min-height: 100svh;
-  padding: 1rem;
-  background:
-    radial-gradient(circle at top, rgba(201, 167, 92, 0.12), transparent 32%),
-    radial-gradient(circle at 20% 20%, rgba(120, 95, 45, 0.05), transparent 30%),
-    linear-gradient(180deg, #f8f4ed 0%, #f3eee6 52%, #efe7dc 100%);
-}
-
-.archive-panel {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 88rem;
-  border: 1px solid rgba(94, 78, 50, 0.14);
-  border-radius: 2rem;
-  background:
-    linear-gradient(180deg, rgba(255, 253, 249, 0.92), rgba(250, 246, 240, 0.88));
-  box-shadow:
-    0 20px 60px rgba(43, 32, 14, 0.08),
-    0 4px 16px rgba(43, 32, 14, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(12px);
-}
-
-.archive-panel-inner {
-  padding: 1.5rem 1.25rem 2rem;
-}
-
-.archive-reading-column {
-  max-width: 42rem;
-}
-
-/* Archive labels */
-
-.archive-header-kicker,
-.archive-card-kicker,
-.manuscript-breadcrumb,
-.ritual-note-kicker,
-.procession-link-kicker {
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgb(120 113 108);
-}
-
-.manuscript-breadcrumb {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  text-decoration: none;
-  transition: color 180ms ease;
-}
-
-.manuscript-breadcrumb:hover {
-  color: rgb(28 25 23);
-}
-
-/* Archive hero/title */
-
-.archive-page-title {
-  margin-top: 1rem;
-  max-width: 10ch;
-  font-size: clamp(2.7rem, 5.4vw, 5rem);
-  font-weight: 300;
-  line-height: 0.92;
-  letter-spacing: -0.05em;
-  color: rgb(15 23 42);
-}
-
-.archive-title-divider {
-  margin-top: 1.5rem;
-  width: 5rem;
-  height: 1px;
-  background: rgba(120, 113, 108, 0.28);
-}
-
-.archive-page-intro {
-  margin-top: 1.4rem;
-  max-width: 42rem;
-  font-size: clamp(1.03rem, 1.15vw, 1.15rem);
-  line-height: 1.82;
-  color: rgb(87 83 78);
-}
-
-/* Cards */
-
-.archive-card {
-  display: block;
-  border: 1px solid rgba(94, 78, 50, 0.12);
-  border-radius: 1.5rem;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(249, 245, 238, 0.92));
-  padding: 1.2rem 1.25rem;
-  text-decoration: none;
-  transition:
-    transform 220ms ease,
-    border-color 220ms ease,
-    box-shadow 220ms ease;
-  box-shadow:
-    0 8px 28px rgba(43, 32, 14, 0.045),
-    inset 0 1px 0 rgba(255, 255, 255, 0.6);
-}
-
-.archive-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(94, 78, 50, 0.24);
-  box-shadow:
-    0 16px 36px rgba(43, 32, 14, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.7);
-}
-
-.archive-card-title {
-  margin-top: 0.65rem;
-  font-size: clamp(1.45rem, 2vw, 2rem);
-  font-weight: 300;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
-  color: rgb(17 24 39);
-}
-
-.archive-card-body {
-  margin-top: 0.75rem;
-  max-width: 38ch;
-  font-size: 1rem;
-  line-height: 1.75;
-  color: rgb(87 83 78);
-}
-
-/* Manuscript body */
-
-.archive-manuscript {
-  position: relative;
-  max-width: 42rem;
-}
-
-.archive-manuscript::before {
-  content: "";
-  position: absolute;
-  left: -1.1rem;
-  top: 0.4rem;
-  bottom: 0.4rem;
-  width: 1px;
-  background: linear-gradient(
-    180deg,
-    transparent,
-    rgba(120, 113, 108, 0.18),
-    rgba(120, 113, 108, 0.18),
-    transparent
-  );
-}
-
-.archive-manuscript h1,
-.archive-manuscript h2,
-.archive-manuscript h3,
-.archive-manuscript h4 {
-  color: rgb(17 24 39);
-}
-
-.archive-manuscript h1 {
-  margin-top: 2.75rem;
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -0.045em;
-}
-
-.archive-manuscript h2 {
-  margin-top: 2.75rem;
-  font-size: clamp(1.7rem, 2.3vw, 2.35rem);
-  font-weight: 300;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
-}
-
-.archive-manuscript h3 {
-  margin-top: 2rem;
-  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: rgb(41 37 36);
-}
-
-.archive-manuscript p {
-  margin-top: 1rem;
-  font-size: clamp(1.01rem, 1.02vw, 1.08rem);
-  line-height: 1.82;
-  color: rgb(68 64 60);
-}
-
-.archive-manuscript ul,
-.archive-manuscript ol {
-  margin-top: 1rem;
-  padding-left: 1.5rem;
-  color: rgb(68 64 60);
-}
-
-.archive-manuscript li {
-  margin-top: 0.45rem;
-  line-height: 1.8;
-}
-
-.archive-manuscript blockquote {
-  margin-top: 1.5rem;
-  border-left: 2px solid rgba(120, 113, 108, 0.28);
-  padding: 0.15rem 0 0.15rem 1rem;
-  color: rgb(87 83 78);
-  font-style: italic;
-}
-
-.archive-manuscript hr {
-  margin: 2.25rem 0;
-  border: 0;
-  border-top: 1px solid rgba(120, 113, 108, 0.18);
-}
-
-.archive-manuscript a {
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-color: rgba(120, 113, 108, 0.45);
-  text-underline-offset: 0.2em;
-  transition: text-decoration-color 180ms ease;
-}
-
-.archive-manuscript a:hover {
-  text-decoration-color: rgba(28, 25, 23, 0.9);
-}
-
-.archive-manuscript strong {
-  color: rgb(17 24 39);
-  font-weight: 600;
-}
-
-.archive-manuscript em {
-  color: rgb(41 37 36);
-}
-
-.archive-manuscript pre {
-  margin-top: 1.5rem;
-  overflow-x: auto;
-  border-radius: 1rem;
-  background: rgb(24 24 27);
-  padding: 1rem;
-  color: rgb(244 244 245);
-}
-
-.archive-manuscript code {
-  border-radius: 0.4rem;
-  background: rgba(120, 113, 108, 0.1);
-  padding: 0.12rem 0.36rem;
-  font-size: 0.95em;
-}
-
-.archive-manuscript pre code {
-  background: transparent;
-  padding: 0;
-}
-
-/* Ritual note */
-
-.archive-ritual-note,
-.ritual-note {
-  margin-top: 3.5rem;
-  max-width: 42rem;
-  border: 1px solid rgba(94, 78, 50, 0.12);
-  border-radius: 1.5rem;
-  background:
-    linear-gradient(180deg, rgba(255, 252, 247, 0.95), rgba(247, 242, 235, 0.92));
-  padding: 1.2rem 1.25rem;
-  box-shadow:
-    0 8px 24px rgba(43, 32, 14, 0.04),
-    inset 0 1px 0 rgba(255, 255, 255, 0.65);
-}
-
-.ritual-note-body {
-  margin-top: 0.75rem;
-  font-size: 1rem;
-  line-height: 1.75;
-  color: rgb(68 64 60);
-}
 
 /* Navigation */
 
@@ -382,97 +99,33 @@ a {
   color: rgb(28 25 23);
 }
 
-/* Layout helpers */
-
-.archive-volume-grid {
-  display: grid;
-  gap: 1.25rem;
-}
-
-.archive-lesson-grid {
-  display: grid;
-  gap: 1rem;
-}
 
 /* Responsive */
-
 @media (min-width: 768px) {
-  .archive-shell {
-    padding: 1.5rem;
-  }
-
-  .archive-panel-inner {
-    padding: 2rem 2rem 2.5rem;
-  }
-
-  .archive-volume-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .procession-nav {
+   .procession-nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (min-width: 1024px) {
-  .archive-panel-inner {
-    padding: 2.75rem 3rem 3rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .archive-page-title {
-    max-width: 12ch;
-    font-size: clamp(2.2rem, 10vw, 3.7rem);
-    line-height: 0.96;
-  }
-
-  .archive-page-intro,
-  .archive-reading-column,
-  .archive-manuscript,
-  .archive-ritual-note,
-  .ritual-note {
-    max-width: none;
-  }
-
-  .archive-manuscript::before {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .archive-panel {
-    border-radius: 1.4rem;
-  }
-
-  .archive-panel-inner {
-    padding: 1.1rem 1rem 1.5rem;
-  }
-
-  .archive-header-kicker,
-  .archive-card-kicker,
-  .manuscript-breadcrumb,
-  .ritual-note-kicker,
-  .procession-link-kicker {
-    font-size: 0.64rem;
-    letter-spacing: 0.18em;
-  }
-
-  .archive-card,
-  .procession-link,
-  .archive-ritual-note,
-  .ritual-note {
-    padding: 1rem;
-  }
-}
 @media (max-height: 820px) {
   .threshold-door-compact {
     transform: scale(0.9);
-    transform-origin: top center;
+    transform-origin: center top;
   }
 
   .threshold-copy-compact {
-    transform: scale(0.96);
-    transform-origin: top center;
+    transform: scale(0.94);
+    transform-origin: center top;
   }
 }
+
+@media (max-height: 720px) {
+  .threshold-door-compact {
+    transform: scale(0.84);
+  }
+
+  .threshold-copy-compact {
+    transform: scale(0.9);
+  }
+}
+

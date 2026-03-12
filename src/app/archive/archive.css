@@ -1,0 +1,1099 @@
+.archive-shell {
+    min-height: 100svh;
+    padding: 1rem;
+    background:
+      radial-gradient(circle at top, rgba(186, 146, 74, 0.08), transparent 22%),
+      radial-gradient(circle at 18% 18%, rgba(101, 76, 37, 0.07), transparent 24%),
+      linear-gradient(180deg, #d7c7ad 0%, #c6b291 52%, #b49d79 100%);
+  }
+  
+  .archive-shell-dim,
+  .archive-shell--dim {
+    background:
+      radial-gradient(circle at top, rgba(247, 234, 204, 0.1), transparent 16%),
+      linear-gradient(180deg, #c6b18e 0%, #b49d78 100%);
+  }
+  
+  .archive-panel {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 88rem;
+    border: 1px solid var(--archive-border);
+    border-radius: 2rem;
+    background:
+      linear-gradient(180deg, rgba(224, 210, 187, 0.985), rgba(211, 195, 169, 0.96));
+    box-shadow:
+      0 20px 60px rgba(43, 32, 14, 0.1),
+      0 4px 16px rgba(43, 32, 14, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.26);
+    backdrop-filter: blur(12px);
+    color: var(--archive-ink);
+  }
+  
+  .archive-panel--folio,
+  .archive-panel-folio,
+  .archive-panel-volume,
+  .archive-panel-contents {
+    background:
+      linear-gradient(180deg, rgba(219, 204, 178, 0.985), rgba(204, 187, 159, 0.97));
+    border: 1px solid rgba(87, 67, 36, 0.16);
+    box-shadow:
+      0 30px 80px rgba(52, 39, 22, 0.14),
+      inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  }
+  
+  .archive-panel-inner {
+    padding: 1.5rem 1.25rem 2rem;
+    color: var(--archive-ink);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.008));
+  }
+  
+  /* Labels */
+  
+  .manuscript-breadcrumb {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(90, 70, 45, 0.74);
+    text-decoration: none;
+    transition: color 180ms ease, opacity 180ms ease;
+    cursor: pointer;
+  }
+  
+  .manuscript-breadcrumb:hover {
+    color: rgba(32, 26, 20, 0.95);
+  }
+  
+  .manuscript-inline-link,
+  .archive-side-link {
+    position: relative;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(108, 77, 35, 0.92);
+    text-decoration: none;
+    transition: color 180ms ease, opacity 180ms ease;
+    cursor: pointer;
+  }
+  
+  .manuscript-inline-link:hover,
+  .archive-side-link:hover {
+    opacity: 0.72;
+  }
+  
+  .manuscript-inline-link::after,
+  .archive-side-link::after,
+  .manuscript-breadcrumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.18rem;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      rgba(132, 87, 28, 0.58),
+      rgba(132, 87, 28, 0)
+    );
+    transform: scaleX(0.35);
+    transform-origin: left;
+    opacity: 0;
+    transition:
+      transform 280ms ease,
+      opacity 220ms ease;
+  }
+  
+  .manuscript-inline-link:hover::after,
+  .archive-side-link:hover::after,
+  .manuscript-breadcrumb:hover::after {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  
+  .archive-header-kicker,
+  .ritual-note-kicker,
+  .procession-link-kicker,
+  .archive-side-kicker,
+  .contents-volume-link-kicker,
+  .archive-card-kicker {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    color: rgba(118, 82, 31, 0.84);
+  }
+  
+  /* Headers */
+  
+  .folio-header,
+  .volume-header,
+  .contents-header,
+  .archive-index-header {
+    margin-bottom: 3rem;
+  }
+  
+  .folio-register {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .folio-separator {
+    color: rgba(97, 82, 60, 0.55);
+  }
+  
+  .folio-meta-row {
+    margin-top: 2rem;
+  }
+  
+  .archive-page-title {
+    margin-top: 1rem;
+    font-size: clamp(2.15rem, 3.8vw, 3.15rem);
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+    font-weight: 300;
+    color: var(--archive-ink);
+  }
+  
+  .archive-title-divider {
+    margin: 1.5rem 0 1.5rem;
+    width: 7rem;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      rgba(128, 88, 32, 0.68),
+      rgba(128, 88, 32, 0.08)
+    );
+  }
+  
+  .archive-page-intro {
+    max-width: 42rem;
+    font-size: 1.08rem;
+    line-height: 1.88;
+    color: rgba(58, 44, 28, 0.82);
+  }
+  
+  .archive-page-intro--incipit {
+    max-width: 42rem;
+    font-size: 1.12rem;
+  }
+  
+  .contents-intro {
+    max-width: 44rem;
+  }
+  
+  /* Reading layout */
+  
+  .archive-reading-column {
+    max-width: 42rem;
+  }
+  
+  .folio-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 18rem;
+    gap: 3rem;
+    align-items: start;
+  }
+  
+  .archive-reading-column-lesson,
+  .archive-reading-column--lesson {
+    max-width: 68ch;
+  }
+  
+  /* Manuscript body */
+  
+  .archive-manuscript {
+    position: relative;
+    max-width: 68ch;
+  }
+  
+  .archive-manuscript::before {
+    content: "";
+    position: absolute;
+    left: -1.1rem;
+    top: 0.4rem;
+    bottom: 0.4rem;
+    width: 1px;
+    background: linear-gradient(
+      180deg,
+      transparent,
+      rgba(120, 113, 108, 0.16),
+      rgba(120, 113, 108, 0.16),
+      transparent
+    );
+  }
+  
+  .archive-manuscript h1,
+  .archive-manuscript h2,
+  .archive-manuscript h3,
+  .archive-manuscript h4 {
+    color: var(--archive-ink);
+  }
+  
+  .archive-manuscript h1 {
+    margin-top: 2.75rem;
+    font-size: clamp(1.95rem, 3vw, 3rem);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+  
+  .archive-manuscript h2,
+  .archive-reading-column-lesson :where(h2),
+  .archive-reading-column--lesson :where(h2) {
+    margin-top: 3.25rem;
+    margin-bottom: 1.15rem;
+    font-size: clamp(1.55rem, 2vw, 2rem);
+    font-weight: 400;
+    line-height: 1.14;
+    letter-spacing: -0.025em;
+    color: var(--archive-ink);
+  }
+  
+  .archive-manuscript h3,
+  .archive-reading-column-lesson :where(h3),
+  .archive-reading-column--lesson :where(h3) {
+    margin-top: 2.2rem;
+    margin-bottom: 0.7rem;
+    font-size: clamp(1.12rem, 1.6vw, 1.3rem);
+    font-weight: 500;
+    line-height: 1.32;
+    letter-spacing: -0.01em;
+    color: rgba(34, 28, 22, 0.94);
+  }
+  
+  .archive-manuscript p,
+  .archive-reading-column-lesson :where(p),
+  .archive-reading-column--lesson :where(p),
+  .archive-reading-column-lesson :where(li),
+  .archive-reading-column--lesson :where(li) {
+    font-size: clamp(1.04rem, 1.02vw, 1.1rem);
+    line-height: 1.9;
+    color: rgba(47, 36, 24, 0.9);
+  }
+  
+  .archive-manuscript p {
+    margin-top: 1rem;
+  }
+  
+  .archive-manuscript p + p {
+    margin-top: 0.9rem;
+  }
+  
+  .archive-manuscript ul,
+  .archive-manuscript ol {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    color: rgba(47, 36, 24, 0.9);
+  }
+  
+  .archive-manuscript li {
+    margin-top: 0.45rem;
+    line-height: 1.82;
+  }
+  
+  .archive-manuscript blockquote {
+    margin-top: 1.5rem;
+    border-left: 2px solid rgba(120, 113, 108, 0.24);
+    padding: 0.15rem 0 0.15rem 1rem;
+    color: rgba(79, 61, 41, 0.78);
+    font-style: italic;
+  }
+  
+  .archive-manuscript hr {
+    margin: 2.25rem 0;
+    border: 0;
+    border-top: 1px solid rgba(120, 113, 108, 0.18);
+  }
+  
+  .archive-manuscript a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(120, 113, 108, 0.42);
+    text-underline-offset: 0.2em;
+    transition: text-decoration-color 180ms ease;
+  }
+  
+  .archive-manuscript a:hover {
+    text-decoration-color: rgba(28, 25, 23, 0.9);
+  }
+  
+  .archive-manuscript strong {
+    color: var(--archive-ink);
+    font-weight: 600;
+  }
+  
+  .archive-manuscript em {
+    color: rgba(41, 37, 36, 0.92);
+  }
+  
+  .archive-manuscript pre {
+    margin-top: 1.5rem;
+    overflow-x: auto;
+    border-radius: 1rem;
+    background: rgb(24 24 27);
+    padding: 1rem;
+    color: rgb(244 244 245);
+  }
+  
+  .archive-manuscript code {
+    border-radius: 0.4rem;
+    background: rgba(120, 113, 108, 0.1);
+    padding: 0.12rem 0.36rem;
+    font-size: 0.95em;
+  }
+  
+  .archive-manuscript pre code {
+    background: transparent;
+    padding: 0;
+  }
+  
+  /* Opening paragraph + drop cap */
+  
+  .archive-reading-column-lesson > :first-child p:first-of-type,
+  .archive-reading-column--lesson > :first-child p:first-of-type,
+  .archive-manuscript > p:first-of-type {
+    font-size: 1.16rem;
+    line-height: 1.85;
+    color: rgba(36, 28, 18, 0.96);
+  }
+  
+  .archive-reading-column-lesson > :first-child p:first-of-type::first-letter,
+  .archive-reading-column--lesson > :first-child p:first-of-type::first-letter,
+  .archive-manuscript > p:first-of-type::first-letter {
+    float: left;
+    font-size: 4.15rem;
+    line-height: 0.78;
+    padding-right: 0.42rem;
+    padding-top: 0.02rem;
+    margin-bottom: -0.08rem;
+    color: rgba(132, 87, 28, 0.92);
+  }
+  
+  /* Margin rail */
+  
+  .archive-margin-rail {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    position: sticky;
+    top: 2rem;
+  }
+  
+  .archive-ritual-note,
+  .ritual-note,
+  .archive-ritual-note-margin,
+  .archive-side-card {
+    border: 1px solid rgba(92, 72, 42, 0.16);
+    border-radius: 1.35rem;
+    background:
+      linear-gradient(180deg, rgba(210, 193, 164, 0.62), rgba(196, 178, 148, 0.54));
+    padding: 1rem 1rem 1.1rem;
+    box-shadow:
+      0 8px 24px rgba(43, 32, 14, 0.04),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  }
+  
+  .archive-ritual-note,
+  .ritual-note {
+    margin-top: 3.5rem;
+    max-width: 42rem;
+  }
+  
+  .ritual-note-body,
+  .archive-side-body {
+    margin-top: 0.55rem;
+    font-size: 0.98rem;
+    line-height: 1.75;
+    color: rgba(58, 44, 28, 0.82);
+  }
+  
+  .archive-side-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-top: 1rem;
+  }
+  
+  /* Navigation */
+  
+  .folio-footer,
+  .contents-footer {
+    margin-top: 4rem;
+  }
+  
+  .procession-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.1rem;
+  }
+  
+  .procession-link {
+    display: block;
+    border: 1px solid rgba(92, 72, 42, 0.16);
+    border-radius: 1.35rem;
+    background:
+      linear-gradient(180deg, rgba(215, 199, 172, 0.66), rgba(198, 181, 152, 0.55));
+    padding: 1.1rem 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .procession-link-title {
+    margin-top: 0.4rem;
+    font-size: 1.06rem;
+    line-height: 1.55;
+    color: rgba(28, 25, 23, 0.95);
+  }
+  
+  /* Archive index */
+  
+  .archive-index-header {
+    max-width: 46rem;
+  }
+  
+  .archive-index-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 2rem;
+  }
+  
+  .archive-index-grid {
+    display: grid;
+    gap: 1.25rem;
+  }
+  
+  .archive-volume-card {
+    background:
+      linear-gradient(180deg, rgba(220, 205, 179, 0.72), rgba(203, 186, 156, 0.58));
+  }
+  
+  .archive-volume-preview-lessons {
+    margin-top: 1.65rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(92, 72, 42, 0.14);
+  }
+  
+  .archive-volume-preview-kicker {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: rgba(125, 92, 44, 0.8);
+    margin-bottom: 0.15rem;
+  }
+  
+  .archive-volume-preview-lesson-list {
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .archive-volume-preview-lesson-item {
+    display: grid;
+    grid-template-columns: 2.1rem minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+  }
+  
+  .archive-volume-preview-lesson-number {
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(125, 92, 44, 0.66);
+    padding-top: 0.42rem;
+  }
+  
+  .archive-volume-preview-lesson-title {
+    font-size: 1.18rem;
+    line-height: 1.34;
+    letter-spacing: -0.01em;
+    color: rgba(28, 23, 18, 0.96);
+  }
+  
+  .archive-volume-card-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+  
+  .archive-volume-card-count {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: rgba(64, 52, 39, 0.68);
+  }
+  
+  .archive-volume-card-action {
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: rgba(125, 92, 44, 0.82);
+  }
+  
+  /* Volume page */
+  
+  .volume-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 2rem;
+  }
+  
+  .volume-primary-link,
+  .volume-secondary-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.8rem;
+    border-radius: 999px;
+    padding: 0.8rem 1.25rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.76rem;
+    cursor: pointer;
+    transition:
+      transform 280ms ease,
+      border-color 240ms ease,
+      box-shadow 280ms ease,
+      background-color 280ms ease,
+      color 240ms ease;
+  }
+  
+  .volume-primary-link {
+    background: #2b241c;
+    color: #f3eadb;
+    border: 1px solid rgba(43, 36, 28, 0.96);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.08),
+      0 8px 20px rgba(43, 32, 14, 0.14);
+  }
+  
+  .volume-secondary-link {
+    background: rgba(255,255,255,0.04);
+    color: rgba(92, 72, 42, 0.96);
+    border: 1px solid rgba(92, 72, 42, 0.28);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.12),
+      0 6px 16px rgba(43, 32, 14, 0.06);
+  }
+  
+  .volume-primary-link:hover,
+  .volume-secondary-link:hover {
+    transform: translateY(-1px);
+    border-color: rgba(132, 87, 28, 0.34);
+  }
+  
+  .volume-cover-text {
+    margin-bottom: 3rem;
+  }
+  
+  .volume-preview {
+    margin-top: 2rem;
+  }
+  
+  .volume-preview-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: baseline;
+    margin-bottom: 1rem;
+  }
+  
+  .volume-preview-list {
+    display: grid;
+    gap: 0.65rem;
+  }
+  
+  .volume-preview-item {
+    border-top: 1px solid rgba(92, 72, 42, 0.14);
+    padding-top: 0.9rem;
+  }
+  
+  .volume-preview-link {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .volume-preview-number {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: rgba(125, 92, 44, 0.84);
+  }
+  
+  .volume-preview-title {
+    font-size: 1.18rem;
+    line-height: 1.42;
+    color: var(--archive-ink);
+  }
+  
+  /* Contents page */
+  
+  .contents-volume-nav {
+    display: grid;
+    gap: 0.9rem;
+    margin-bottom: 3rem;
+  }
+  
+  .contents-volume-link {
+    display: block;
+    border: 1px solid rgba(92, 72, 42, 0.16);
+    border-radius: 1.3rem;
+    background:
+      linear-gradient(180deg, rgba(214, 198, 171, 0.55), rgba(198, 181, 151, 0.45));
+    padding: 1rem 1.1rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .contents-volume-link-title {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 1.02rem;
+    line-height: 1.38;
+    color: var(--archive-ink);
+  }
+  
+  .contents-volumes {
+    display: grid;
+    gap: 2.5rem;
+  }
+  
+  .contents-volume-section {
+    scroll-margin-top: 2rem;
+    border-top: 1px solid rgba(92, 72, 42, 0.14);
+    padding-top: 2rem;
+  }
+  
+  .contents-volume-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.2rem;
+    align-items: start;
+    margin-bottom: 1.2rem;
+  }
+  
+  .contents-volume-title {
+    margin-top: 0.55rem;
+    font-size: clamp(1.55rem, 2.2vw, 2rem);
+    line-height: 1.18;
+    color: var(--archive-ink);
+  }
+  
+  .contents-volume-description {
+    margin-top: 0.8rem;
+    max-width: 40rem;
+    font-size: 1rem;
+    line-height: 1.78;
+    color: rgba(64, 52, 39, 0.76);
+  }
+  
+  /* TOC / Manuscript Index */
+  
+  .archive-toc-list {
+    display: grid;
+    gap: 0;
+  }
+  
+  .archive-toc-item {
+    border-top: 1px solid rgba(92, 72, 42, 0.14);
+    transition:
+      transform 320ms ease,
+      border-color 260ms ease,
+      box-shadow 320ms ease,
+      background-color 320ms ease,
+      opacity 220ms ease;
+  }
+  
+  .archive-toc-item:hover {
+    border-top-color: rgba(132, 87, 28, 0.22);
+  }
+  
+  .archive-toc-link {
+    display: grid;
+    grid-template-columns: 4rem minmax(0, 1fr) auto;
+    gap: 1.25rem;
+    align-items: start;
+    text-decoration: none;
+    padding: 1.25rem 0;
+    cursor: pointer;
+  }
+  
+  .archive-toc-leading {
+    padding-top: 0.2rem;
+  }
+  
+  .archive-toc-number {
+    display: inline-block;
+    font-size: 0.78rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(125, 92, 44, 0.82);
+  }
+  
+  .archive-toc-main {
+    min-width: 0;
+  }
+  
+  .archive-toc-title {
+    display: block;
+    font-size: clamp(1.45rem, 2.4vw, 2rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--archive-ink);
+    transition: opacity 220ms ease;
+  }
+  
+  .archive-toc-excerpt {
+    margin-top: 0.55rem;
+    max-width: 46rem;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: rgba(58, 44, 28, 0.74);
+  }
+  
+  .archive-toc-trailing {
+    display: flex;
+    align-items: center;
+    padding-top: 0.2rem;
+  }
+  
+  .archive-toc-action {
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: rgba(125, 92, 44, 0.78);
+    white-space: nowrap;
+  }
+  
+  .archive-toc-link:hover .archive-toc-title {
+    opacity: 0.84;
+  }
+  
+  .archive-toc-link:hover .archive-toc-action {
+    opacity: 1;
+  }
+  
+  /* Cards */
+  
+  .archive-card {
+    display: block;
+    border: 1px solid rgba(92, 72, 42, 0.16);
+    border-radius: 1.5rem;
+    background:
+      linear-gradient(180deg, rgba(226, 211, 185, 0.72), rgba(208, 191, 162, 0.82));
+    padding: 1.2rem 1.25rem;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow:
+      0 8px 28px rgba(43, 32, 14, 0.05),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+  
+  .archive-card-title {
+    margin-top: 0.65rem;
+    font-size: clamp(1.45rem, 2vw, 2rem);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    color: var(--archive-ink);
+    transition: opacity 220ms ease;
+  }
+  
+  .archive-card-body {
+    margin-top: 0.75rem;
+    max-width: 38ch;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: rgba(64, 52, 39, 0.76);
+  }
+  
+  /* Shared hover motion + title softening */
+  
+  .archive-card,
+  .procession-link,
+  .contents-volume-link,
+  .archive-toc-link,
+  .volume-preview-link {
+    transition:
+      transform 320ms ease,
+      opacity 220ms ease,
+      border-color 260ms ease,
+      box-shadow 320ms ease,
+      background-color 320ms ease;
+  }
+  
+  .archive-card:hover,
+  .procession-link:hover,
+  .contents-volume-link:hover,
+  .archive-toc-link:hover,
+  .volume-preview-link:hover {
+    transform: translateY(-2px);
+  }
+  
+  .archive-card:hover,
+  .procession-link:hover,
+  .contents-volume-link:hover,
+  .volume-primary-link:hover,
+  .volume-secondary-link:hover {
+    border-color: rgba(132, 87, 28, 0.34);
+  }
+  
+  .archive-card:hover {
+    background:
+      linear-gradient(180deg, rgba(228, 213, 188, 0.76), rgba(210, 193, 164, 0.84));
+  }
+  
+  .archive-card:hover .archive-card-title,
+  .archive-card:hover .archive-volume-preview-lesson-title,
+  .volume-preview-link:hover .volume-preview-title {
+    opacity: 0.84;
+  }
+  
+  .archive-volume-preview-lesson-title,
+  .volume-preview-title {
+    transition: opacity 220ms ease;
+  }
+  
+  /* Animation */
+  
+  @keyframes archiveFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes archivePanelFloat {
+    0% {
+      transform: translateY(0);
+      box-shadow:
+        0 30px 80px rgba(52, 39, 22, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    }
+    50% {
+      transform: translateY(-1px);
+      box-shadow:
+        0 34px 88px rgba(52, 39, 22, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    }
+    100% {
+      transform: translateY(0);
+      box-shadow:
+        0 30px 80px rgba(52, 39, 22, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    }
+  }
+  
+  .archive-fade-up {
+    opacity: 0;
+    animation: archiveFadeUp 900ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  
+  .archive-panel-animated {
+    animation: archivePanelFloat 10s ease-in-out infinite;
+  }
+  
+  /* Responsive */
+  
+  @media (min-width: 768px) {
+    .archive-shell {
+      padding: 1.5rem;
+    }
+  
+    .archive-panel-inner {
+      padding: 2rem 2rem 2.5rem;
+    }
+  
+    .archive-index-grid,
+    .contents-volume-nav {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .archive-panel-inner {
+      padding: 2.75rem 3rem 3rem;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .folio-layout {
+      grid-template-columns: 1fr;
+    }
+  
+    .archive-margin-rail {
+      position: static;
+    }
+  
+    .procession-nav {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .archive-page-title {
+      max-width: 12ch;
+      font-size: clamp(2rem, 9vw, 3rem);
+      line-height: 0.98;
+    }
+  
+    .archive-page-intro,
+    .archive-reading-column,
+    .archive-manuscript,
+    .archive-ritual-note,
+    .ritual-note,
+    .archive-reading-column-lesson,
+    .archive-reading-column--lesson {
+      max-width: none;
+    }
+  
+    .archive-manuscript::before {
+      display: none;
+    }
+  
+    .archive-toc-link {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+  
+    .archive-toc-trailing {
+      padding-top: 0;
+    }
+  
+    .contents-volume-header,
+    .volume-preview-header {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .archive-panel {
+      border-radius: 1.4rem;
+    }
+  
+    .archive-panel-inner {
+      padding: 1.1rem 1rem 1.5rem;
+    }
+  
+    .archive-header-kicker,
+    .archive-card-kicker,
+    .manuscript-breadcrumb,
+    .ritual-note-kicker,
+    .procession-link-kicker,
+    .archive-side-kicker,
+    .contents-volume-link-kicker {
+      font-size: 0.64rem;
+      letter-spacing: 0.18em;
+    }
+  
+    .archive-card,
+    .procession-link,
+    .archive-ritual-note,
+    .ritual-note,
+    .archive-side-card,
+    .contents-volume-link {
+      padding: 1rem;
+    }
+  
+    .archive-toc-title {
+      font-size: 1.25rem;
+    }
+  
+    .volume-primary-link,
+    .volume-secondary-link {
+      width: 100%;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .archive-fade-up,
+    .archive-panel-animated {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  
+    .archive-card,
+    .procession-link,
+    .contents-volume-link,
+    .archive-toc-link,
+    .volume-preview-link,
+    .archive-toc-title,
+    .archive-volume-preview-lesson-title,
+    .volume-preview-title,
+    .archive-card-title,
+    .volume-primary-link,
+    .volume-secondary-link,
+    .manuscript-inline-link,
+    .archive-side-link,
+    .manuscript-breadcrumb {
+      transition: none;
+    }
+  
+    .manuscript-inline-link::after,
+    .archive-side-link::after,
+    .manuscript-breadcrumb::after {
+      display: none;
+    }
+  }
+  .archive-volume-card {
+    background:
+      linear-gradient(180deg, rgba(220, 205, 179, 0.72), rgba(203, 186, 156, 0.58));
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .archive-volume-card-footer {
+    margin-top: auto;
+    padding-top: 1.5rem;
+  }
+  .manuscript-breadcrumb-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.45rem 0.7rem;
+    border: 1px solid rgba(92, 72, 42, 0.16);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(78, 60, 37, 0.88);
+    font-weight: 500;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.14);
+  }
+  
+  .manuscript-breadcrumb-home:hover {
+    border-color: rgba(132, 87, 28, 0.28);
+    background: rgba(255, 255, 255, 0.12);
+    color: rgba(32, 26, 20, 0.98);
+  }
+  .archive-home-link-row {
+    margin-bottom: 1.15rem;
+  }
+  
+  .archive-header-kicker {
+    margin-top: 0;
+  }

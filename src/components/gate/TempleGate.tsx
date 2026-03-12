@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { DoorFrame } from "./DoorFrame";
 import { GateCopy } from "./GateCopy";
 import { InteriorHomepage } from "@/components/home/InteriorHomepage";
@@ -71,12 +72,27 @@ const STARS: Star[] = [
 ];
 
 export function TempleGate() {
-  const [isEntering, setIsEntering] = useState(false);
-  const [showInterior, setShowInterior] = useState(false);
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const prefersReducedMotion = useReducedMotion();
 
+  const shouldOpenInterior = searchParams.get("interior") === "1";
+
+  const [isEntering, setIsEntering] = useState(false);
+  const [showInterior, setShowInterior] = useState(shouldOpenInterior);
+
   useEffect(() => {
-    if (!isEntering) return;
+    if (shouldOpenInterior) {
+      setIsEntering(true);
+      setShowInterior(true);
+    } else {
+      setIsEntering(false);
+      setShowInterior(false);
+    }
+  }, [shouldOpenInterior]);
+
+  useEffect(() => {
+    if (!isEntering || showInterior) return;
 
     if (prefersReducedMotion) {
       setShowInterior(true);
@@ -88,10 +104,20 @@ export function TempleGate() {
     }, ENTER_DURATION_MS);
 
     return () => window.clearTimeout(timer);
-  }, [isEntering, prefersReducedMotion]);
+  }, [isEntering, showInterior, prefersReducedMotion]);
 
   const handleEnter = () => {
     setIsEntering(true);
+
+    if (prefersReducedMotion) {
+      setShowInterior(true);
+      router.replace("/?interior=1", { scroll: false });
+      return;
+    }
+
+    window.setTimeout(() => {
+      router.replace("/?interior=1", { scroll: false });
+    }, 250);
   };
 
   const overlayClassName = useMemo(() => {
@@ -123,7 +149,7 @@ export function TempleGate() {
           >
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute left-1/2 top-[58%] h-[26rem] w-[34rem] -translate-x-1/2 -translate-y-1/2 opacity-40"
+              className="pointer-events-none absolute left-1/2 top-[50%] h-[24rem] w-[32rem] -translate-x-1/2 -translate-y-1/2 opacity-40"
               style={{
                 background:
                   "radial-gradient(ellipse at center, rgba(120,70,18,0.12) 0%, rgba(120,70,18,0.06) 28%, rgba(0,0,0,0) 68%)",
@@ -131,8 +157,8 @@ export function TempleGate() {
               }}
             />
 
-            <div className="mx-auto flex min-h-[100svh] w-full max-w-5xl items-start justify-center pt-[5.5rem] pb-8 sm:pt-[6rem] md:pt-[6.5rem]">
-              <div className="flex w-full flex-col items-center justify-start">
+            <div className="mx-auto flex min-h-[100svh] w-full max-w-5xl items-center justify-center px-2 pt-6 pb-6 sm:pt-8 sm:pb-8 md:pt-10 md:pb-10">
+              <div className="flex w-full flex-col items-center justify-center gap-5 sm:gap-6 md:gap-7 threshold-door-compact threshold-copy-compact">
                 <DoorFrame isEntering={isEntering} />
                 <GateCopy isEntering={isEntering} onEnter={handleEnter} />
               </div>

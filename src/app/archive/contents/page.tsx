@@ -1,90 +1,153 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import {
   getLessonsByVolume,
-  getStructurePageBySlug,
+  getVolumeFromRoute,
 } from "@/lib/archive/get-archive";
 import { volumeMap } from "@/lib/archive/volume-map";
-import { ArchiveMdx } from "@/components/archive/archive-mdx";
 
-export default async function ContentsPage() {
-  const page = await getStructurePageBySlug("table-of-contents");
+type VolumeEntry = {
+  key: string;
+  volumeData: Awaited<ReturnType<typeof getVolumeFromRoute>>;
+  lessons: Awaited<ReturnType<typeof getLessonsByVolume>>;
+};
 
-  if (!page) {
-    notFound();
-  }
+type ResolvedVolumeEntry = {
+  key: string;
+  volumeData: NonNullable<Awaited<ReturnType<typeof getVolumeFromRoute>>>;
+  lessons: Awaited<ReturnType<typeof getLessonsByVolume>>;
+};
 
-  const volumes = await Promise.all(
+function hasVolumeData(entry: VolumeEntry): entry is ResolvedVolumeEntry {
+  return entry.volumeData !== null;
+}
+
+export default async function ArchiveContentsPage() {
+  const volumes: VolumeEntry[] = await Promise.all(
     Object.values(volumeMap).map(async (volume) => {
+      const volumeData = await getVolumeFromRoute(volume.key);
       const lessons = await getLessonsByVolume(volume.key);
+
       return {
-        ...volume,
+        key: volume.key,
+        volumeData,
         lessons,
       };
     })
   );
 
+  const renderedVolumes = volumes.filter(hasVolumeData);
+
   return (
-    <main className="archive-shell">
-      <div className="archive-panel">
+    <main className="archive-shell archive-shell-dim">
+      <div className="archive-panel archive-panel-contents archive-panel-animated">
         <div className="archive-panel-inner">
-          <header className="mb-14 max-w-3xl">
+          <header className="contents-header archive-fade-up">
             <Link href="/archive" className="manuscript-breadcrumb">
               Archive
             </Link>
 
-            <p className="mt-8 archive-header-kicker">Canonical Index</p>
-            <h1 className="archive-page-title">{page.title}</h1>
+            <p className="archive-header-kicker mt-8">Master Index</p>
+
+            <h1 className="archive-page-title">
+              The Inner Throne Manuscript Index
+            </h1>
+
+            <div className="archive-title-divider" />
+
+            <p className="archive-page-intro contents-intro">
+              The manuscripts are arranged below by volume and preserved in
+              sacred sequence. Enter by chamber, or open any teaching directly.
+            </p>
           </header>
 
-          <div className="max-w-3xl">
-            {page.content ? await ArchiveMdx({ source: page.content }) : null}
-          </div>
-
-          <section className="mt-16 space-y-12">
-            {volumes.map((volume) => (
-              <div key={volume.key} className="max-w-4xl">
-                <div className="mb-5">
-                  <Link
-                    href={`/archive/volume/${volume.key}`}
-                    className="manuscript-breadcrumb"
-                  >
-                    Volume {volume.number}
-                  </Link>
-
-                  <h2 className="mt-3 text-3xl font-light tracking-[-0.03em] text-neutral-950 md:text-4xl">
-                    {volume.title}
-                  </h2>
-
-                  <p className="mt-3 max-w-2xl text-[1rem] leading-7 text-neutral-600">
-                    {volume.description}
-                  </p>
-                </div>
-
-                <div className="space-y-4">
-                  {volume.lessons.map((lesson) => (
-                    <Link
-                      key={lesson.slug}
-                      href={lesson.href}
-                      className="archive-card block"
-                    >
-                      <p className="archive-card-kicker">
-                        Lesson {lesson.lessonNumber}
-                      </p>
-                      <h3 className="mt-2 text-2xl font-light leading-tight tracking-[-0.02em] text-neutral-950">
-                        {lesson.title}
-                      </h3>
-                      {lesson.excerpt ? (
-                        <p className="mt-3 max-w-2xl text-[1rem] leading-7 text-neutral-600">
-                          {lesson.excerpt}
-                        </p>
-                      ) : null}
-                    </Link>
-                  ))}
-                </div>
-              </div>
+          <nav
+            className="contents-volume-nav archive-fade-up"
+            aria-label="Jump to volume"
+            style={{ animationDelay: "100ms" }}
+          >
+            {renderedVolumes.map(({ key, volumeData }) => (
+              <Link
+                key={key}
+                href={`#volume-${key}`}
+                className="contents-volume-link"
+              >
+                <span className="contents-volume-link-kicker">
+                  Volume {volumeData.number}
+                </span>
+                <span className="contents-volume-link-title">
+                  {volumeData.title}
+                </span>
+              </Link>
             ))}
-          </section>
+          </nav>
+
+          <div className="contents-volumes">
+            {renderedVolumes.map(({ key, volumeData, lessons }, index) => (
+              <section
+                key={key}
+                id={`volume-${key}`}
+                className="contents-volume-section archive-fade-up"
+                style={{ animationDelay: `${160 + index * 90}ms` }}
+              >
+                <div className="contents-volume-header">
+                  <div>
+                    <p className="archive-header-kicker">
+                      Volume {volumeData.number}
+                    </p>
+
+                    <h2 className="contents-volume-title">
+                      {volumeData.title}
+                    </h2>
+
+                    <p className="contents-volume-description">
+                      {volumeData.description}
+                    </p>
+                  </div>
+
+                  <div className="contents-volume-actions">
+                    <Link
+                      href={`/archive/volume/${key}`}
+                      className="manuscript-inline-link"
+                    >
+                      Open Volume
+                    </Link>
+                  </div>
+                </div>
+
+                <ol className="archive-toc-list">
+                  {lessons.map((lesson) => (
+                    <li key={lesson.slug} className="archive-toc-item">
+                      <Link href={lesson.href} className="archive-toc-link">
+                        <div className="archive-toc-leading">
+                          <span className="archive-toc-number">
+                            {String(lesson.lessonNumber).padStart(2, "0")}
+                          </span>
+                        </div>
+
+                        <div className="archive-toc-main">
+                          <span className="archive-toc-title">
+                            {lesson.title}
+                          </span>
+
+                          {lesson.excerpt ? (
+                            <p className="archive-toc-excerpt">
+                              {lesson.excerpt}
+                            </p>
+                          ) : null}
+                        </div>
+
+                        <div className="archive-toc-trailing">
+                          <span className="archive-toc-action">
+                            Open Manusript
+                          </span>
+                        </div>
+                      </Link>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            ))}
+          </div>
         </div>
       </div>
     </main>

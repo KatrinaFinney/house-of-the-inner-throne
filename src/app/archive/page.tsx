@@ -4,43 +4,108 @@ import { getArchiveVolumes, getLessonsByVolume } from "@/lib/archive/get-archive
 export default async function ArchivePage() {
   const volumes = await getArchiveVolumes();
 
-  const volumesWithCounts = await Promise.all(
+  const volumesWithLessons = await Promise.all(
     volumes.map(async (volume) => {
       const lessons = await getLessonsByVolume(volume.key);
+
       return {
         ...volume,
         count: lessons.length,
+        previewLessons: lessons.slice(0, 3),
       };
     })
   );
 
+  const firstVolume = volumesWithLessons[0];
+
   return (
-    <main className="archive-shell">
-      <div className="archive-panel">
+    <main className="archive-shell archive-shell-dim">
+      <div className="archive-panel archive-panel-contents archive-panel-animated">
         <div className="archive-panel-inner">
-          <header className="mb-14 max-w-3xl">
-            <p className="archive-header-kicker">Inner Throne Archive</p>
-            <h1 className="archive-page-title">The Canonical Teachings</h1>
+          <header className="archive-index-header archive-fade-up">
+          <div className="archive-home-link-row">
+          <div className="archive-home-link-row">
+  <Link href="/?interior=1" className="manuscript-breadcrumb manuscript-breadcrumb-home">
+    <span aria-hidden="true" className="manuscript-breadcrumb-arrow">
+      ←
+    </span>
+    <span>Return to the House</span>
+  </Link>
+</div>
+</div>
+
+<p className="archive-header-kicker">Inner Throne Archive</p>
+            <h1 className="archive-page-title">The Inner Throne Manuscripts</h1>
+
+            <div className="archive-title-divider" />
+
             <p className="archive-page-intro">
-              A manuscript library of the 44 teachings, arranged by volume and
-              preserved in sacred sequence. Enter by chamber, proceed by lesson,
-              and read as one crossing a threshold rather than consuming a feed.
+              A manuscript library of 44 teachings, arranged by volume and
+              preserved in sacred sequence. Enter by chamber, or open the
+              Manuscript Index and proceed through the archive in order.
             </p>
+
+            <div className="archive-index-actions">
+              <Link href="/archive/contents" className="volume-primary-link">
+                Open the Manuscript Index
+              </Link>
+
+              {firstVolume ? (
+                <Link
+                  href={`/archive/volume/${firstVolume.key}`}
+                  className="volume-secondary-link"
+                >
+                  Begin with Volume {firstVolume.number}
+                </Link>
+              ) : null}
+            </div>
           </header>
 
-          <section className="grid gap-6 md:grid-cols-2">
-            {volumesWithCounts.map((volume) => (
+          <section className="archive-index-grid">
+            {volumesWithLessons.map((volume, index) => (
               <Link
                 key={volume.key}
                 href={`/archive/volume/${volume.key}`}
-                className="archive-card"
+                className="archive-card archive-volume-card archive-fade-up"
+                style={{ animationDelay: `${index * 90}ms` }}
               >
                 <p className="archive-card-kicker">Volume {volume.number}</p>
+
                 <h2 className="archive-card-title">{volume.title}</h2>
+
                 <p className="archive-card-body">{volume.description}</p>
-                <p className="mt-6 text-sm text-stone-500">
-                  {volume.count} published teachings
-                </p>
+
+                {volume.previewLessons.length > 0 ? (
+  <div className="archive-volume-preview-lessons">
+    <p className="archive-volume-preview-kicker">
+      Teachings within
+    </p>
+
+    <ol className="archive-volume-preview-lesson-list">
+      {volume.previewLessons.map((lesson) => (
+        <li
+          key={lesson.slug}
+          className="archive-volume-preview-lesson-item"
+        >
+          <span className="archive-volume-preview-lesson-number">
+            {String(lesson.lessonNumber).padStart(2, "0")}
+          </span>
+          <span className="archive-volume-preview-lesson-title">
+            {lesson.title}
+          </span>
+        </li>
+      ))}
+    </ol>
+  </div>
+) : null}
+
+                <div className="archive-volume-card-footer">
+                  <p className="archive-volume-card-count">
+                    {volume.count} published teachings
+                  </p>
+
+                  <p className="archive-volume-card-action">Open Volume</p>
+                </div>
               </Link>
             ))}
           </section>

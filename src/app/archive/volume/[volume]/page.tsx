@@ -24,52 +24,80 @@ export default async function VolumePage({ params }: PageProps) {
   const { volume } = await params;
 
   const volumeData = await getVolumeFromRoute(volume);
-
-  if (!volumeData) {
-    notFound();
-  }
+  if (!volumeData) notFound();
 
   const lessons = await getLessonsByVolume(volume);
   const coverPage = await getStructurePageBySlug(volume);
 
+  const firstLesson = lessons[0];
+
   return (
-    <main className="archive-shell">
-      <div className="archive-panel">
+    <main className="archive-shell archive-shell-dim">
+      <div className="archive-panel archive-panel-volume">
         <div className="archive-panel-inner">
-          <header className="mb-14 max-w-3xl">
+          <header className="volume-header">
             <Link href="/archive" className="manuscript-breadcrumb">
               Archive
             </Link>
 
-            <p className="mt-8 archive-header-kicker">Volume {volumeData.number}</p>
+            <p className="archive-header-kicker mt-8">
+              Volume {volumeData.number}
+            </p>
+
             <h1 className="archive-page-title">{volumeData.title}</h1>
+
+            <div className="archive-title-divider" />
+
             <p className="archive-page-intro">{volumeData.description}</p>
+
+            <div className="volume-actions">
+              {firstLesson ? (
+                <Link href={firstLesson.href} className="volume-primary-link">
+                  Begin with Lesson {firstLesson.lessonNumber}
+                </Link>
+              ) : null}
+
+              <Link
+                href={`/archive/contents#volume-${volume}`}
+                className="volume-secondary-link"
+              >
+                Open the Manuscript Index
+              </Link>
+            </div>
           </header>
 
           {coverPage?.content ? (
-            <div className="mb-14 max-w-3xl">
-              {await ArchiveMdx({ source: coverPage.content })}
-            </div>
+            <section className="volume-cover-text">
+              <div className="archive-reading-column archive-reading-column-lesson">
+                {await ArchiveMdx({ source: coverPage.content })}
+              </div>
+            </section>
           ) : null}
 
-          <section className="space-y-4">
-            {lessons.map((lesson) => (
+          <section className="volume-preview">
+            <div className="volume-preview-header">
+              <p className="archive-header-kicker">Teachings in This Volume</p>
               <Link
-                key={lesson.slug}
-                href={lesson.href}
-                className="archive-card block"
+                href={`/archive/contents#volume-${volume}`}
+                className="manuscript-inline-link"
               >
-                <p className="archive-card-kicker">Lesson {lesson.lessonNumber}</p>
-                <h2 className="mt-2 text-2xl font-light leading-tight tracking-[-0.02em] text-neutral-950">
-                  {lesson.title}
-                </h2>
-                {lesson.excerpt ? (
-                  <p className="mt-3 max-w-2xl text-[1rem] leading-7 text-neutral-600">
-                    {lesson.excerpt}
-                  </p>
-                ) : null}
+                Open Manuscript Index
               </Link>
-            ))}
+            </div>
+
+            <ol className="volume-preview-list">
+              {lessons.map((lesson) => (
+                <li key={lesson.slug} className="volume-preview-item">
+                  <Link href={lesson.href} className="volume-preview-link">
+                    <span className="volume-preview-number">
+                      {String(lesson.lessonNumber).padStart(2, "0")}
+                    </span>
+
+                    <span className="volume-preview-title">{lesson.title}</span>
+                  </Link>
+                </li>
+              ))}
+            </ol>
           </section>
         </div>
       </div>
