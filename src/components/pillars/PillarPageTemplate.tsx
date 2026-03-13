@@ -4,34 +4,34 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 type LinkItem = {
-  title: string;
-  href: string;
-  description?: string;
+  readonly title: string;
+  readonly href: string;
+  readonly description?: string;
 };
 
 type PillarPageProps = {
-  eyebrow: string;
-  title: string;
-  subtitle: string;
-  heroBody: string;
-  ctaPrimary: { label: string; href: string };
-  ctaSecondary: { label: string; href: string };
-  currentTitle: string;
-  currentBody: string[];
-  whyTitle: string;
-  whyItems: string[];
-  beginTitle: string;
-  beginIntro: string;
-  beginItems: LinkItem[];
-  practicesTitle: string;
-  practicesIntro: string;
-  practices: LinkItem[];
-  supportTitle: string;
-  supportBody: string;
-  houseSupports: LinkItem[];
-  curatedSupports: LinkItem[];
-  closingTitle: string;
-  closingBody: string;
+  readonly eyebrow: string;
+  readonly title: string;
+  readonly subtitle: string;
+  readonly heroBody: string;
+  readonly ctaPrimary: { readonly label: string; readonly href: string };
+  readonly ctaSecondary: { readonly label: string; readonly href: string };
+  readonly currentTitle: string;
+  readonly currentBody: readonly string[];
+  readonly whyTitle: string;
+  readonly whyItems: readonly string[];
+  readonly beginTitle: string;
+  readonly beginIntro: string;
+  readonly beginItems: readonly LinkItem[];
+  readonly practicesTitle: string;
+  readonly practicesIntro: string;
+  readonly practices: readonly LinkItem[];
+  readonly supportTitle: string;
+  readonly supportBody: string;
+  readonly houseSupports: readonly LinkItem[];
+  readonly curatedSupports: readonly LinkItem[];
+  readonly closingTitle: string;
+  readonly closingBody: string;
 };
 
 export function PillarPageTemplate(props: PillarPageProps) {
