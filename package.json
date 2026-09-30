@@ -1,5 +1,5 @@
 {
-  "name": "house-of-the-inner-throne",
+  "name": "shrine-of-the-inner-throne",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "audit:lessons": "node --import tsx scripts/audit-lessons.ts",
     "compile:lesson": "tsx scripts/compile-lesson.ts",
     "compile:incoming": "tsx scripts/compile-incoming.ts"
   },

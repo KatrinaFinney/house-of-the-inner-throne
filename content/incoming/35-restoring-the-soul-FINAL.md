@@ -163,9 +163,9 @@ It is the ability to return to oneself without violence.
 
 To restore the soul is to remember that the spirit was never meant to survive without care.
 
-# The Rite of Alignment
+## The Rite of Alignment
 
-## The Intelligence Behind the Lesson
+### The Intelligence Behind the Lesson
 
 La Madama, revered in several Afro-Caribbean spiritual traditions, carries the presence of ancestral wisdom, healing intelligence, emotional refinement, and spiritual counsel. She is often understood not merely as a helper, but as an eldering force — one who sees what has become heavy in a person's spirit and responds with both dignity and compassion.
 
@@ -175,7 +175,7 @@ She restores through presence, through wisdom, through emotional truth, and thro
 
 Within the Inner Throne system, La Madama symbolizes **Sacred Restoration** — the healing current that gathers the spirit back to itself after depletion, sorrow, and fragmentation.
 
-## Energetic Current
+### Energetic Current
 
 The sacred restoration current strengthens:
 
@@ -187,7 +187,7 @@ The sacred restoration current strengthens:
 
 When this current becomes active, the practitioner often feels less pressured to perform strength and more willing to return honestly to their own humanity.
 
-## Communion Ritual
+### Communion Ritual
 
 Prepare a quiet space where you will not be interrupted.
 
@@ -227,7 +227,7 @@ When the ritual feels complete, extinguish the candle gently.
 
 If desired, pour the water outside afterward as a sign that pain is being returned to the larger cycles of life for transformation.
 
-## The Lunar Gate
+### The Lunar Gate
 
 The **Waning Moon** supports release, recovery, and return.
 

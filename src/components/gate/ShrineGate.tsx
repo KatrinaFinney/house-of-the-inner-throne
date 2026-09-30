@@ -71,53 +71,37 @@ const STARS: Star[] = [
   { left: "87%", top: "86%", size: 1.2, opacity: 0.18, color: "soft" },
 ];
 
-export function TempleGate() {
+export function ShrineGate() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const prefersReducedMotion = useReducedMotion();
 
   const shouldOpenInterior = searchParams.get("interior") === "1";
 
-  const [isEntering, setIsEntering] = useState(false);
-  const [showInterior, setShowInterior] = useState(shouldOpenInterior);
-
-  useEffect(() => {
-    if (shouldOpenInterior) {
-      setIsEntering(true);
-      setShowInterior(true);
-    } else {
-      setIsEntering(false);
-      setShowInterior(false);
-    }
-  }, [shouldOpenInterior]);
+  const [isEntering, setIsEntering] = useState(shouldOpenInterior);
+  const [hasEntered, setHasEntered] = useState(false);
+  const showInterior = shouldOpenInterior || hasEntered;
 
   useEffect(() => {
     if (!isEntering || showInterior) return;
 
-    if (prefersReducedMotion) {
-      setShowInterior(true);
-      return;
-    }
+    if (prefersReducedMotion) return;
 
     const timer = window.setTimeout(() => {
-      setShowInterior(true);
+      setHasEntered(true);
+      router.replace("/?interior=1", { scroll: false });
     }, ENTER_DURATION_MS);
 
     return () => window.clearTimeout(timer);
-  }, [isEntering, showInterior, prefersReducedMotion]);
+  }, [isEntering, showInterior, prefersReducedMotion, router]);
 
   const handleEnter = () => {
     setIsEntering(true);
 
     if (prefersReducedMotion) {
-      setShowInterior(true);
+      setHasEntered(true);
       router.replace("/?interior=1", { scroll: false });
-      return;
     }
-
-    window.setTimeout(() => {
-      router.replace("/?interior=1", { scroll: false });
-    }, 250);
   };
 
   const overlayClassName = useMemo(() => {

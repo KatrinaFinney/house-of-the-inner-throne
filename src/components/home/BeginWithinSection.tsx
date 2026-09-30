@@ -7,7 +7,7 @@ const entrances = [
   {
     title: "Study the Archive",
     description:
-      "Enter the manuscript library of the House. Read foundational teachings in sequence or move by pillar according to present need.",
+      "Enter the manuscript library of the Shrine. Read foundational teachings in sequence or move by pillar according to present need.",
     cta: "Enter the Archive",
     href: "/archive",
   },
@@ -43,7 +43,7 @@ export function BeginWithinSection() {
           </p>
 
           <h2 className="text-4xl leading-tight sm:text-5xl">
-            Enter the House in the order that meets your spirit.
+            Enter the Shrine in the order that meets your spirit.
           </h2>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)]">
@@ -53,7 +53,7 @@ export function BeginWithinSection() {
           </p>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-[var(--muted)]">
-            The House is structured, but sovereignty remains with the one who enters.
+            The Shrine is structured, but sovereignty remains with the one who enters.
           </p>
         </motion.div>
 

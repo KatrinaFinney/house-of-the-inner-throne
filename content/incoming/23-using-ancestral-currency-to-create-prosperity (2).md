@@ -2,7 +2,7 @@
 title: Using Ancestral Currency to Create Prosperity
 lessonNumber: 23
 volumeNumber: 3
-volumeOrder: 2
+volumeOrder: 1
 slug: using-ancestral-currency-to-create-prosperity
 ritualNote: Prosperity grows when gratitude and reciprocity are practiced with those who came before us.
 excerpt: Ancestral currency is the wisdom, resilience, and opportunity inherited from previous generations.
@@ -68,15 +68,15 @@ Prosperity grows strongest when rooted in gratitude.
 
 By recognizing the wealth already present within their lineage, the practitioner learns to cultivate prosperity responsibly.
 
-# The Rite of Alignment
+## The Rite of Alignment
 
-## The Intelligence Behind the Lesson
+### The Intelligence Behind the Lesson
 
 Aje, within Yoruba cosmology, represents the sacred force of prosperity, exchange, and material increase. Aje is not merely money. It is the living current of wealth itself — the movement of value, opportunity, circulation, and increase.
 
 Within the Inner Throne system, Aje represents the intelligence of prosperity as a force that must be cultivated, honored, and directed with discipline.
 
-## Energetic Current
+### Energetic Current
 
 The prosperity current strengthens:
 
@@ -87,7 +87,7 @@ The prosperity current strengthens:
 
 When this current becomes active, prosperity is no longer approached as luck or accident. It is approached as an energy that can be fed, directed, and expanded.
 
-## Communion Ritual
+### Communion Ritual
 
 Place a **green candle** upon your altar.
 
@@ -111,6 +111,6 @@ Remain seated for several minutes, allowing the ritual to settle into your aware
 
 When the ritual is complete, keep one coin from the altar in your wallet, on your desk, or in your place of business as a sign of ongoing prosperity cultivation.
 
-## The Lunar Gate
+### The Lunar Gate
 
 The **Waxing Moon** strengthens growth, increase, and development. Prosperity rituals performed during this phase help expand the energy of wealth and reinforce long-term material growth.

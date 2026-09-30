@@ -31,7 +31,7 @@ export default function PillarsPage() {
         </h1>
 
         <p className="mt-6 max-w-3xl text-lg leading-8 text-(--muted)">
-          The pillars are three living currents within the House. Each one
+          The pillars are three living currents within the Shrine. Each one
           offers a different doorway into sovereignty, ritual life, and sacred
           becoming.
         </p>

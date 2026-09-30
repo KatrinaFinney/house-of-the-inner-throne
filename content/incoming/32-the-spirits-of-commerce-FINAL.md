@@ -2,7 +2,7 @@
 title: The Spirits of Commerce
 lessonNumber: 32
 volumeNumber: 3
-volumeOrder: 11
+volumeOrder: 10
 slug: the-spirits-of-commerce
 ritualNote: Commerce becomes powerful when guided by intelligence, fairness, and cooperation.
 excerpt: Markets are living systems shaped by the decisions and relationships of those who participate in them.
@@ -72,15 +72,15 @@ Commerce becomes a powerful force when guided by awareness and fairness.
 
 The practitioner who observes carefully becomes a wiser participant in the economy.
 
-# The Rite of Alignment
+## The Rite of Alignment
 
-## The Intelligence Behind the Lesson
+### The Intelligence Behind the Lesson
 
 Nisaba, the Sumerian goddess of writing, accounting, and record-keeping, represents the intellectual foundation of commerce. Ancient civilizations relied on careful records and calculation to organize trade and taxation.
 
 Within the Inner Throne system, Nisaba represents **Economic Intelligence** — the disciplined observation and knowledge required to navigate markets.
 
-## Energetic Current
+### Energetic Current
 
 The economic intelligence current strengthens:
 
@@ -91,7 +91,7 @@ The economic intelligence current strengthens:
 
 When this current becomes active, the practitioner approaches commerce with greater insight and discipline.
 
-## Communion Ritual
+### Communion Ritual
 
 Place a **yellow candle** on your altar.
 
@@ -105,6 +105,6 @@ Speak quietly:
 
 Write one action you will take to strengthen your economic awareness.
 
-## The Lunar Gate
+### The Lunar Gate
 
 The **Waxing Gibbous Moon** supports refinement and preparation. Rituals during this phase strengthen strategic thinking before major decisions.

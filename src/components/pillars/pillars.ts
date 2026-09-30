@@ -18,7 +18,7 @@ export const pillars = {
     currentTitle: "The Current",
     currentBody: [
       "Protection is the keeping of the spirit within its rightful bounds. It is the clearing of what clouds, the strengthening of what holds, and the quiet return to what is whole.",
-      "In the House, protection is not taught as suspicion toward life. It is taught as spiritual self-preservation. It allows the practitioner to remain open without becoming porous, present without becoming burdened, and clear without becoming hardened.",
+      "In the Shrine, protection is not taught as suspicion toward life. It is taught as spiritual self-preservation. It allows the practitioner to remain open without becoming porous, present without becoming burdened, and clear without becoming hardened.",
       "Where protection is absent, freedom becomes difficult to hold. Where protection is strengthened, sovereignty may remain seated and undisturbed.",
     ],
     whyTitle: "Why One Enters Here",
@@ -74,7 +74,7 @@ export const pillars = {
     ],
     supportTitle: "What May Support the Work",
     supportBody:
-      "Gather what assists the preservation of peace, clarity, and spiritual steadiness. Some instruments are prepared by the House. Others are chosen carefully as useful companions to the work.",
+      "Gather what assists the preservation of peace, clarity, and spiritual steadiness. Some instruments are prepared by the Shrine. Others are chosen carefully as useful companions to the work.",
     houseSupports: [
       { title: "Temple Candles", href: "/storehouse/temple-candles" },
       { title: "Petition Papers", href: "/storehouse/petition-papers" },
@@ -97,7 +97,7 @@ export const pillars = {
     subtitle:
       "Power is the freedom to stand in your own spiritual authority without shame, dependence, or self-abandonment.",
     heroBody:
-      "This chamber is entered when the work is worthiness, autonomy, ritual presence, and chosen self-mastery. Power in the House is not performance. It is the return of the spirit to its own seat, the strengthening of voice, and the willingness to live from inner authority.",
+      "This chamber is entered when the work is worthiness, autonomy, ritual presence, and chosen self-mastery. Power in the Shrine is not performance. It is the return of the spirit to its own seat, the strengthening of voice, and the willingness to live from inner authority.",
     ctaPrimary: {
       label: "Enter the Archive",
       href: "/archive?pillar=power",
@@ -188,7 +188,7 @@ export const pillars = {
     subtitle:
       "Prosperity is the freedom to receive, expand, and live in visible relationship with blessing.",
     heroBody:
-      "This chamber is entered when the work is increase, flow, offering, beauty, and rightful abundance. Prosperity in the House is not excess without meaning. It is sacred material relationship, the welcome of blessing, and the opening of life to fuller expression.",
+      "This chamber is entered when the work is increase, flow, offering, beauty, and rightful abundance. Prosperity in the Shrine is not excess without meaning. It is sacred material relationship, the welcome of blessing, and the opening of life to fuller expression.",
     ctaPrimary: {
       label: "Enter the Archive",
       href: "/archive?pillar=prosperity",

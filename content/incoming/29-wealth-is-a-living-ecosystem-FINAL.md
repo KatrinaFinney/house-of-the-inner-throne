@@ -2,7 +2,7 @@
 title: Wealth Is a Living Ecosystem
 lessonNumber: 29
 volumeNumber: 3
-volumeOrder: 8
+volumeOrder: 7
 slug: wealth-is-a-living-ecosystem
 ritualNote: Prosperity develops through relationships and circulation rather than isolation.
 excerpt: Wealth behaves less like a possession and more like a living ecosystem sustained through connection.
@@ -84,15 +84,15 @@ The practitioner who cultivates relationships and cooperation strengthens their 
 
 Abundance grows naturally where connections flourish.
 
-# The Rite of Alignment
+## The Rite of Alignment
 
-## The Intelligence Behind the Lesson
+### The Intelligence Behind the Lesson
 
 Cernunnos, the horned figure found within Celtic spiritual traditions, represents the vitality of the natural world. Often depicted surrounded by animals and vegetation, his imagery reflects the balance of ecosystems where life thrives through interconnected relationships.
 
 Within the Inner Throne system, Cernunnos represents **Natural Abundance** — prosperity that emerges from balanced and living systems.
 
-## Energetic Current
+### Energetic Current
 
 The natural abundance current strengthens:
 
@@ -103,7 +103,7 @@ The natural abundance current strengthens:
 
 When this current becomes active, the practitioner begins to see prosperity as something cultivated rather than captured.
 
-## Communion Ritual
+### Communion Ritual
 
 Place a **green candle** on your altar.
 
@@ -124,6 +124,6 @@ Speak quietly:
 
 Sit quietly for several minutes while contemplating the networks that support your life.
 
-## The Lunar Gate
+### The Lunar Gate
 
 The **Waxing Moon** strengthens growth and expansion. Rituals during this phase encourage prosperity ecosystems to develop steadily.

@@ -8,8 +8,8 @@ ritualNote: Spiritual communication requires patience, discernment, and discipli
 excerpt: True spiritual guidance rarely arrives through spectacle. It often emerges quietly through insight, intuition, and careful listening.
 spiritualIntelligence:
   cycle: Spirit, Lineage & Mystical Power
-  energy: Anubis
-  current: Sacred Discernment
+  energy: Thoth
+  current: Divine Language
   optimalMoonPhase: Waning Crescent
 status: published
 ---
@@ -76,26 +76,26 @@ When practitioners cultivate patience and discernment, spiritual insight becomes
 
 Wisdom rarely shouts. It waits for the mind to become quiet enough to hear it.
 
-# The Rite of Alignment
+## The Rite of Alignment
 
-## The Intelligence Behind the Lesson
+### The Intelligence Behind the Lesson
 
-Anubis, the ancient Egyptian guide of souls, presides over thresholds between worlds. His symbolism emphasizes discernment, judgment, and safe passage through unfamiliar territories.
+Thoth, the ancient Egyptian intelligence of writing, measured speech, wisdom, and sacred knowledge, represents language disciplined enough to carry truth. His presence here is not a promise that every thought is a message. It is a reminder that spiritual communication must be interpreted with patience, precision, and ethical care.
 
-Within the Inner Throne system, Anubis represents **Sacred Discernment** — the ability to navigate spiritual experience with wisdom and caution.
+Within the Inner Throne system, Thoth represents **Divine Language** — the capacity to receive, examine, and express insight without surrendering discernment.
 
-## Energetic Current
+### Energetic Current
 
-The sacred discernment current strengthens:
+The divine language current strengthens:
 
 • clarity in spiritual perception  
 • patient listening  
 • protection against self-deception  
 • responsible interpretation of intuition
 
-When this current becomes active, the practitioner becomes less interested in dramatic experiences and more committed to steady wisdom.
+When this current becomes active, the practitioner becomes less interested in dramatic experiences and more committed to listening carefully, testing meaning, and speaking responsibly.
 
-## Communion Ritual
+### Communion Ritual
 
 Place a **silver or gray candle** upon your altar.
 
@@ -111,6 +111,6 @@ Remain in silence for several minutes.
 
 Record any insights that arise afterward in a journal.
 
-## The Lunar Gate
+### The Lunar Gate
 
 The **Waning Crescent Moon** supports introspection and spiritual listening. Rituals during this phase deepen discernment and prepare the practitioner for new understanding.

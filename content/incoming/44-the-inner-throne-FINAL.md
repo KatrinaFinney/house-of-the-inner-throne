@@ -8,8 +8,8 @@ ritualNote: The Inner Throne represents the seat of spiritual sovereignty within
 excerpt: Spiritual sovereignty is not given by institutions or traditions. It emerges when individuals learn to govern their own awareness.
 spiritualIntelligence:
   cycle: Spirit, Lineage & Mystical Power
-  energy: Obatala
-  current: Sovereign Clarity
+  energy: Amun
+  current: Hidden Sovereignty
   optimalMoonPhase: Full Moon
 status: published
 ---
@@ -80,26 +80,26 @@ The throne was never distant.
 
 It was waiting.
 
-# The Rite of Alignment
+## The Rite of Alignment
 
-## The Intelligence Behind the Lesson
+### The Intelligence Behind the Lesson
 
-Obatala, revered within Yoruba cosmology, represents clarity, wisdom, and ethical balance. Associated with purity and thoughtful judgment, Obatala symbolizes the calm authority required for responsible leadership.
+Amun, whose name is commonly understood as “the Hidden One,” represents divine power that is present even when it is not displayed. This hiddenness offers a fitting final correspondence for the Inner Throne: genuine authority does not depend upon spectacle, permission, or constant recognition.
 
-Within the Inner Throne system, Obatala represents **Sovereign Clarity** — the balanced awareness that allows practitioners to govern their spiritual life with wisdom.
+Within the Inner Throne system, Amun represents **Hidden Sovereignty** — the quiet authority cultivated through self-knowledge, discipline, humility, and responsible action.
 
-## Energetic Current
+### Energetic Current
 
-The sovereign clarity current strengthens:
+The hidden sovereignty current strengthens:
 
 • disciplined awareness  
 • ethical decision-making  
 • humility within authority  
 • spiritual sovereignty
 
-When this current becomes active, the practitioner recognizes their responsibility as steward of their own consciousness.
+When this current becomes active, the practitioner recognizes that spiritual authority is most trustworthy when it is inwardly rooted and responsibly expressed.
 
-## Communion Ritual
+### Communion Ritual
 
 Place a **white candle** upon your altar.
 
@@ -113,6 +113,6 @@ Speak quietly:
 
 Remain in calm meditation for several minutes, allowing a sense of quiet authority to settle within you.
 
-## The Lunar Gate
+### The Lunar Gate
 
 The **Full Moon** represents illumination and completion. Rituals during this phase celebrate clarity, wisdom, and the culmination of spiritual development.

@@ -82,7 +82,7 @@ When shame is released, power returns.
 
 When power returns, autonomy strengthens.
 
-## The Rite of Restoration
+## The Rite of Alignment
 
 ### The Intelligence Behind the Lesson
 

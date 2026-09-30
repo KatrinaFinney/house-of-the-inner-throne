@@ -9,7 +9,7 @@ export default function RitualFoundationsPage() {
         <section className="max-w-4xl">
           <p className="text-[10px] uppercase tracking-[0.38em] text-(--gold) sm:text-xs">Ritual Foundations</p>
           <h1 className="mt-5 text-[3rem] leading-[0.95] sm:text-[4rem] md:text-[5rem]">Learn the structures beneath the work.</h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-(--muted)">Ritual Foundations is the instructional chamber of the House. Here, the materials, methods, and symbolic languages of ritual life are made more visible and more usable.</p>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-(--muted)">Ritual Foundations is the instructional chamber of the Shrine. Here, the materials, methods, and symbolic languages of ritual life are made more visible and more usable.</p>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-(--muted)">Some teachings may be read in shorter form within the site. Fuller guides may be received through your email or phone, so the work may continue beyond the page and accompany you in practice.</p>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-(--muted)">These guides do not replace intuition. They refine it. They help the practitioner move with greater understanding, clearer intention, and deeper spiritual freedom.</p>
         </section>

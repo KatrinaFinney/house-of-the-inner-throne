@@ -18,11 +18,11 @@ export function DailyDedicationSection() {
           </p>
 
           <h2 className="mt-4 text-4xl leading-tight sm:text-5xl">
-            Join the daily rite and remain in rhythm with the House.
+            Join the daily rite and remain in rhythm with the Shrine.
           </h2>
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--muted)]">
-            The Daily Dedication is the shared devotional rhythm of the House.
+            The Daily Dedication is the shared devotional rhythm of the Shrine.
             Join through our social channels each day to remain close to the work
             of discipline, remembrance, prayer, and spiritual order.
           </p>
@@ -62,7 +62,7 @@ export function DailyDedicationSection() {
                   Gather
                 </p>
                 <p className="mt-1 text-[var(--muted)]">
-                  Enter the appointed daily space and come into stillness with the House.
+                  Enter the appointed daily space and come into stillness with the Shrine.
                 </p>
               </li>
 

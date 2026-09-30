@@ -25,7 +25,7 @@ export function GateCopy({ isEntering, onEnter }: GateCopyProps) {
       </p>
 
       <h1 className="mx-auto max-w-[14ch] text-[1.95rem] leading-[0.94] tracking-[0.02em] sm:text-[2.35rem] md:text-[2.8rem] lg:text-[3.1rem]">
-        House of the
+        Shrine of the
         <br />
         Inner Throne
       </h1>
@@ -36,7 +36,7 @@ export function GateCopy({ isEntering, onEnter }: GateCopyProps) {
         transition={{ delay: 0.25, duration: 0.6 }}
         className="mx-auto mt-3 max-w-md text-[0.95rem] leading-7 text-(--muted) sm:text-[1rem]"
       >
-        The Sacred House of Ritual Sovereignty
+        The Sacred Shrine of Ritual Sovereignty
       </motion.p>
 
       <div className="mt-5 flex items-center justify-center">
@@ -46,7 +46,7 @@ export function GateCopy({ isEntering, onEnter }: GateCopyProps) {
           disabled={isEntering}
           className="min-w-41 rounded-full border border-(--gold) bg-(--gold) px-5 py-2.5 text-[0.68rem] font-medium uppercase tracking-[0.18em] text-black shadow-[0_8px_24px_rgba(202,169,107,0.12)] transition hover:brightness-[1.04] disabled:cursor-default disabled:opacity-80"
         >
-          Enter the House
+          Enter the Shrine
         </button>
       </div>
 

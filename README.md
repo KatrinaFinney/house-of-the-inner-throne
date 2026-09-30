@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shrine of the Inner Throne
 
-## Getting Started
+Shrine of the Inner Throne is a sacred digital shrine centered on ritual sovereignty, ancestral remembrance, and the three pillars of Protection, Power, and Prosperity.
 
-First, run the development server:
+The project combines a ceremonial entrance experience with the Inner Throne Archive, a manuscript-style collection of 44 teachings arranged across four volumes.
+
+## Technology
+
+- Next.js 16 App Router
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- Framer Motion
+- MDX and file-based content
+
+The Archive intentionally uses MDX files stored in Git. It does not require a database or CMS for the current version.
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Run the project checks with:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run audit:lessons
+npm run lint
+npm run build
+```
 
-## Learn More
+## Archive structure
 
-To learn more about Next.js, take a look at the following resources:
+```text
+content/
+├── incoming/                  # Source manuscripts
+└── archive/
+    ├── structure/             # Preface, index, volume pages, benediction
+    ├── volume-1/              # Foundations of Sovereignty
+    ├── volume-2/              # The Architecture of Ritual
+    ├── volume-3/              # The Ecology of Prosperity
+    └── volume-4/              # The Lineage of Spirit
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The public Archive routes are:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```text
+/archive
+/archive/contents
+/archive/preface
+/archive/volume/[volume]
+/archive/volume/[volume]/[slug]
+/archive/closing
+```
 
-## Deploy on Vercel
+## Compiling manuscripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Compile one manuscript from `content/incoming`:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run compile:lesson -- 01-spiritual-sovereignty-FINAL.md
+```
+
+Compile every incoming manuscript:
+
+```bash
+npm run compile:incoming
+```
+
+The compiler validates required frontmatter, normalizes slugs, rejects duplicate lesson numbers and slugs, removes the source `-FINAL` suffix, and writes canonical `.mdx` files into the correct volume directory.
+
+The lesson audit also verifies the 44-manuscript canon, evolved lesson anatomy, unique spiritual correspondences, contiguous volume order, and absence of duplicated substantive paragraphs. See [`docs/archive-editorial-standard.md`](docs/archive-editorial-standard.md).
+
+Required lesson metadata includes:
+
+- `title`
+- `lessonNumber`
+- `volumeNumber`
+- `volumeOrder`
+- `slug`
+- `status`
+
+Optional metadata includes `excerpt` and `ritualNote`.
+
+## Brand foundation
+
+The Shrine is guided by Sarafina Ethereal and organized around three living pillars:
+
+- Protection
+- Power
+- Prosperity
+
+Its editorial standard favors discipline over spectacle, responsibility over sensationalism, and spiritual privacy over public performance.
+
+## Current development priorities
+
+1. Stabilize and verify the ceremonial entrance.
+2. Resolve unfinished or broken public routes.
+3. Map all Pillar recommendations to canonical Archive folios.
+4. Add the Shrine's email, policy, and launch infrastructure.
+5. Introduce the first Ancestor Money offering after physical prototyping and safety review.
+6. Execute the four-week founding content runway in `docs/marketing/`.

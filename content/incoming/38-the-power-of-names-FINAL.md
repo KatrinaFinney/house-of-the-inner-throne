@@ -78,15 +78,15 @@ The practitioner who learns to name clearly gains deeper influence over their ow
 
 Clarity of language strengthens clarity of spirit.
 
-# The Rite of Alignment
+## The Rite of Alignment
 
-## The Intelligence Behind the Lesson
+### The Intelligence Behind the Lesson
 
 Metatron’s Cube, a sacred geometric figure within mystical traditions, represents the structural patterns underlying creation. The diagram contains interconnected shapes symbolizing the order and intelligence present throughout the universe.
 
 Within the Inner Throne system, Metatron’s Cube represents **Sacred Pattern** — the recognition that names, symbols, and forms organize perception.
 
-## Energetic Current
+### Energetic Current
 
 The sacred pattern current strengthens:
 
@@ -97,7 +97,7 @@ The sacred pattern current strengthens:
 
 When this current becomes active, the practitioner becomes more conscious of how words shape their spiritual environment.
 
-## Communion Ritual
+### Communion Ritual
 
 Place a **violet candle** on your altar.
 
@@ -111,6 +111,6 @@ As the candle burns, reflect on the meaning of the words you have spoken and the
 
 Remain quietly focused for several minutes.
 
-## The Lunar Gate
+### The Lunar Gate
 
 The **Waxing Crescent Moon** supports beginnings and the formation of intention. Rituals performed during this phase strengthen new ideas and identities.

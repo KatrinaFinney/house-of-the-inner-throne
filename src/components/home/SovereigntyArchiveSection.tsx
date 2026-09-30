@@ -20,7 +20,7 @@ export function SovereigntyArchiveSection() {
 
           <p className="mt-4 text-lg leading-8 text-(--muted)">
             Teachings, philosophy, correspondences, and ritual instruction
-            preserved by the House.
+            preserved by the Shrine.
           </p>
 
           <p className="mt-4 text-base leading-7 text-(--muted)">
@@ -40,7 +40,7 @@ export function SovereigntyArchiveSection() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-(--muted)">
-            The Archive contains the manuscript body of the House: lessons that
+            The Archive contains the manuscript body of the Shrine: lessons that
             train perception, deepen ritual intelligence, and restore sovereignty
             to the individual.
           </p>

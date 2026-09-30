@@ -51,7 +51,7 @@ export function RitualFoundationsSection() {
 
           <p className="mt-6 text-lg leading-8 text-(--muted)">
             Ritual Foundations offers guided introductions to the materials,
-            symbols, and methods that support practice in the House.
+            symbols, and methods that support practice in the Shrine.
           </p>
 
           <p className="mt-4 text-lg leading-8 text-(--muted)">

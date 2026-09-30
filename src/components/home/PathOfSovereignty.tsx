@@ -44,7 +44,7 @@ export function PathOfSovereignty() {
 </p>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-[var(--muted)]">
-            The House is entered through practice. Each chamber opens a sovereign path.
+            The Shrine is entered through practice. Each chamber opens a sovereign path.
           </p>
         </motion.div>
 

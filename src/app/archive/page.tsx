@@ -29,7 +29,7 @@ export default async function ArchivePage() {
     <span aria-hidden="true" className="manuscript-breadcrumb-arrow">
       ←
     </span>
-    <span>Return to the House</span>
+    <span>Return to the Shrine</span>
   </Link>
 </div>
 </div>

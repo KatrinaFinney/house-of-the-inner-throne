@@ -192,7 +192,7 @@ export function PillarPageTemplate(props: PillarPageProps) {
           <div className="mt-10 grid gap-10 lg:grid-cols-2">
             <div>
               <p className="text-sm uppercase tracking-[0.24em] text-(--gold)">
-                Prepared by the House
+                Prepared by the Shrine
               </p>
               <div className="mt-4 grid gap-4">
                 {props.houseSupports.map((item) => (

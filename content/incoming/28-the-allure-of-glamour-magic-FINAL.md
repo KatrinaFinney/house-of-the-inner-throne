@@ -2,7 +2,7 @@
 title: The Allure of Glamour Magic
 lessonNumber: 28
 volumeNumber: 3
-volumeOrder: 7
+volumeOrder: 6
 slug: the-allure-of-glamour-magic
 ritualNote: Glamour magic influences perception by shaping how others interpret presence and appearance.
 excerpt: Glamour magic is the art of enhancing perception so that one's presence communicates intention clearly.
@@ -64,15 +64,15 @@ When presentation aligns with intention, perception becomes clearer.
 
 Opportunity becomes easier to recognize.
 
-# The Rite of Alignment
+## The Rite of Alignment
 
-## The Intelligence Behind the Lesson
+### The Intelligence Behind the Lesson
 
 Fortuna, the Roman goddess of fortune and fate, symbolizes the unpredictable yet responsive nature of opportunity. She represents the moments when preparation and visibility intersect.
 
 Within the Inner Throne system, Fortuna symbolizes fortunate visibility — the ability to be seen and recognized when opportunity appears.
 
-## Energetic Current
+### Energetic Current
 
 The fortunate visibility current strengthens:
 
@@ -83,7 +83,7 @@ The fortunate visibility current strengthens:
 
 When this current becomes active, the practitioner becomes more conscious of how they present themselves to the world.
 
-## Communion Ritual
+### Communion Ritual
 
 Place a **gold candle** upon your altar.
 
@@ -97,6 +97,6 @@ Speak quietly:
 
 Remain seated for several minutes visualizing yourself moving confidently through environments where opportunity appears.
 
-## The Lunar Gate
+### The Lunar Gate
 
 The **Waxing Gibbous Moon** strengthens recognition and refinement. Rituals during this phase support visibility and the preparation required before success becomes fully realized.

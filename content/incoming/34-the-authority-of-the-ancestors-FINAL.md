@@ -72,15 +72,15 @@ Honoring the ancestors deepens gratitude and responsibility.
 
 The practitioner becomes both student of the past and steward of the future.
 
-# The Rite of Alignment
+## The Rite of Alignment
 
-## The Intelligence Behind the Lesson
+### The Intelligence Behind the Lesson
 
 Marie Laveau, remembered as a powerful spiritual leader in New Orleans, embodied the authority of ancestral knowledge and community wisdom. Her legacy reflects the strength that emerges when spiritual practice honors lineage and cultural memory.
 
 Within the Inner Throne system, Marie Laveau represents **Ancestral Authority** — the wisdom that emerges through remembrance and continuity.
 
-## Energetic Current
+### Energetic Current
 
 The ancestral authority current strengthens:
 
@@ -91,7 +91,7 @@ The ancestral authority current strengthens:
 
 When this current becomes active, the practitioner begins to feel supported by the presence of those who came before.
 
-## Communion Ritual
+### Communion Ritual
 
 Place a **purple candle** upon your altar.
 
@@ -105,6 +105,6 @@ Speak quietly:
 
 Sit quietly for several minutes, allowing gratitude to guide your reflection.
 
-## The Lunar Gate
+### The Lunar Gate
 
 The **Waning Moon** supports remembrance and reflection. Rituals during this phase strengthen connection with ancestral wisdom.

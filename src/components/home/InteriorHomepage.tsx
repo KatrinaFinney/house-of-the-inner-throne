@@ -48,21 +48,21 @@ export function InteriorHomepage() {
             <div className="mb-8 h-px w-24 bg-[linear-gradient(90deg,rgba(202,169,107,0.7),rgba(202,169,107,0.08))]" />
 
             <p className="text-[10px] uppercase tracking-[0.38em] text-(--gold) sm:text-xs">
-              Welcome to the House
+              Welcome to the Shrine
             </p>
 
             <h1 className="mt-5 text-[2.9rem] leading-[0.92] sm:text-[3.8rem] md:text-[4.7rem] lg:text-[5.4rem]">
-              House of the Inner Throne
+              Shrine of the Inner Throne
             </h1>
 
             <p className="mt-6 max-w-xl text-base leading-8 text-(--muted) sm:text-lg">
-              Take your seat within. Enter a house of spiritual sovereignty,
+              Take your seat within. Enter a shrine of spiritual sovereignty,
               ancestral remembrance, ritual intelligence, and sacred prosperity.
             </p>
 
             <p className="mt-4 max-w-xl text-base leading-8 text-(--muted)">
               Study the Archive, enter by pillar, or gather what supports your
-              practice. The House is structured, but your way within remains your own.
+              practice. The Shrine is structured, but your way within remains your own.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">

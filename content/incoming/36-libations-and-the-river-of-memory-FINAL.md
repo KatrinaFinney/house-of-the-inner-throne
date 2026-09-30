@@ -74,15 +74,15 @@ Libations remind the practitioner that gratitude is not merely a feeling.
 
 It is an action.
 
-# The Rite of Alignment
+## The Rite of Alignment
 
-## The Intelligence Behind the Lesson
+### The Intelligence Behind the Lesson
 
 Yemaya, the great mother of the ocean within Yoruba and Afro-Caribbean traditions, represents the vast waters from which life emerges. She embodies protection, nurturing, and the ancestral depth carried within the sea.
 
 Within the Inner Throne system, Yemaya symbolizes **Ancestral Waters** — the flowing memory connecting generations.
 
-## Energetic Current
+### Energetic Current
 
 The ancestral waters current strengthens:
 
@@ -93,7 +93,7 @@ The ancestral waters current strengthens:
 
 When this current becomes active, the practitioner feels supported by the deep river of ancestral memory.
 
-## Communion Ritual
+### Communion Ritual
 
 Fill a small cup with **clean water**.
 
@@ -109,6 +109,6 @@ Pour a small portion of the water onto the earth.
 
 Remain quietly present for several moments, acknowledging the connection between generations.
 
-## The Lunar Gate
+### The Lunar Gate
 
 The **Waning Moon** supports remembrance and release. Rituals during this phase strengthen ancestral reflection and emotional healing.

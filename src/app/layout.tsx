@@ -16,8 +16,12 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "House of the Inner Throne",
-  description: "Temple of protection, power, and prosperity.",
+  title: {
+    default: "Shrine of the Inner Throne",
+    template: "%s | Shrine of the Inner Throne",
+  },
+  description:
+    "A sacred digital shrine of ritual sovereignty, ancestral remembrance, protection, power, and prosperity.",
 };
 
 export default function RootLayout({

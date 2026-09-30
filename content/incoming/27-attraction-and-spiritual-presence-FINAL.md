@@ -2,7 +2,7 @@
 title: Attraction and Spiritual Presence
 lessonNumber: 27
 volumeNumber: 3
-volumeOrder: 6
+volumeOrder: 5
 slug: attraction-and-spiritual-presence
 ritualNote: Presence shapes perception, and perception influences opportunity.
 excerpt: The way a practitioner carries themselves influences how opportunity recognizes them.
@@ -66,15 +66,15 @@ The practitioner who cultivates presence begins to notice that opportunity appro
 
 Magnetism grows through awareness.
 
-# The Rite of Alignment
+## The Rite of Alignment
 
-## The Intelligence Behind the Lesson
+### The Intelligence Behind the Lesson
 
 Erzulie Fréda, revered in Haitian Vodou, represents beauty, elegance, refinement, and emotional magnetism. She embodies the ability to attract admiration, cooperation, and affection through grace rather than force.
 
 Within the Inner Throne system, Erzulie Fréda symbolizes magnetic presence — the quiet influence that draws opportunity and goodwill.
 
-## Energetic Current
+### Energetic Current
 
 The magnetic grace current strengthens:
 
@@ -85,7 +85,7 @@ The magnetic grace current strengthens:
 
 When this current becomes active, the practitioner becomes more aware of how their presence shapes opportunity.
 
-## Communion Ritual
+### Communion Ritual
 
 Place a **pink candle** upon your altar.
 
@@ -101,6 +101,6 @@ Sit quietly for several minutes, focusing on calm breathing and upright posture.
 
 Allow the feeling of composed presence to settle into your body.
 
-## The Lunar Gate
+### The Lunar Gate
 
 The **Waxing Moon** supports attraction and expansion. Rituals during this phase strengthen the practitioner's ability to draw opportunity and cooperation.

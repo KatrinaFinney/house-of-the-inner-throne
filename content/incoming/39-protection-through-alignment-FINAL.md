@@ -78,15 +78,15 @@ The practitioner who cultivates alignment becomes difficult to disturb.
 
 Protection becomes a natural extension of integrity.
 
-# The Rite of Alignment
+## The Rite of Alignment
 
-## The Intelligence Behind the Lesson
+### The Intelligence Behind the Lesson
 
 Erzulie Dantor, within Haitian Vodou, embodies fierce maternal protection, loyalty, and unwavering devotion to those she protects. Her presence represents the strength that arises when love and courage combine.
 
 Within the Inner Throne system, Erzulie Dantor symbolizes **Fierce Devotion** — the protective force that emerges when a practitioner stands firmly within their truth.
 
-## Energetic Current
+### Energetic Current
 
 The fierce devotion current strengthens:
 
@@ -97,7 +97,7 @@ The fierce devotion current strengthens:
 
 When this current becomes active, the practitioner becomes less tolerant of forces that threaten their stability.
 
-## Communion Ritual
+### Communion Ritual
 
 Place a **red candle** on your altar.
 
@@ -111,6 +111,6 @@ Reflect for several minutes on the choices that would strengthen this alignment.
 
 Allow the flame to represent the courage required to maintain integrity.
 
-## The Lunar Gate
+### The Lunar Gate
 
 The **Waning Moon** supports release and correction. Rituals during this phase help practitioners remove behaviors and influences that disrupt alignment.

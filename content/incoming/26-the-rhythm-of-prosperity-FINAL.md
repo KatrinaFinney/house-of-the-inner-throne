@@ -2,7 +2,7 @@
 title: The Rhythm of Prosperity
 lessonNumber: 26
 volumeNumber: 3
-volumeOrder: 5
+volumeOrder: 4
 slug: the-rhythm-of-prosperity
 ritualNote: Prosperity moves in cycles of growth, stability, and renewal.
 excerpt: Wealth behaves like a living ecosystem that expands and contracts through natural rhythms.
@@ -64,15 +64,15 @@ Prosperity becomes easier to navigate when the practitioner understands its cycl
 
 Wisdom grows through observation.
 
-# The Rite of Alignment
+## The Rite of Alignment
 
-## The Intelligence Behind the Lesson
+### The Intelligence Behind the Lesson
 
 Njörðr, the Norse deity associated with the sea, commerce, and maritime wealth, represents prosperity flowing through trade and exchange. His mythology reflects the importance of tides, navigation, and the movement of goods across oceans.
 
 Within the Inner Throne system, Njörðr represents the oceanic flow of wealth — prosperity that moves through cycles rather than remaining static.
 
-## Energetic Current
+### Energetic Current
 
 The oceanic prosperity current strengthens:
 
@@ -83,7 +83,7 @@ The oceanic prosperity current strengthens:
 
 When this current becomes active, the practitioner learns to move with prosperity rather than resisting its rhythms.
 
-## Communion Ritual
+### Communion Ritual
 
 Place a **blue candle** on your altar.
 
@@ -99,6 +99,6 @@ Speak quietly:
 
 Touch the water lightly with your fingers and remain seated for several moments of reflection.
 
-## The Lunar Gate
+### The Lunar Gate
 
 The **Waxing Moon** supports growth and forward movement. Prosperity rituals during this phase strengthen expanding opportunities.

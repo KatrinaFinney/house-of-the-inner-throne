@@ -3,7 +3,7 @@
 title: Partnership With the Moon
 lessonNumber: 24
 volumeNumber: 3
-volumeOrder: 4
+volumeOrder: 2
 slug: partnership-with-the-moon
 ritualNote: The moon reflects natural cycles of growth, release, and renewal.
 excerpt: Observing lunar phases helps practitioners align ritual work with natural rhythms.
@@ -45,22 +45,22 @@ Silver represents lunar reflection and intuitive awareness.
 
 The moon teaches patience and respect for natural timing.
 
-# The Rite of Alignment
+## The Rite of Alignment
 
-## The Intelligence Behind the Lesson
+### The Intelligence Behind the Lesson
 
 Maia symbolizes nurturing growth and gradual development.
 
-## Energetic Current
+### Energetic Current
 
 • patience with natural timing  
 • intuitive awareness  
 • nurturing intentions into form  
 
-## Communion Ritual
+### Communion Ritual
 
 Light a **silver candle** and spend a few minutes observing the moon or reflecting on its current phase.
 
-## The Lunar Gate
+### The Lunar Gate
 
 The **Waxing Crescent Moon** supports new intentions and early development.
