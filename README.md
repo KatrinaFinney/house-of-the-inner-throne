@@ -85,6 +85,19 @@ Required lesson metadata includes:
 
 Optional metadata includes `excerpt` and `ritualNote`.
 
+## Founding-list email setup
+
+The homepage founding-list form sends subscribers to a MailerLite group through
+the server-only `/api/founding-list` endpoint. Copy `.env.example` to `.env.local`
+and configure:
+
+- `MAILERLITE_API_TOKEN`: generated in MailerLite under **Integrations → MailerLite API**
+- `MAILERLITE_FOUNDING_GROUP_ID`: the numeric ID of the MailerLite group that should receive founding-list subscribers
+
+Add the same values to the Vercel project for Preview and Production before
+testing a live signup. Never expose the API token through a `NEXT_PUBLIC_`
+variable.
+
 ## Brand foundation
 
 The Shrine is guided by Sarafina Ethereal and organized around three living pillars:

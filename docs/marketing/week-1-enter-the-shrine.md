@@ -145,6 +145,6 @@ Description:
 - [ ] Confirm the first-manuscript link opens “Spiritual Sovereignty.”
 - [ ] Schedule Monday, Wednesday, Friday, and Sunday contributions.
 
-## Email capture dependency
+## Email capture
 
-The founding-list copy and placement can be added after an email provider and destination list are selected. Do not publish a collection form until submissions have been tested from signup through confirmation and storage.
+The homepage founding-list form is wired to MailerLite through a server-only endpoint. Before publishing it, configure the MailerLite API token and founding-list group ID in Vercel, then test the complete path from form submission through subscriber storage and the first welcome message.

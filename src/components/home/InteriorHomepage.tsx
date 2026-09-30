@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { BeginWithinSection } from "./BeginWithinSection";
 import { DailyDedicationSection } from "./DailyDedicationSection";
+import { FoundingListSection } from "./FoundingListSection";
 import { StorehouseSection } from "./StorehouseSection";
 import { RitualFoundationsSection } from "./RitualFoundationsSection";
 import { IncenseSmoke } from "./IncenseSmoke";
@@ -124,6 +125,7 @@ export function InteriorHomepage() {
 
       <BeginWithinSection />
       <SovereigntyArchiveSection />
+      <FoundingListSection />
       <RitualFoundationsSection />
       <StorehouseSection />
       <DailyDedicationSection />
