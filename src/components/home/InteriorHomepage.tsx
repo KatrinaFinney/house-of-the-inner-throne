@@ -56,28 +56,30 @@ export function InteriorHomepage() {
             </h1>
 
             <p className="mt-6 max-w-xl text-base leading-8 text-(--muted) sm:text-lg">
-              Take your seat within. Enter a shrine of spiritual sovereignty,
-              ancestral remembrance, ritual intelligence, and sacred prosperity.
+              A sacred digital space for the throne within. Enter through
+              spiritual sovereignty, ancestral remembrance, ritual intelligence,
+              and disciplined prosperity.
             </p>
 
             <p className="mt-4 max-w-xl text-base leading-8 text-(--muted)">
-              Study the Archive, enter by pillar, or gather what supports your
-              practice. The Shrine is structured, but your way within remains your own.
+              The Archive holds 44 manuscripts across four volumes. Begin with
+              Spiritual Sovereignty, enter by pillar, or follow the teaching that
+              calls your attention.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <Link
-                href="/archive"
+                href="/archive/volume/foundations-of-sovereignty/spiritual-sovereignty"
                 className="inline-flex min-w-55 items-center justify-center rounded-full border border-(--gold) bg-(--gold) px-7 py-3 text-[0.78rem] font-medium uppercase tracking-[0.16em] text-black shadow-[0_8px_30px_rgba(202,169,107,0.18)] transition hover:brightness-[1.04]"
               >
-                Enter the Archive
+                Begin with Sovereignty
               </Link>
 
               <Link
-                href="/begin-within"
+                href="/archive"
                 className="inline-flex min-w-55 items-center justify-center rounded-full border border-[rgba(202,169,107,0.28)] bg-white/3 px-7 py-3 text-[0.78rem] font-medium uppercase tracking-[0.16em] text-(--text) transition hover:bg-white/6"
               >
-                Begin Within
+                Explore the Archive
               </Link>
             </div>
           </motion.div>
