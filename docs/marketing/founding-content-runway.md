@@ -15,39 +15,37 @@ This runway introduces Shrine of the Inner Throne before product promotion begin
 
 | Week | Theme | Primary content | Supporting content | Invitation |
 |---|---|---|---|---|
-| 1 | Enter the Shrine | The House has become the Shrine | What the Inner Throne means; meet the Three Pillars | Enter the Shrine and join the founding list |
+| 1 | Enter the Shrine | A sacred space for the throne within | What the Inner Throne means; meet the Three Pillars | Enter the Shrine and begin with the Archive |
 | 2 | Protection before access | Privacy is a form of protection | Sacred boundaries; why every practice should not be posted | Read a Protection manuscript |
 | 3 | Power through discipline | Sovereignty is a practice | Attention is spiritual currency; tools do not replace discipline | Enter the Power pillar |
 | 4 | Prosperity in right relationship | Prosperity must be held by structure | Offering, circulation, stewardship; introduction to ancestral currency | Join the Ancestor Money waitlist |
 
-## Founding post 01: The House has become the Shrine
+## Founding post 01: Enter the Shrine
 
 ### Carousel copy
 
 **Slide 1**  
-The House has become the Shrine.
+Enter the Shrine.
 
 **Slide 2**  
-The name changed because the purpose became clearer.
+A sacred digital space for the throne within.
 
 **Slide 3**  
-A house can hold many things. A shrine is arranged around what must be remembered, protected, and approached with intention.
+The Inner Throne is the seat of spiritual authority no one else can occupy for you.
 
 **Slide 4**  
-Shrine of the Inner Throne is a sacred digital space for ritual sovereignty, ancestral remembrance, and disciplined prosperity.
+Here, spiritual sovereignty is studied through ancestral remembrance, ritual intelligence, and disciplined prosperity.
 
 **Slide 5**  
 Its three living pillars remain: Protection. Power. Prosperity.
 
 **Slide 6**  
-The Archive is being prepared. The Storehouse will follow. The work begins within.
+The Archive is open for study. The Storehouse will follow in its appointed time.
 
 **Slide 7**  
 Enter the Shrine.
 
 ### Caption
-
-The name has changed because the vision has come into sharper focus.
 
 Shrine of the Inner Throne is a sacred digital shrine devoted to spiritual sovereignty, ancestral remembrance, and the disciplined cultivation of Protection, Power, and Prosperity.
 
@@ -63,8 +61,8 @@ Enter the Shrine. The work begins within.
 - Slow gold light appearing beneath the door
 - Close shots of parchment, smoke, a closed manuscript, and an unlit candle
 - No altar reveal
-- On-screen text drawn from slides 1, 3, 5, and 7
-- Calm voiceover using the caption's first, second, and final paragraphs
+- On-screen text drawn from slides 1, 2, 5, and 7
+- Calm voiceover using the caption's first and final paragraphs
 
 ## Founding post 02: What is the Inner Throne?
 
