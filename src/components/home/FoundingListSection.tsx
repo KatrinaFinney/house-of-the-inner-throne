@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 type SubmissionState = "idle" | "submitting" | "success" | "error";
 
@@ -112,7 +113,11 @@ export function FoundingListSection() {
             />
             <span>
               I agree to receive teachings and announcements from Shrine of the
-              Inner Throne. I may unsubscribe at any time.
+              Inner Throne. I may unsubscribe at any time. See the{" "}
+              <Link href="/privacy" className="underline decoration-white/30 underline-offset-4 hover:text-(--text)">
+                privacy notice
+              </Link>
+              .
             </span>
           </label>
 

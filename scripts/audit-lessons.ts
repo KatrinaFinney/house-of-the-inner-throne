@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import matter from "gray-matter";
+import { parseFrontmatter } from "../src/lib/frontmatter";
 
 const ROOT = process.cwd();
 const INCOMING_DIR = path.join(ROOT, "content", "incoming");
@@ -68,17 +68,17 @@ async function loadLessons(): Promise<Lesson[]> {
   return Promise.all(
     fileNames.map(async (fileName) => {
       const source = await fs.readFile(path.join(INCOMING_DIR, fileName), "utf8");
-      const { data, content } = matter(source.replace(/^\uFEFF/, "").trimStart());
-      const intelligence = data.spiritualIntelligence;
+      const { data, content } = parseFrontmatter(source.replace(/^\uFEFF/, "").trimStart());
+      const intelligence = data.spiritualIntelligence as Record<string, unknown> | undefined;
 
       return {
         fileName,
-        lessonNumber: data.lessonNumber,
-        volumeNumber: data.volumeNumber,
-        volumeOrder: data.volumeOrder,
-        title: data.title,
-        slug: data.slug,
-        energy: intelligence?.energy,
+        lessonNumber: data.lessonNumber as number,
+        volumeNumber: data.volumeNumber as number,
+        volumeOrder: data.volumeOrder as number,
+        title: data.title as string,
+        slug: data.slug as string,
+        energy: intelligence?.energy as string,
         content,
       };
     }),

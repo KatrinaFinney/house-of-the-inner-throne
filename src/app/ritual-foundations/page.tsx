@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { RitualFoundationsGrid } from "@/components/ritual-foundations/RitualFoundationsGrid";
 import { ritualFoundations } from "@/components/ritual-foundations/ritualFoundations";
+
+export const metadata: Metadata = {
+  title: "Ritual Foundations",
+  description: "Guided introductions to the materials, methods, and symbolic languages that support conscious ritual practice.",
+};
 
 export default function RitualFoundationsPage() {
   return (

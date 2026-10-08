@@ -52,7 +52,11 @@ export function InteriorHomepage() {
               Welcome to the Shrine
             </p>
 
-            <h1 className="mt-5 text-[2.9rem] leading-[0.92] sm:text-[3.8rem] md:text-[4.7rem] lg:text-[5.4rem]">
+            <h1
+              data-shrine-interior-heading
+              tabIndex={-1}
+              className="mt-5 text-[2.9rem] leading-[0.92] outline-none sm:text-[3.8rem] md:text-[4.7rem] lg:text-[5.4rem]"
+            >
               Shrine of the Inner Throne
             </h1>
 

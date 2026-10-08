@@ -6,3 +6,7 @@ export const ritualFoundations = [
   { title: "Petition Papers", body: "Learn how intention is clarified, written, and directed through petition as part of conscious ritual practice.", href: "/ritual-foundations/petition-papers", guideHref: "/ritual-foundations/petition-papers/full-guide" },
   { title: "Incense", body: "Understand smoke, atmosphere, elevation, and the spiritual use of incense in cleansing, offering, and preparation.", href: "/ritual-foundations/incense", guideHref: "/ritual-foundations/incense/full-guide" }
 ] as const;
+
+export function getRitualFoundation(slug: string) {
+  return ritualFoundations.find((item) => item.href.endsWith(`/${slug}`));
+}

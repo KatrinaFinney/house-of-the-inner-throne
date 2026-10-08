@@ -4,6 +4,13 @@ const MAILERLITE_SUBSCRIBERS_URL =
   "https://connect.mailerlite.com/api/subscribers";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const GROUP_ID_PATTERN = /^\d+$/;
+const REQUEST_TIMEOUT_MS = 8_000;
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1_000;
+const RATE_LIMIT_MAX = 5;
+
+type RateLimitEntry = { count: number; resetAt: number };
+const rateLimits = new Map<string, RateLimitEntry>();
 
 type SignupBody = {
   email?: unknown;
@@ -12,12 +19,43 @@ type SignupBody = {
   website?: unknown;
 };
 
+function getClientKey(request: Request) {
+  return request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+}
+
+function isRateLimited(key: string) {
+  const now = Date.now();
+  const existing = rateLimits.get(key);
+
+  if (!existing || existing.resetAt <= now) {
+    rateLimits.set(key, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+
+  existing.count += 1;
+  return existing.count > RATE_LIMIT_MAX;
+}
+
 export async function POST(request: Request) {
-  let body: SignupBody;
+  if (isRateLimited(getClientKey(request))) {
+    return NextResponse.json(
+      { message: "Please wait a few minutes before trying again." },
+      { status: 429 },
+    );
+  }
+
+  let body: SignupBody | null;
 
   try {
     body = (await request.json()) as SignupBody;
   } catch {
+    return NextResponse.json(
+      { message: "Please enter your information again." },
+      { status: 400 },
+    );
+  }
+
+  if (!body || typeof body !== "object" || Array.isArray(body)) {
     return NextResponse.json(
       { message: "Please enter your information again." },
       { status: 400 },
@@ -55,7 +93,7 @@ export async function POST(request: Request) {
   const token = process.env.MAILERLITE_API_TOKEN;
   const groupId = process.env.MAILERLITE_FOUNDING_GROUP_ID;
 
-  if (!token || !groupId) {
+  if (!token || !groupId || !GROUP_ID_PATTERN.test(groupId)) {
     console.error("MailerLite founding-list environment variables are not configured.");
     return NextResponse.json(
       { message: "The founding list is being prepared. Please return soon." },
@@ -63,21 +101,35 @@ export async function POST(request: Request) {
     );
   }
 
-  const response = await fetch(MAILERLITE_SUBSCRIBERS_URL, {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      Authorization: `Bearer ${token}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      email,
-      fields: name ? { name } : undefined,
-      groups: [groupId],
-      status: "active",
-    }),
-    cache: "no-store",
-  });
+  let response: Response;
+
+  try {
+    response = await fetch(MAILERLITE_SUBSCRIBERS_URL, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        fields: name ? { name } : undefined,
+        groups: [groupId],
+        status: "active",
+      }),
+      cache: "no-store",
+      signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
+    });
+  } catch (error) {
+    console.error(
+      "MailerLite signup request failed.",
+      error instanceof Error ? error.name : "Unknown error",
+    );
+    return NextResponse.json(
+      { message: "We could not complete your entry. Please try again shortly." },
+      { status: 502 },
+    );
+  }
 
   if (!response.ok) {
     console.error(`MailerLite signup failed with status ${response.status}.`);

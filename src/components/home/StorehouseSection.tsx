@@ -4,10 +4,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const storeItems = [
-  { title: "Ancestor Currency", href: "/storehouse/ancestor-currency" },
-  { title: "Petition Papers", href: "/storehouse/petition-papers" },
-  { title: "Temple Candles", href: "/storehouse/temple-candles" },
-  { title: "Ritual Kits", href: "/storehouse/ritual-kits" },
+  { title: "Ancestor Currency", href: "/storehouse#ancestor-currency" },
+  { title: "Petition Papers", href: "/storehouse#petition-papers" },
+  { title: "Temple Candles", href: "/storehouse#temple-candles" },
+  { title: "Ritual Kits", href: "/storehouse#ritual-kits" },
 ];
 
 export function StorehouseSection() {

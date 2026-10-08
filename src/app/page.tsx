@@ -1,10 +1,11 @@
-import { Suspense } from "react";
 import { ShrineGate } from "@/components/gate/ShrineGate";
 
-export default function HomePage() {
-  return (
-    <Suspense fallback={null}>
-      <ShrineGate />
-    </Suspense>
-  );
+type HomePageProps = {
+  searchParams: Promise<{ interior?: string }>;
+};
+
+export default async function HomePage({ searchParams }: HomePageProps) {
+  const { interior } = await searchParams;
+
+  return <ShrineGate initialOpen={interior === "1"} />;
 }

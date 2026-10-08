@@ -1,8 +1,9 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import matter from "gray-matter";
+import { parseFrontmatter } from "../src/lib/frontmatter";
 import slugify from "slugify";
+import { stringify as stringifyYaml } from "yaml";
 import type {
   ArchiveStatus,
   CompiledLesson,
@@ -229,7 +230,7 @@ async function readExistingLessons(): Promise<ExistingLessonRecord[]> {
   for (const filePath of files) {
     const source = await fs.readFile(filePath, "utf8");
     const normalizedSource = source.replace(/^\uFEFF/, "").trimStart();
-    const { data } = matter(normalizedSource);
+    const { data } = parseFrontmatter(normalizedSource);
 
     try {
       const frontmatter = parseLessonFrontmatter(data, filePath);
@@ -286,10 +287,10 @@ async function compileLessonFromFile(incomingFileName: string): Promise<Compiled
   const source = await fs.readFile(incomingPath, "utf8");
 
   // Remove a possible UTF-8 BOM and any leading whitespace/newlines
-  // before the frontmatter block so gray-matter can parse reliably.
+  // before the frontmatter block so the parser can read it reliably.
   const normalizedSource = source.replace(/^\uFEFF/, "").trimStart();
 
-  const { data, content } = matter(normalizedSource);
+  const { data, content } = parseFrontmatter(normalizedSource);
 
   const frontmatter = parseLessonFrontmatter(data, incomingFileName);
   validateSemanticRules(frontmatter, incomingFileName);
@@ -332,7 +333,8 @@ function buildCompiledFile(lesson: CompiledLesson): string {
     status: lesson.status,
   };
 
-  return matter.stringify(`${lesson.content}\n`, frontmatterData);
+  const yaml = stringifyYaml(frontmatterData, { lineWidth: 0 }).trim();
+  return `---\n${yaml}\n---\n\n${lesson.content}\n`;
 }
 
 export async function runCompileLesson(incomingFileName: string): Promise<CompiledLesson> {

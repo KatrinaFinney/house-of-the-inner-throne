@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Protection, Power, and Prosperity",
+  description: "Enter the three living pillars of Shrine of the Inner Throne.",
+};
 
 const chamberLinks = [
   {
