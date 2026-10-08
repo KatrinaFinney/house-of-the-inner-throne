@@ -13,8 +13,15 @@ type DoorPanelProps = {
 export function DoorPanel({ side, isEntering }: DoorPanelProps) {
   const prefersReducedMotion = useReducedMotion();
 
-  const xOffset = prefersReducedMotion ? 10 : 86;
-  const x = !isEntering ? 0 : side === "left" ? -xOffset : xOffset;
+  const x = !isEntering
+    ? "0%"
+    : side === "left"
+      ? prefersReducedMotion
+        ? "-8%"
+        : "-104%"
+      : prefersReducedMotion
+        ? "8%"
+        : "104%";
 
   return (
     <motion.div
