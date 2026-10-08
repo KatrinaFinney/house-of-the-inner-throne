@@ -33,22 +33,22 @@ export const pillars = {
       "These teachings offer a sound beginning for those who are entering the chamber of Protection.",
     beginItems: [
       {
-        title: "Spiritual Boundaries",
+        title: "Sacred Boundaries",
         description:
           "A teaching on the preservation of peace, clarity, and rightful inner space.",
-        href: "/archive/spiritual-boundaries",
+        href: "/archive/volume/the-lineage-of-spirit/sacred-boundaries",
       },
       {
-        title: "Cleansing and Spiritual Reset",
+        title: "Protecting with Salt",
         description:
           "A practical beginning for clearing heaviness and restoring the inner atmosphere.",
-        href: "/archive/cleansing-and-spiritual-reset",
+        href: "/archive/volume/the-architecture-of-ritual/protecting-with-salt",
       },
       {
-        title: "Discernment and Inner Clarity",
+        title: "Respecting Spirit Is a Form of Protection",
         description:
           "A lesson in recognizing what belongs, what does not, and what must be released.",
-        href: "/archive/discernment-and-inner-clarity",
+        href: "/archive/volume/foundations-of-sovereignty/respecting-spirit-is-a-form-of-protection",
       },
     ],
     practicesTitle: "Practices of the Chamber",
@@ -76,14 +76,14 @@ export const pillars = {
     supportBody:
       "Gather what assists the preservation of peace, clarity, and spiritual steadiness. Some instruments are prepared by the Shrine. Others are chosen carefully as useful companions to the work.",
     houseSupports: [
-      { title: "Temple Candles", href: "/storehouse/temple-candles" },
-      { title: "Petition Papers", href: "/storehouse/petition-papers" },
-      { title: "Ancestor Currency", href: "/storehouse/ancestor-currency" },
+      { title: "Temple Candles", href: "/storehouse#temple-candles" },
+      { title: "Petition Papers", href: "/storehouse#petition-papers" },
+      { title: "Ancestor Currency", href: "/storehouse#ancestor-currency" },
     ],
     curatedSupports: [
-      { title: "Curated Incense", href: "/storehouse/curated/incense" },
-      { title: "Fire-Safe Bowls", href: "/storehouse/curated/fire-safe-bowls" },
-      { title: "Cauldrons and Burners", href: "/storehouse/curated/cauldrons" },
+      { title: "Curated Incense", href: "/storehouse#curated-incense" },
+      { title: "Fire-Safe Bowls", href: "/storehouse#fire-safe-bowls" },
+      { title: "Cauldrons and Burners", href: "/storehouse#cauldrons-and-burners" },
     ],
     closingTitle: "A Word for the Sovereign Spirit",
     closingBody:
@@ -127,19 +127,19 @@ export const pillars = {
         title: "Grace Restores Spiritual Authority",
         description:
           "A lesson in releasing shame, reclaiming worthiness, and returning power to the inner throne.",
-        href: "/archive/grace-restores-spiritual-authority",
+        href: "/archive/volume/foundations-of-sovereignty/grace-restores-spiritual-authority",
       },
       {
-        title: "Spiritual Authority and Self-Trust",
+        title: "Spiritual Sovereignty",
         description:
           "A beginning in autonomy, discernment, and the strengthening of inner command.",
-        href: "/archive/spiritual-authority-and-self-trust",
+        href: "/archive/volume/foundations-of-sovereignty/spiritual-sovereignty",
       },
       {
-        title: "Devotion and Self-Mastery",
+        title: "The Ritual Mind",
         description:
           "A teaching on how chosen ritual practice deepens freedom rather than limiting it.",
-        href: "/archive/devotion-and-self-mastery",
+        href: "/archive/volume/foundations-of-sovereignty/the-ritual-mind",
       },
     ],
     practicesTitle: "Practices of the Chamber",
@@ -160,21 +160,21 @@ export const pillars = {
       },
       {
         title: "Ritual Journaling and Reflection",
-        href: "/ritual-foundations/ritual-journaling",
+        href: "/ritual-foundations/petition-papers",
       },
     ],
     supportTitle: "What May Support the Work",
     supportBody:
       "Gather what strengthens voice, presence, and ritual focus. Let the instruments serve the becoming, but never stand in place of it.",
     houseSupports: [
-      { title: "Temple Candles", href: "/storehouse/temple-candles" },
-      { title: "Petition Papers", href: "/storehouse/petition-papers" },
-      { title: "Ritual Kits", href: "/storehouse/ritual-kits" },
+      { title: "Temple Candles", href: "/storehouse#temple-candles" },
+      { title: "Petition Papers", href: "/storehouse#petition-papers" },
+      { title: "Ritual Kits", href: "/storehouse#ritual-kits" },
     ],
     curatedSupports: [
-      { title: "Curated Incense", href: "/storehouse/curated/incense" },
-      { title: "Prayer Journals", href: "/storehouse/curated/journals" },
-      { title: "Altar Tools", href: "/storehouse/curated/altar-tools" },
+      { title: "Curated Incense", href: "/storehouse#curated-incense" },
+      { title: "Prayer Journals", href: "/storehouse#prayer-journals" },
+      { title: "Altar Tools", href: "/storehouse#altar-tools" },
     ],
     closingTitle: "A Word for the Sovereign Spirit",
     closingBody:
@@ -215,22 +215,22 @@ export const pillars = {
       "These teachings open the chamber of increase, receptivity, and sacred material relationship.",
     beginItems: [
       {
-        title: "Sacred Prosperity",
+        title: "Using Ancestral Currency to Create Prosperity",
         description:
           "A philosophical beginning for understanding abundance as a spiritual current.",
-        href: "/archive/sacred-prosperity",
+        href: "/archive/volume/the-ecology-of-prosperity/using-ancestral-currency-to-create-prosperity",
       },
       {
-        title: "Worthiness and Receiving",
+        title: "Prosperity Grows Where It Is Fed",
         description:
           "A lesson in how openness to blessing begins with restored self-worth.",
-        href: "/archive/worthiness-and-receiving",
+        href: "/archive/volume/the-ecology-of-prosperity/prosperity-grows-where-it-is-fed",
       },
       {
-        title: "Offerings, Flow, and Increase",
+        title: "Circulating Wealth Strengthens Wealth",
         description:
           "An introduction to circulation, reciprocity, and the spiritual logic of increase.",
-        href: "/archive/offerings-flow-and-increase",
+        href: "/archive/volume/the-ecology-of-prosperity/circulating-wealth-strengthens-wealth",
       },
     ],
     practicesTitle: "Practices of the Chamber",
@@ -258,14 +258,14 @@ export const pillars = {
     supportBody:
       "Gather what supports flow, offering, beauty, and visible increase. Let the materials remain servants of the current rather than becoming the current itself.",
     houseSupports: [
-      { title: "Ancestor Currency", href: "/storehouse/ancestor-currency" },
-      { title: "Petition Papers", href: "/storehouse/petition-papers" },
-      { title: "Temple Candles", href: "/storehouse/temple-candles" },
+      { title: "Ancestor Currency", href: "/storehouse#ancestor-currency" },
+      { title: "Petition Papers", href: "/storehouse#petition-papers" },
+      { title: "Temple Candles", href: "/storehouse#temple-candles" },
     ],
     curatedSupports: [
-      { title: "Offering Bowls", href: "/storehouse/curated/offering-bowls" },
-      { title: "Honey Jar Supports", href: "/storehouse/curated/honey-jars" },
-      { title: "Curated Incense", href: "/storehouse/curated/incense" },
+      { title: "Offering Bowls", href: "/storehouse#offering-bowls" },
+      { title: "Honey Jar Supports", href: "/storehouse#honey-jar-supports" },
+      { title: "Curated Incense", href: "/storehouse#curated-incense" },
     ],
     closingTitle: "A Word for the Sovereign Spirit",
     closingBody:
