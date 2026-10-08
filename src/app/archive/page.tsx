@@ -1,5 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { getArchiveVolumes, getLessonsByVolume } from "@/lib/archive/get-archive";
+
+export const metadata: Metadata = {
+  title: "The Inner Throne Manuscripts",
+  description: "A manuscript archive of 44 teachings arranged across four sacred volumes.",
+};
 
 export default async function ArchivePage() {
   const volumes = await getArchiveVolumes();
@@ -24,14 +30,12 @@ export default async function ArchivePage() {
         <div className="archive-panel-inner">
           <header className="archive-index-header archive-fade-up">
           <div className="archive-home-link-row">
-          <div className="archive-home-link-row">
   <Link href="/?interior=1" className="manuscript-breadcrumb manuscript-breadcrumb-home">
     <span aria-hidden="true" className="manuscript-breadcrumb-arrow">
       ←
     </span>
     <span>Return to the Shrine</span>
   </Link>
-</div>
 </div>
 
 <p className="archive-header-kicker">Inner Throne Archive</p>
