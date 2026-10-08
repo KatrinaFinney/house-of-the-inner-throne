@@ -109,6 +109,8 @@ export function ShrineGate({ initialOpen = false }: { initialOpen?: boolean }) {
   }, [isEntering, hasEntered, prefersReducedMotion, router]);
 
   const handleEnter = () => {
+    if (isEntering) return;
+
     track("shrine_entered");
     setIsEntering(true);
 
@@ -161,7 +163,7 @@ export function ShrineGate({ initialOpen = false }: { initialOpen?: boolean }) {
 
             <div className="mx-auto flex min-h-svh w-full max-w-5xl items-center justify-center px-2 pt-6 pb-6 sm:pt-8 sm:pb-8 md:pt-10 md:pb-10">
               <div className="flex w-full flex-col items-center justify-center gap-5 sm:gap-6 md:gap-7 threshold-door-compact threshold-copy-compact">
-                <DoorFrame isEntering={isEntering} />
+                <DoorFrame isEntering={isEntering} onEnter={handleEnter} />
                 <GateCopy isEntering={isEntering} onEnter={handleEnter} />
               </div>
             </div>
