@@ -149,7 +149,7 @@ export function ShrineGate({ initialOpen = false }: { initialOpen?: boolean }) {
               duration: prefersReducedMotion ? 0 : 0.55,
               ease: "easeOut",
             }}
-            className="fixed inset-0 z-40 min-h-svh overflow-hidden bg-(--bg) px-5 sm:px-6"
+            className="fixed inset-0 z-40 min-h-svh overflow-y-auto overscroll-contain bg-(--bg) px-4 sm:px-6"
           >
             <div
               aria-hidden="true"
@@ -161,8 +161,8 @@ export function ShrineGate({ initialOpen = false }: { initialOpen?: boolean }) {
               }}
             />
 
-            <div className="mx-auto flex min-h-svh w-full max-w-5xl items-center justify-center px-2 pt-6 pb-6 sm:pt-8 sm:pb-8 md:pt-10 md:pb-10">
-              <div className="flex w-full flex-col items-center justify-center gap-5 sm:gap-6 md:gap-7 threshold-door-compact threshold-copy-compact">
+            <div className="mx-auto flex min-h-svh w-full max-w-5xl items-center justify-center px-1 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(1rem,env(safe-area-inset-bottom))] sm:px-2 sm:pt-[max(1.5rem,env(safe-area-inset-top))] sm:pb-[max(1.5rem,env(safe-area-inset-bottom))]">
+              <div className="threshold-stage flex w-full flex-col items-center justify-center">
                 <DoorFrame isEntering={isEntering} onEnter={handleEnter} />
                 <GateCopy isEntering={isEntering} onEnter={handleEnter} />
               </div>

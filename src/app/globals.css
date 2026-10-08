@@ -147,25 +147,34 @@ summary::-webkit-details-marker {
   }
 }
 
-@media (max-height: 820px) {
-  .threshold-door-compact {
-    transform: scale(0.9);
-    transform-origin: center top;
-  }
-
-  .threshold-copy-compact {
-    transform: scale(0.94);
-    transform-origin: center top;
-  }
+.threshold-stage {
+  gap: clamp(0.75rem, 2.2svh, 1.75rem);
 }
 
 @media (max-height: 720px) {
-  .threshold-door-compact {
-    transform: scale(0.84);
+  .threshold-stage {
+    gap: 0.65rem;
   }
 
-  .threshold-copy-compact {
-    transform: scale(0.9);
+  .threshold-kicker {
+    margin-bottom: 0.35rem;
+  }
+
+  .threshold-copy-compact h1 {
+    font-size: clamp(1.45rem, 7vw, 2.2rem);
+  }
+
+  .threshold-subtitle {
+    margin-top: 0.45rem;
+    line-height: 1.35;
+  }
+
+  .threshold-action {
+    margin-top: 0.75rem;
+  }
+
+  .threshold-divider {
+    display: none;
   }
 }
 

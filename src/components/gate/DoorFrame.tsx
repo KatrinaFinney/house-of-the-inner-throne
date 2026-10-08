@@ -19,7 +19,7 @@ export function DoorFrame({ isEntering, onEnter }: DoorFrameProps) {
       aria-label="Open the doors and enter the Shrine"
       whileHover={prefersReducedMotion || isEntering ? undefined : { scale: 1.012 }}
       whileTap={prefersReducedMotion || isEntering ? undefined : { scale: 0.992 }}
-      className="group relative mx-auto block h-[20.5rem] w-[13.75rem] cursor-pointer appearance-none border-0 bg-transparent p-0 text-left outline-none focus-visible:rounded-[30px] focus-visible:ring-2 focus-visible:ring-(--gold) focus-visible:ring-offset-4 focus-visible:ring-offset-(--bg) disabled:cursor-default sm:h-[23.5rem] sm:w-[15.75rem] md:h-[27.5rem] md:w-[18.25rem] lg:h-[31rem] lg:w-[20.25rem]"
+      className="group relative mx-auto block aspect-[2/3] h-auto w-[min(13.75rem,32svh,calc(100vw-3rem))] shrink-0 cursor-pointer appearance-none border-0 bg-transparent p-0 text-left outline-none focus-visible:rounded-[30px] focus-visible:ring-2 focus-visible:ring-(--gold) focus-visible:ring-offset-4 focus-visible:ring-offset-(--bg) disabled:cursor-default sm:w-[min(15.75rem,32svh,calc(100vw-4rem))] md:w-[min(18.25rem,32svh,calc(100vw-5rem))] lg:w-[min(20.25rem,34svh)]"
     >
       <div className="absolute inset-0 rounded-[28px] border-2 border-[var(--gold-soft)] bg-[#13140f] shadow-[0_35px_120px_rgba(0,0,0,0.58)]" />
 

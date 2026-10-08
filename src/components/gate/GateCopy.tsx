@@ -18,9 +18,9 @@ export function GateCopy({ isEntering, onEnter }: GateCopyProps) {
         y: 0,
       }}
       transition={{ duration: 0.45, ease: "easeOut" }}
-      className="mx-auto mt-7 max-w-3xl text-center sm:mt-8 md:mt-9"
+      className="threshold-copy-compact mx-auto max-w-3xl text-center"
     >
-      <p className="mb-3 font-display text-[10px] uppercase tracking-[0.28em] text-(--gold) sm:text-[11px]">
+      <p className="threshold-kicker mb-3 font-display text-[10px] uppercase tracking-[0.28em] text-(--gold) sm:text-[11px]">
         Protection · Power · Prosperity
       </p>
 
@@ -34,17 +34,17 @@ export function GateCopy({ isEntering, onEnter }: GateCopyProps) {
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.25, duration: 0.6 }}
-        className="mx-auto mt-3 max-w-md text-[0.95rem] leading-7 text-(--muted) sm:text-[1rem]"
+        className="threshold-subtitle mx-auto mt-3 max-w-md text-[0.95rem] leading-7 text-(--muted) sm:text-[1rem]"
       >
         The Sacred Shrine of Ritual Sovereignty
       </motion.p>
 
-      <div className="mt-5 flex items-center justify-center">
+      <div className="threshold-action mt-5 flex items-center justify-center">
         <button
           type="button"
           onClick={onEnter}
           disabled={isEntering}
-          className="min-w-41 rounded-full border border-(--gold) bg-(--gold) px-5 py-2.5 text-[0.68rem] font-medium uppercase tracking-[0.18em] text-black shadow-[0_8px_24px_rgba(202,169,107,0.12)] transition hover:brightness-[1.04] disabled:cursor-default disabled:opacity-80"
+          className="min-h-11 min-w-41 rounded-full border border-(--gold) bg-(--gold) px-5 py-2.5 text-[0.68rem] font-medium uppercase tracking-[0.18em] text-black shadow-[0_8px_24px_rgba(202,169,107,0.12)] transition hover:brightness-[1.04] disabled:cursor-default disabled:opacity-80"
         >
           Enter the Shrine
         </button>
@@ -52,7 +52,7 @@ export function GateCopy({ isEntering, onEnter }: GateCopyProps) {
 
       <div
         aria-hidden="true"
-        className="pointer-events-none mx-auto mt-8 h-px w-28 bg-[linear-gradient(90deg,transparent,rgba(202,169,107,0.24),transparent)]"
+        className="threshold-divider pointer-events-none mx-auto mt-8 h-px w-28 bg-[linear-gradient(90deg,transparent,rgba(202,169,107,0.24),transparent)]"
       />
     </motion.div>
   );
