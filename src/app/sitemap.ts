@@ -18,6 +18,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/ritual-foundations",
     "/daily-dedication",
     "/storehouse",
+    "/ethos",
+    "/socials",
     "/privacy",
   ];
 
