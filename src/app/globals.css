@@ -12,6 +12,10 @@
 }
 
 :root {
+  /* Local-first stacks keep the Shrine readable when external font hosts are unavailable. */
+  --font-display: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  --font-body: Georgia, "Times New Roman", Times, serif;
+
   /* Core temple palette */
   --bg: #0a0a08;
   --text: #f2eadb;
@@ -49,7 +53,7 @@ body {
     radial-gradient(circle at 50% 35%, rgba(255, 183, 77, 0.05), transparent 30%),
     linear-gradient(180deg, #0b0b09 0%, #090908 100%);
   color: var(--text);
-  font-family: var(--font-body), serif;
+  font-family: var(--font-body);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -64,7 +68,7 @@ h2,
 h3,
 h4,
 .font-display {
-  font-family: var(--font-display), serif;
+  font-family: var(--font-display);
   letter-spacing: 0.04em;
 }
 
