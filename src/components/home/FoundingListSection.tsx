@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { track } from "@vercel/analytics";
 
 type SubmissionState = "idle" | "submitting" | "success" | "error";
 
@@ -17,6 +18,7 @@ export function FoundingListSection() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+    track("founding_list_attempted");
 
     try {
       const response = await fetch("/api/founding-list", {
@@ -38,9 +40,11 @@ export function FoundingListSection() {
 
       form.reset();
       setSubmissionState("success");
+      track("founding_list_joined");
       setMessage("Your name has been entered. Watch your inbox for the next message from the Shrine.");
     } catch (error) {
       setSubmissionState("error");
+      track("founding_list_failed");
       setMessage(error instanceof Error ? error.message : "Please try again.");
     }
   }
