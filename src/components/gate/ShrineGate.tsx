@@ -163,8 +163,21 @@ export function ShrineGate({ initialOpen = false }: { initialOpen?: boolean }) {
 
             <div className="mx-auto flex min-h-svh w-full max-w-5xl items-center justify-center px-1 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(1rem,env(safe-area-inset-bottom))] sm:px-2 sm:pt-[max(1.5rem,env(safe-area-inset-top))] sm:pb-[max(1.5rem,env(safe-area-inset-bottom))]">
               <div className="threshold-stage flex w-full flex-col items-center justify-center">
-                <DoorFrame isEntering={isEntering} onEnter={handleEnter} />
-                <GateCopy isEntering={isEntering} onEnter={handleEnter} />
+                <div className="flex flex-col items-center gap-3">
+                  <DoorFrame isEntering={isEntering} onEnter={handleEnter} />
+                  <motion.p
+                    initial={false}
+                    animate={{
+                      opacity: isEntering ? 0 : 0.72,
+                      y: isEntering ? 4 : 0,
+                    }}
+                    transition={{ duration: prefersReducedMotion ? 0.1 : 0.35 }}
+                    className="font-display text-[9px] uppercase tracking-[0.24em] text-(--gold) sm:text-[10px]"
+                  >
+                    Tap the doors to enter
+                  </motion.p>
+                </div>
+                <GateCopy isEntering={isEntering} />
               </div>
             </div>
 

@@ -175,10 +175,6 @@ summary::-webkit-details-marker {
     line-height: 1.35;
   }
 
-  .threshold-action {
-    margin-top: 0.75rem;
-  }
-
   .threshold-divider {
     display: none;
   }
@@ -194,8 +190,5 @@ summary::-webkit-details-marker {
     font-size: 1.35rem;
   }
 
-  .threshold-action {
-    margin-top: 0.5rem;
-  }
 }
 

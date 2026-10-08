@@ -33,15 +33,15 @@ export function DoorPanel({ side, isEntering }: DoorPanelProps) {
       }}
       className={clsx(
         "relative h-full w-full overflow-hidden",
-        side === "left" ? "rounded-l-[22px]" : "rounded-r-[22px]"
+        side === "left" ? "border-r border-black/20" : "border-l border-white/10"
       )}
     >
       <div
         className={clsx(
           "absolute inset-0",
           side === "left"
-            ? "bg-[linear-gradient(180deg,#7e8b79_0%,#6d7968_22%,#5f6b5a_48%,#55604f_72%,#4a5445_100%)]"
-            : "bg-[linear-gradient(180deg,#83907d_0%,#727e6d_22%,#626e5d_48%,#576251_72%,#4c5647_100%)]"
+            ? "bg-[linear-gradient(180deg,#d7d0bf_0%,#c6beab_24%,#b3aa96_52%,#a19884_76%,#8d846f_100%)]"
+            : "bg-[linear-gradient(180deg,#d9d2c1_0%,#c9c1ae_24%,#b6ad99_52%,#a49a86_76%,#908672_100%)]"
         )}
       />
 
@@ -49,13 +49,22 @@ export function DoorPanel({ side, isEntering }: DoorPanelProps) {
         className="absolute inset-0 opacity-[0.62]"
         style={{
           backgroundImage: `
-            radial-gradient(circle at 18% 14%, rgba(214,223,205,0.26) 0%, transparent 16%),
-            radial-gradient(circle at 34% 30%, rgba(175,190,165,0.18) 0%, transparent 20%),
-            radial-gradient(circle at 68% 20%, rgba(221,228,215,0.18) 0%, transparent 16%),
-            radial-gradient(circle at 82% 44%, rgba(162,176,152,0.16) 0%, transparent 18%),
-            radial-gradient(circle at 26% 74%, rgba(58,66,54,0.15) 0%, transparent 24%),
-            radial-gradient(circle at 62% 70%, rgba(205,214,196,0.12) 0%, transparent 22%),
-            radial-gradient(circle at 86% 86%, rgba(49,56,46,0.12) 0%, transparent 18%)
+            radial-gradient(circle at 18% 14%, rgba(248,244,231,0.32) 0%, transparent 18%),
+            radial-gradient(circle at 38% 34%, rgba(117,105,82,0.17) 0%, transparent 21%),
+            radial-gradient(circle at 72% 18%, rgba(244,239,224,0.25) 0%, transparent 18%),
+            radial-gradient(circle at 82% 48%, rgba(112,99,77,0.16) 0%, transparent 20%),
+            radial-gradient(circle at 28% 76%, rgba(83,73,57,0.14) 0%, transparent 25%),
+            radial-gradient(circle at 66% 72%, rgba(239,233,216,0.18) 0%, transparent 24%)
+          `,
+        }}
+      />
+
+      <div
+        className="absolute inset-0 opacity-[0.46]"
+        style={{
+          backgroundImage: `
+            linear-gradient(108deg, transparent 0 28%, rgba(84,74,57,0.25) 29%, rgba(239,233,217,0.18) 30%, transparent 32%),
+            linear-gradient(72deg, transparent 0 62%, rgba(91,79,60,0.20) 63%, rgba(244,239,225,0.14) 64%, transparent 66%)
           `,
         }}
       />
