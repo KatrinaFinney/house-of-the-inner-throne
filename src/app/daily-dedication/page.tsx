@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { currentDedication } from "@/lib/daily-dedication";
 
 export const metadata: Metadata = {
   title: "Daily Dedication",
@@ -24,6 +25,21 @@ export default function DailyDedicationPage() {
           Shrine’s social channels as they open. Until then, the founding list
           is the surest way to remain close to the rite.
         </p>
+        <section className="mt-12 rounded-[2rem] border border-[rgba(202,169,107,0.16)] bg-white/[0.04] p-7 sm:p-9">
+          <p className="text-xs uppercase tracking-[0.3em] text-(--gold)">{currentDedication.eyebrow}</p>
+          <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">{currentDedication.intention}</h2>
+          <dl className="mt-7 grid gap-6 sm:grid-cols-2">
+            <div>
+              <dt className="text-xs uppercase tracking-[0.18em] text-(--gold)">Offering</dt>
+              <dd className="mt-2 text-(--muted)">{currentDedication.offering}</dd>
+            </div>
+            <div>
+              <dt className="text-xs uppercase tracking-[0.18em] text-(--gold)">Petition window</dt>
+              <dd className="mt-2 text-(--muted)">{currentDedication.petitionWindow}</dd>
+            </div>
+          </dl>
+          <p className="mt-7 border-t border-white/10 pt-6 leading-7 text-(--muted)">{currentDedication.note}</p>
+        </section>
         <div className="mt-10 flex flex-wrap gap-4">
           <Link href="/?interior=1#founding-list" className="rounded-full bg-(--gold) px-7 py-3 text-sm uppercase tracking-[0.14em] text-black">
             Remain Close
