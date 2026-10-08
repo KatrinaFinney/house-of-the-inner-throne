@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { DoorFrame } from "./DoorFrame";
 import { GateCopy } from "./GateCopy";
 import { InteriorHomepage } from "@/components/home/InteriorHomepage";
@@ -71,19 +71,31 @@ const STARS: Star[] = [
   { left: "87%", top: "86%", size: 1.2, opacity: 0.18, color: "soft" },
 ];
 
-export function ShrineGate() {
+export function ShrineGate({ initialOpen = false }: { initialOpen?: boolean }) {
   const router = useRouter();
-  const searchParams = useSearchParams();
   const prefersReducedMotion = useReducedMotion();
 
-  const shouldOpenInterior = searchParams.get("interior") === "1";
-
-  const [isEntering, setIsEntering] = useState(shouldOpenInterior);
-  const [hasEntered, setHasEntered] = useState(false);
-  const showInterior = shouldOpenInterior || hasEntered;
+  const [isEntering, setIsEntering] = useState(initialOpen);
+  const [hasEntered, setHasEntered] = useState(initialOpen);
+  const showGate = !hasEntered;
 
   useEffect(() => {
-    if (!isEntering || showInterior) return;
+    if (!showGate) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [showGate]);
+
+  useEffect(() => {
+    if (!hasEntered || initialOpen) return;
+    document.querySelector<HTMLElement>("[data-shrine-interior-heading]")?.focus();
+  }, [hasEntered, initialOpen]);
+
+  useEffect(() => {
+    if (!isEntering || hasEntered) return;
 
     if (prefersReducedMotion) return;
 
@@ -93,7 +105,7 @@ export function ShrineGate() {
     }, ENTER_DURATION_MS);
 
     return () => window.clearTimeout(timer);
-  }, [isEntering, showInterior, prefersReducedMotion, router]);
+  }, [isEntering, hasEntered, prefersReducedMotion, router]);
 
   const handleEnter = () => {
     setIsEntering(true);
@@ -105,13 +117,13 @@ export function ShrineGate() {
   };
 
   const overlayClassName = useMemo(() => {
-    return showInterior
+    return hasEntered
       ? "bg-[radial-gradient(circle_at_center,rgba(255,244,220,0.18),transparent_26%),linear-gradient(180deg,#1a1813_0%,#0b0b09_38%,#070707_100%)]"
       : "bg-[radial-gradient(circle_at_center,rgba(255,183,77,0.06),transparent_34%),linear-gradient(180deg,#0b0b09_0%,#090908_100%)]";
-  }, [showInterior]);
+  }, [hasEntered]);
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-(--bg) text-(--text)">
+    <div className="relative min-h-screen overflow-hidden bg-(--bg) text-(--text)">
       <motion.div
         aria-hidden="true"
         className={`pointer-events-none absolute inset-0 transition-colors duration-1000 ${overlayClassName}`}
@@ -119,8 +131,12 @@ export function ShrineGate() {
 
       <CelestialField reducedMotion={!!prefersReducedMotion} />
 
+      <div className="relative z-0">
+        <InteriorHomepage />
+      </div>
+
       <AnimatePresence mode="wait">
-        {!showInterior ? (
+        {showGate ? (
           <motion.section
             key="gate"
             initial={{ opacity: 1 }}
@@ -129,7 +145,7 @@ export function ShrineGate() {
               duration: prefersReducedMotion ? 0 : 0.55,
               ease: "easeOut",
             }}
-            className="relative min-h-svh px-5 sm:px-6"
+            className="fixed inset-0 z-40 min-h-svh overflow-hidden bg-(--bg) px-5 sm:px-6"
           >
             <div
               aria-hidden="true"
@@ -150,22 +166,9 @@ export function ShrineGate() {
 
             <LightTransition isEntering={isEntering} />
           </motion.section>
-        ) : (
-          <motion.section
-            key="interior"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{
-              duration: prefersReducedMotion ? 0.15 : 0.9,
-              ease: "easeOut",
-            }}
-            className="relative min-h-screen"
-          >
-            <InteriorHomepage />
-          </motion.section>
-        )}
+        ) : null}
       </AnimatePresence>
-    </main>
+    </div>
   );
 }
 
