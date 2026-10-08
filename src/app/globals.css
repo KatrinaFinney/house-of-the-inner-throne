@@ -49,6 +49,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-x: clip;
   background:
     radial-gradient(circle at 50% 35%, rgba(255, 183, 77, 0.05), transparent 30%),
     linear-gradient(180deg, #0b0b09 0%, #090908 100%);
@@ -147,25 +148,54 @@ summary::-webkit-details-marker {
   }
 }
 
-@media (max-height: 820px) {
-  .threshold-door-compact {
-    transform: scale(0.9);
-    transform-origin: center top;
-  }
+.threshold-stage {
+  gap: clamp(0.75rem, 2.2svh, 1.75rem);
+}
 
-  .threshold-copy-compact {
-    transform: scale(0.94);
-    transform-origin: center top;
-  }
+.site-header-safe {
+  padding-right: max(1.25rem, env(safe-area-inset-right));
+  padding-left: max(1.25rem, env(safe-area-inset-left));
 }
 
 @media (max-height: 720px) {
-  .threshold-door-compact {
-    transform: scale(0.84);
+  .threshold-stage {
+    gap: 0.65rem;
   }
 
-  .threshold-copy-compact {
-    transform: scale(0.9);
+  .threshold-kicker {
+    margin-bottom: 0.35rem;
+  }
+
+  .threshold-copy-compact h1 {
+    font-size: clamp(1.45rem, 7vw, 2.2rem);
+  }
+
+  .threshold-subtitle {
+    margin-top: 0.45rem;
+    line-height: 1.35;
+  }
+
+  .threshold-action {
+    margin-top: 0.75rem;
+  }
+
+  .threshold-divider {
+    display: none;
+  }
+}
+
+@media (max-height: 480px) and (orientation: landscape) {
+  .threshold-kicker,
+  .threshold-subtitle {
+    display: none;
+  }
+
+  .threshold-copy-compact h1 {
+    font-size: 1.35rem;
+  }
+
+  .threshold-action {
+    margin-top: 0.5rem;
   }
 }
 
