@@ -54,7 +54,7 @@ export function SovereigntyArchiveSection() {
             </Link>
 
             <Link
-              href="/archive/foundations"
+              href="/archive/volume/foundations-of-sovereignty/spiritual-sovereignty"
               className="inline-flex min-w-55 items-center justify-center rounded-full border border-[rgba(202,169,107,0.28)] bg-white/3 px-6 py-3 text-[0.78rem] font-medium uppercase tracking-[0.16em] text-(--text) transition hover:bg-white/6"
             >
               Read Foundations First
