@@ -4,10 +4,9 @@ import { motion, useReducedMotion } from "framer-motion";
 
 type GateCopyProps = {
   isEntering: boolean;
-  onEnter: () => void;
 };
 
-export function GateCopy({ isEntering, onEnter }: GateCopyProps) {
+export function GateCopy({ isEntering }: GateCopyProps) {
   const prefersReducedMotion = useReducedMotion();
 
   return (
@@ -39,20 +38,9 @@ export function GateCopy({ isEntering, onEnter }: GateCopyProps) {
         The Sacred Shrine of Ritual Sovereignty
       </motion.p>
 
-      <div className="threshold-action mt-5 flex items-center justify-center">
-        <button
-          type="button"
-          onClick={onEnter}
-          disabled={isEntering}
-          className="min-h-11 min-w-41 rounded-full border border-(--gold) bg-(--gold) px-5 py-2.5 text-[0.68rem] font-medium uppercase tracking-[0.18em] text-black shadow-[0_8px_24px_rgba(202,169,107,0.12)] transition hover:brightness-[1.04] disabled:cursor-default disabled:opacity-80"
-        >
-          Enter the Shrine
-        </button>
-      </div>
-
       <div
         aria-hidden="true"
-        className="threshold-divider pointer-events-none mx-auto mt-8 h-px w-28 bg-[linear-gradient(90deg,transparent,rgba(202,169,107,0.24),transparent)]"
+        className="threshold-divider pointer-events-none mx-auto mt-6 h-px w-28 bg-[linear-gradient(90deg,transparent,rgba(202,169,107,0.24),transparent)]"
       />
     </motion.div>
   );
