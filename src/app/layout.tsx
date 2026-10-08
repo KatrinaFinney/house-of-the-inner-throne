@@ -1,21 +1,8 @@
 import type { Metadata } from "next";
-import { Cinzel, Cormorant_Garamond } from "next/font/google";
 import type { ReactNode } from "react";
 import "./globals.css";
 import { siteUrl } from "@/lib/site";
 import { SiteFooter } from "@/components/SiteFooter";
-
-const cinzel = Cinzel({
-  subsets: ["latin"],
-  variable: "--font-display",
-  weight: ["400", "500", "600", "700"],
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  variable: "--font-body",
-  weight: ["400", "500", "600"],
-});
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
@@ -47,7 +34,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cinzel.variable} ${cormorant.variable}`}>
+    <html lang="en">
       <body>
         {children}
         <SiteFooter />
