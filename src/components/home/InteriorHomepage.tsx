@@ -9,21 +9,22 @@ import { StorehouseSection } from "./StorehouseSection";
 import { RitualFoundationsSection } from "./RitualFoundationsSection";
 import { IncenseSmoke } from "./IncenseSmoke";
 import { SovereigntyArchiveSection } from "./SovereigntyArchiveSection";
+import { track } from "@vercel/analytics";
 
 const pillars = [
   {
     title: "Protection",
-    body: "Sacred boundaries, cleansing, and covering. Protection establishes the ground on which authority can stand.",
+    body: "Protection preserves freedom. Sacred boundaries strengthen authority and keep the inner throne undisturbed.",
     href: "/pillars/protection",
   },
   {
     title: "Power",
-    body: "Command, devotion, alignment, and spiritual force. Power rises where the spirit is rightly seated.",
+    body: "Power restores inner authority. When the spirit is seated, authority follows.",
     href: "/pillars/power",
   },
   {
     title: "Prosperity",
-    body: "Flow, increase, offering, and rightful abundance. Prosperity is power made visible in life.",
+    body: "Prosperity opens a rightful relationship with increase, circulation, stewardship, and enoughness.",
     href: "/pillars/prosperity",
   },
 ];
@@ -61,27 +62,29 @@ export function InteriorHomepage() {
             </h1>
 
             <p className="mt-6 max-w-xl text-base leading-8 text-(--muted) sm:text-lg">
-              A sacred digital space for the throne within. Enter through
-              spiritual sovereignty, ancestral remembrance, ritual intelligence,
-              and disciplined prosperity.
+              A sacred digital space for the throne within. Return to spiritual
+              sovereignty, ancestral remembrance, ritual intelligence, and a
+              rightful relationship with increase.
             </p>
 
             <p className="mt-4 max-w-xl text-base leading-8 text-(--muted)">
-              The Archive holds 44 manuscripts across four volumes. Begin with
-              Spiritual Sovereignty, enter by pillar, or follow the teaching that
-              calls your attention.
+              The Archive holds 44 manuscripts across four volumes. Begin at the
+              threshold, follow a pillar, or receive the teaching that calls your
+              attention.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <Link
-                href="/archive/volume/foundations-of-sovereignty/spiritual-sovereignty"
+                href="#begin-within"
+                onClick={() => track("begin_within_opened", { source: "home_hero" })}
                 className="inline-flex min-w-55 items-center justify-center rounded-full border border-(--gold) bg-(--gold) px-7 py-3 text-[0.78rem] font-medium uppercase tracking-[0.16em] text-black shadow-[0_8px_30px_rgba(202,169,107,0.18)] transition hover:brightness-[1.04]"
               >
-                Begin with Sovereignty
+                Begin Within
               </Link>
 
               <Link
                 href="/archive"
+                onClick={() => track("archive_opened", { source: "home_hero" })}
                 className="inline-flex min-w-55 items-center justify-center rounded-full border border-[rgba(202,169,107,0.28)] bg-white/3 px-7 py-3 text-[0.78rem] font-medium uppercase tracking-[0.16em] text-(--text) transition hover:bg-white/6"
               >
                 Explore the Archive
@@ -107,6 +110,7 @@ export function InteriorHomepage() {
                   <Link
                     key={pillar.title}
                     href={pillar.href}
+                    onClick={() => track("pillar_selected", { pillar: pillar.title })}
                     className="block rounded-[1.4rem] border border-[rgba(202,169,107,0.1)] bg-[linear-gradient(180deg,rgba(0,0,0,0.22),rgba(0,0,0,0.12))] px-5 py-5 transition hover:bg-white/[0.04] md:px-6"
                   >
                     <p className="mb-2 text-[10px] uppercase tracking-[0.32em] text-(--gold)/80">
@@ -127,7 +131,9 @@ export function InteriorHomepage() {
         </div>
       </section>
 
-      <BeginWithinSection />
+      <div id="begin-within" className="scroll-mt-24">
+        <BeginWithinSection />
+      </div>
       <SovereigntyArchiveSection />
       <FoundingListSection />
       <RitualFoundationsSection />
