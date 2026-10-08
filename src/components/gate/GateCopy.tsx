@@ -23,7 +23,7 @@ export function GateCopy({ isEntering }: GateCopyProps) {
         Protection · Power · Prosperity
       </p>
 
-      <h1 className="mx-auto max-w-[13ch] text-[1.8rem] leading-[0.96] tracking-[0.015em] sm:text-[2.35rem] md:text-[2.8rem] lg:text-[3.1rem]">
+      <h1 className="mx-auto max-w-[15ch] text-[1.8rem] leading-[0.96] tracking-[0.015em] sm:text-[2.35rem] md:text-[2.8rem] lg:text-[3.1rem]">
         Shrine of the
         <br />
         Inner Throne
