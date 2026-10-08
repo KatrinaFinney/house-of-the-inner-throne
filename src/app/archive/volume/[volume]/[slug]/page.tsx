@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
   getLessonBySlug,
@@ -22,6 +23,18 @@ export async function generateStaticParams() {
     volume: lesson.volumeKey,
     slug: lesson.slug,
   }));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { volume, slug } = await params;
+  const lesson = await getLessonBySlug(volume, slug);
+
+  if (!lesson) return { title: "Manuscript" };
+
+  return {
+    title: lesson.title,
+    description: lesson.excerpt || `Lesson ${lesson.lessonNumber} of the Inner Throne Manuscripts.`,
+  };
 }
 
 export default async function LessonPage({ params }: PageProps) {
