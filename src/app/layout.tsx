@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Cinzel, Cormorant_Garamond } from "next/font/google";
 import type { ReactNode } from "react";
 import "./globals.css";
+import { siteUrl } from "@/lib/site";
+import { SiteFooter } from "@/components/SiteFooter";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -16,12 +18,27 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: siteUrl,
   title: {
     default: "Shrine of the Inner Throne",
     template: "%s | Shrine of the Inner Throne",
   },
   description:
     "A sacred digital shrine of ritual sovereignty, ancestral remembrance, protection, power, and prosperity.",
+  applicationName: "Shrine of the Inner Throne",
+  openGraph: {
+    type: "website",
+    siteName: "Shrine of the Inner Throne",
+    title: "Shrine of the Inner Throne",
+    description:
+      "A sacred digital shrine of ritual sovereignty, ancestral remembrance, protection, power, and prosperity.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shrine of the Inner Throne",
+    description:
+      "A sacred digital shrine of ritual sovereignty, ancestral remembrance, protection, power, and prosperity.",
+  },
 };
 
 export default function RootLayout({
@@ -31,7 +48,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cinzel.variable} ${cormorant.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <SiteFooter />
+      </body>
     </html>
   );
 }
