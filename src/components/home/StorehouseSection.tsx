@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { track } from "@vercel/analytics";
 
 const storeItems = [
   { title: "Ancestor Currency", href: "/storehouse#ancestor-currency" },
@@ -31,12 +32,12 @@ export function StorehouseSection() {
 
           <p className="mt-6 text-lg leading-8 text-(--muted)">
             The Storehouse holds practical instruments for offering, remembrance,
-            devotion, and disciplined ritual work.
+            devotion, and sovereign ritual practice.
           </p>
 
           <p className="mt-4 text-lg leading-8 text-(--muted)">
             These items support practice, but they do not replace it. The work
-            begins with attention, order, and spiritual intention.
+            begins with attention, discernment, and spiritual relationship.
           </p>
         </motion.div>
 
@@ -45,6 +46,7 @@ export function StorehouseSection() {
             <Link
               key={item.title}
               href={item.href}
+              onClick={() => track("storehouse_interest", { category: item.title })}
               className="rounded-[1.8rem] border border-[rgba(202,169,107,0.12)] bg-white/[0.04] p-4 transition hover:bg-white/[0.05]"
             >
               <div className="rounded-[1.3rem] border border-[rgba(202,169,107,0.14)] bg-black/20 p-6 text-center">
@@ -57,6 +59,7 @@ export function StorehouseSection() {
         <div className="mt-10">
           <Link
             href="/storehouse"
+            onClick={() => track("storehouse_opened", { source: "home" })}
             className="inline-flex rounded-full border border-white/20 px-8 py-3 text-sm uppercase tracking-[0.14em] transition hover:bg-white/10"
           >
             Enter the Storehouse

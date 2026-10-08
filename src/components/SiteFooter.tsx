@@ -5,6 +5,8 @@ const links = [
   ["Archive", "/archive"],
   ["Three Pillars", "/pillars"],
   ["Ritual Foundations", "/ritual-foundations"],
+  ["Storehouse", "/storehouse"],
+  ["Ethos", "/ethos"],
   ["Privacy", "/privacy"],
 ] as const;
 

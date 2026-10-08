@@ -3,6 +3,7 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
+import { track } from "@vercel/analytics";
 import { DoorFrame } from "./DoorFrame";
 import { GateCopy } from "./GateCopy";
 import { InteriorHomepage } from "@/components/home/InteriorHomepage";
@@ -108,6 +109,7 @@ export function ShrineGate({ initialOpen = false }: { initialOpen?: boolean }) {
   }, [isEntering, hasEntered, prefersReducedMotion, router]);
 
   const handleEnter = () => {
+    track("shrine_entered");
     setIsEntering(true);
 
     if (prefersReducedMotion) {

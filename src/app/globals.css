@@ -12,14 +12,14 @@
 }
 
 :root {
-  /* Local-first stacks keep the Shrine readable when external font hosts are unavailable. */
-  --font-display: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
-  --font-body: Georgia, "Times New Roman", Times, serif;
+  /* Self-hosted brand type keeps the Shrine independent of external font hosts. */
+  --font-display: "Cinzel Variable", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-body: "Cormorant Garamond Variable", Georgia, "Times New Roman", serif;
 
   /* Core temple palette */
   --bg: #0a0a08;
   --text: #f2eadb;
-  --muted: #c9bda6;
+  --muted: #d2c7b3;
 
   /* Gold system */
   --gold: #caa96b;
@@ -72,8 +72,33 @@ h4,
   letter-spacing: 0.04em;
 }
 
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
 a {
   color: inherit;
+}
+
+:where(a, button, summary, input):focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  h1 {
+    overflow-wrap: anywhere;
+  }
 }
 
 /* Selection */

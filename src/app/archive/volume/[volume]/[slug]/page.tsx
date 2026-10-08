@@ -8,6 +8,11 @@ import {
   getVolumeFromRoute,
 } from "@/lib/archive/get-archive";
 import { ArchiveMdx } from "@/components/archive/archive-mdx";
+import {
+  getLessonPillar,
+  getLessonReadingTime,
+  getRelatedFoundation,
+} from "@/lib/archive/lesson-context";
 
 type PageProps = {
   params: Promise<{
@@ -40,13 +45,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function LessonPage({ params }: PageProps) {
   const { volume, slug } = await params;
 
-  const volumeData = await getVolumeFromRoute(volume);
+  const [volumeData, lesson] = await Promise.all([
+    getVolumeFromRoute(volume),
+    getLessonBySlug(volume, slug),
+  ]);
   if (!volumeData) notFound();
-
-  const lesson = await getLessonBySlug(volume, slug);
   if (!lesson) notFound();
 
-  const navigation = await getLessonNavigation(lesson.lessonNumber);
+  const [navigation, publishedLessons] = await Promise.all([
+    getLessonNavigation(lesson.lessonNumber),
+    getPublishedLessons(),
+  ]);
+  const totalLessons = publishedLessons.length;
+  const readingTime = getLessonReadingTime(lesson.content);
+  const progress = Math.round((lesson.lessonNumber / totalLessons) * 100);
+  const pillar = getLessonPillar(lesson);
+  const relatedFoundation = getRelatedFoundation(lesson);
 
   return (
     <main className="archive-shell archive-shell-dim">
@@ -79,7 +93,7 @@ export default async function LessonPage({ params }: PageProps) {
 
             <div className="folio-meta-row">
               <p className="archive-header-kicker">
-                Volume {lesson.volumeNumber} · Lesson {lesson.lessonNumber}
+                Volume {lesson.volumeNumber} · Manuscript {lesson.lessonNumber} of {totalLessons} · {readingTime} min read
               </p>
             </div>
 
@@ -100,6 +114,16 @@ export default async function LessonPage({ params }: PageProps) {
               style={{ animationDelay: "120ms" }}
             >
               {await ArchiveMdx({ source: lesson.content })}
+
+              <section className="archive-reflection" aria-labelledby="reflection-heading">
+                <p className="ritual-note-kicker">Carry It With You</p>
+                <h2 id="reflection-heading">Reflection</h2>
+                <p>
+                  Name one truth from this manuscript that asks to become lived
+                  practice. What changes when the teaching is inhabited rather
+                  than only understood?
+                </p>
+              </section>
             </article>
 
             <aside
@@ -114,10 +138,15 @@ export default async function LessonPage({ params }: PageProps) {
               ) : null}
 
               <section className="archive-side-card">
-                <p className="archive-side-kicker">In This Volume</p>
+                <p className="archive-side-kicker">Archive Progress</p>
                 <p className="archive-side-body">
-                  Lesson {lesson.lessonNumber} · Volume {lesson.volumeNumber}
+                  Manuscript {lesson.lessonNumber} of {totalLessons}
                 </p>
+
+                <div className="archive-progress-track" aria-label={`${progress}% through the Archive`}>
+                  <span style={{ width: `${progress}%` }} />
+                </div>
+                <p className="archive-progress-label">{progress}% of the 44-manuscript path</p>
 
                 <div className="archive-side-links">
                   <Link
@@ -133,6 +162,24 @@ export default async function LessonPage({ params }: PageProps) {
                   >
                     Open Manuscript Index
                   </Link>
+                </div>
+              </section>
+
+              <section className="archive-side-card">
+                <p className="archive-side-kicker">Continue the Study</p>
+                <div className="archive-side-links">
+                  <Link href={pillar.href} className="archive-side-link">
+                    Pillar of {pillar.title}
+                  </Link>
+                  {relatedFoundation ? (
+                    <Link href={relatedFoundation.href} className="archive-side-link">
+                      Foundation: {relatedFoundation.title}
+                    </Link>
+                  ) : (
+                    <Link href="/ritual-foundations" className="archive-side-link">
+                      Explore Ritual Foundations
+                    </Link>
+                  )}
                 </div>
               </section>
             </aside>
@@ -154,7 +201,7 @@ export default async function LessonPage({ params }: PageProps) {
 
               {navigation.next ? (
                 <Link href={navigation.next.href} className="procession-link">
-                  <p className="procession-link-kicker">Next Teaching</p>
+                  <p className="procession-link-kicker">Continue Reading</p>
                   <h2 className="procession-link-title">
                     {navigation.next.lessonNumber}. {navigation.next.title}
                   </h2>

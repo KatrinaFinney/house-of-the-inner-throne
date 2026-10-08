@@ -7,22 +7,22 @@ const entrances = [
   {
     title: "Study the Archive",
     description:
-      "Enter the manuscript library of the Shrine. Read foundational teachings in sequence or move by pillar according to present need.",
-    cta: "Enter the Archive",
+      "Read the 44-manuscript canon in sequence and let each teaching prepare the ground for the next.",
+    cta: "Open the Archive",
     href: "/archive",
   },
   {
     title: "Enter a Pillar",
     description:
-      "Begin with Protection, Power, or Prosperity. Each pillar opens a chamber of teachings, practices, and spiritual focus.",
-    cta: "Enter the Pillars",
+      "Meet the need before you through Protection, Power, or Prosperity, then follow its related teachings.",
+    cta: "Choose a Pillar",
     href: "/pillars",
   },
   {
     title: "Prepare for Practice",
     description:
-      "Gather ritual foundations and practical instruments that support devotion, remembrance, offering, and disciplined spiritual work.",
-    cta: "Enter the Foundations",
+      "Learn the materials, symbols, and methods that help intention become conscious, capable practice.",
+    cta: "Prepare the Hands",
     href: "/ritual-foundations",
   },
 ];
@@ -43,17 +43,16 @@ export function BeginWithinSection() {
           </p>
 
           <h2 className="text-4xl leading-tight sm:text-5xl">
-            Enter the Shrine in the order that meets your spirit.
+            Begin where your spirit recognizes itself.
           </h2>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)]">
-            Some begin in the Archive with foundational teachings. Some enter
-            through a pillar that reflects their present need. Some begin by
-            preparing the hands for ritual work. No single doorway is required.
+            Read from the beginning, follow the pillar that meets your present
+            need, or prepare the hands for practice. Each way leads inward.
           </p>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-[var(--muted)]">
-            The Shrine is structured, but sovereignty remains with the one who enters.
+            The Shrine offers structure. Sovereignty remains with the one who enters.
           </p>
         </motion.div>
 
