@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import matter from "gray-matter";
+import { parseFrontmatter } from "./frontmatter";
 
 const ROOT = process.cwd();
 const ARCHIVE_DIR = path.join(ROOT, "content", "archive");
@@ -70,7 +70,7 @@ export async function getAllLessons(): Promise<Lesson[]> {
 
     for (const filePath of files) {
       const source = await fs.readFile(filePath, "utf8");
-      const { data, content } = matter(normalizeSource(source));
+      const { data, content } = parseFrontmatter(normalizeSource(source));
 
       if (!data || typeof data !== "object") continue;
 
@@ -135,7 +135,7 @@ export async function getAllStructurePages(): Promise<StructurePage[]> {
 
   for (const filePath of files) {
     const source = await fs.readFile(filePath, "utf8");
-    const { data, content } = matter(normalizeSource(source));
+    const { data, content } = parseFrontmatter(normalizeSource(source));
 
     if (!data || typeof data !== "object") continue;
 
