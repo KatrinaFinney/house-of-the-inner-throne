@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "The Storehouse",
   description:
-    "Ritual instruments prepared to support offering, remembrance, devotion, and disciplined sacred work.",
+    "Ritual instruments prepared to support offering, remembrance, devotion, and sovereign practice.",
 };
 
 const offerings = [
@@ -33,8 +33,8 @@ export default function StorehousePage() {
         </h1>
         <p className="mt-7 max-w-3xl text-lg leading-8 text-(--muted)">
           The Storehouse is being prepared slowly and carefully. Its instruments
-          will support practice without standing in place of discipline,
-          attention, or spiritual relationship.
+          will support practice without standing in place of attention,
+          discernment, or spiritual relationship.
         </p>
         <p className="mt-4 max-w-3xl text-lg leading-8 text-(--muted)">
           Join the founding list to receive the first word when offerings become
