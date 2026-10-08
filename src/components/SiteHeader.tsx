@@ -11,7 +11,7 @@ const links = [
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-30 border-b border-white/10 bg-[#080807]/92 px-5 py-4 text-(--text) backdrop-blur-xl">
+    <header className="site-header-safe sticky top-0 z-30 border-b border-white/10 bg-[#080807]/92 py-4 text-(--text) backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 sm:gap-6">
         <Link href="/?interior=1" className="max-w-48 font-display text-[0.9rem] leading-tight tracking-[0.04em] text-(--text) sm:max-w-none sm:text-lg">
           Shrine of the Inner Throne
