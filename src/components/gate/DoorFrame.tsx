@@ -4,13 +4,13 @@ import { motion, useReducedMotion } from "framer-motion";
 import { DoorPanel } from "./DoorPanel";
 
 const LIMESTONE_SURFACE = {
-  backgroundColor: "#bdb5a2",
+  backgroundColor: "#879180",
   backgroundImage: `
-    radial-gradient(ellipse at 18% 12%, rgba(244,239,224,0.42) 0%, transparent 30%),
-    radial-gradient(ellipse at 78% 72%, rgba(88,78,60,0.16) 0%, transparent 34%),
-    linear-gradient(112deg, transparent 0 22%, rgba(82,72,56,0.16) 23%, rgba(236,230,214,0.18) 24%, transparent 26%),
-    linear-gradient(76deg, transparent 0 58%, rgba(78,69,54,0.12) 59%, rgba(237,232,218,0.16) 60%, transparent 62%),
-    linear-gradient(180deg, #d0c9b7 0%, #b8b09d 52%, #9e9582 100%)
+    radial-gradient(ellipse at 18% 12%, rgba(222,230,216,0.34) 0%, transparent 30%),
+    radial-gradient(ellipse at 78% 72%, rgba(35,47,37,0.22) 0%, transparent 34%),
+    linear-gradient(112deg, transparent 0 22%, rgba(49,63,51,0.22) 23%, rgba(214,223,209,0.18) 24%, transparent 26%),
+    linear-gradient(76deg, transparent 0 58%, rgba(44,58,47,0.18) 59%, rgba(223,230,216,0.14) 60%, transparent 62%),
+    linear-gradient(180deg, #aab4a5 0%, #879180 50%, #667062 100%)
   `,
 } as const;
 
@@ -30,10 +30,10 @@ export function DoorFrame({ isEntering, onEnter }: DoorFrameProps) {
       aria-label="Open the doors and enter the Shrine"
       whileHover={prefersReducedMotion || isEntering ? undefined : { scale: 1.012 }}
       whileTap={prefersReducedMotion || isEntering ? undefined : { scale: 0.992 }}
-      className="group relative mx-auto block aspect-[11/17] h-auto w-[min(13.75rem,31svh,calc(100vw-3rem))] shrink-0 cursor-pointer appearance-none border-0 bg-transparent p-0 text-left outline-none focus-visible:ring-2 focus-visible:ring-(--gold) focus-visible:ring-offset-4 focus-visible:ring-offset-(--bg) disabled:cursor-default sm:w-[min(15.75rem,31svh,calc(100vw-4rem))] md:w-[min(18.25rem,31svh,calc(100vw-5rem))] lg:w-[min(20.25rem,33svh)]"
+      className="threshold-door group relative mx-auto block aspect-[11/17] h-auto shrink-0 cursor-pointer appearance-none border-0 bg-transparent p-0 text-left outline-none focus-visible:ring-2 focus-visible:ring-(--gold) focus-visible:ring-offset-4 focus-visible:ring-offset-(--bg) disabled:cursor-default"
     >
       <div
-        className="absolute inset-0 border border-[#776b52] shadow-[0_35px_120px_rgba(0,0,0,0.62)] [clip-path:polygon(7%_0,93%_0,100%_100%,0_100%)]"
+        className="absolute inset-0 border border-[#4d5a4d] shadow-[0_35px_120px_rgba(0,0,0,0.62)] [clip-path:polygon(7%_0,93%_0,100%_100%,0_100%)]"
         style={LIMESTONE_SURFACE}
       />
 
@@ -48,31 +48,31 @@ export function DoorFrame({ isEntering, onEnter }: DoorFrameProps) {
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-[3%] top-0 h-[12%] border-x border-t border-[#756a52] shadow-[0_8px_18px_rgba(0,0,0,0.35)]"
+        className="pointer-events-none absolute inset-x-[3%] top-0 h-[12%] border-x border-t border-[#4d5a4d] shadow-[0_8px_18px_rgba(0,0,0,0.35)]"
         style={LIMESTONE_SURFACE}
       />
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-[1%] top-[8%] bottom-[2%] w-[11%] border border-[#756a52] shadow-[8px_0_18px_rgba(0,0,0,0.28)]"
+        className="pointer-events-none absolute left-[1%] top-[8%] bottom-[2%] w-[11%] border border-[#4d5a4d] shadow-[8px_0_18px_rgba(0,0,0,0.28)]"
         style={LIMESTONE_SURFACE}
       />
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute right-[1%] top-[8%] bottom-[2%] w-[11%] border border-[#756a52] shadow-[-8px_0_18px_rgba(0,0,0,0.28)]"
+        className="pointer-events-none absolute right-[1%] top-[8%] bottom-[2%] w-[11%] border border-[#4d5a4d] shadow-[-8px_0_18px_rgba(0,0,0,0.28)]"
         style={LIMESTONE_SURFACE}
       />
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-[8%] border border-[#756a52] shadow-[0_-7px_16px_rgba(0,0,0,0.25)]"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-[8%] border border-[#4d5a4d] shadow-[0_-7px_16px_rgba(0,0,0,0.25)]"
         style={LIMESTONE_SURFACE}
       />
 
-      <div className="pointer-events-none absolute inset-x-[6%] top-[4%] h-px bg-[#f2ead7]/45" />
+      <div className="pointer-events-none absolute inset-x-[6%] top-[4%] h-px bg-[#e1e8dc]/35" />
       <div className="pointer-events-none absolute inset-x-[7%] top-[7.5%] h-px bg-black/20" />
-      <div className="pointer-events-none absolute inset-x-[13%] bottom-[4%] h-px bg-[#eee5cf]/35" />
+      <div className="pointer-events-none absolute inset-x-[13%] bottom-[4%] h-px bg-[#dce5d8]/30" />
 
       <motion.div
         aria-hidden="true"
