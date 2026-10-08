@@ -149,7 +149,29 @@ summary::-webkit-details-marker {
 }
 
 .threshold-stage {
-  gap: clamp(0.75rem, 2.2svh, 1.75rem);
+  gap: clamp(0.7rem, 1.6svh, 1.35rem);
+}
+
+.threshold-door {
+  width: min(65vw, 19rem, calc(100vw - 2.5rem));
+}
+
+@media (min-width: 640px) {
+  .threshold-door {
+    width: min(18rem, 35svh, calc(100vw - 4rem));
+  }
+}
+
+@media (min-width: 768px) {
+  .threshold-door {
+    width: min(19rem, 34svh, calc(100vw - 5rem));
+  }
+}
+
+@media (min-width: 1024px) {
+  .threshold-door {
+    width: min(20.25rem, 33svh);
+  }
 }
 
 .site-header-safe {
@@ -158,6 +180,10 @@ summary::-webkit-details-marker {
 }
 
 @media (max-height: 720px) {
+  .threshold-door {
+    width: min(57vw, 15.5rem, calc(100vw - 2.5rem));
+  }
+
   .threshold-stage {
     gap: 0.65rem;
   }

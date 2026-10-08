@@ -40,8 +40,8 @@ export function DoorPanel({ side, isEntering }: DoorPanelProps) {
         className={clsx(
           "absolute inset-0",
           side === "left"
-            ? "bg-[linear-gradient(180deg,#d7d0bf_0%,#c6beab_24%,#b3aa96_52%,#a19884_76%,#8d846f_100%)]"
-            : "bg-[linear-gradient(180deg,#d9d2c1_0%,#c9c1ae_24%,#b6ad99_52%,#a49a86_76%,#908672_100%)]"
+            ? "bg-[linear-gradient(180deg,#aeb9aa_0%,#98a493_24%,#818e7e_52%,#6f7b6d_76%,#586357_100%)]"
+            : "bg-[linear-gradient(180deg,#b1bcad_0%,#9ba697_24%,#849081_52%,#727e70_76%,#5b665a_100%)]"
         )}
       />
 
@@ -49,12 +49,12 @@ export function DoorPanel({ side, isEntering }: DoorPanelProps) {
         className="absolute inset-0 opacity-[0.62]"
         style={{
           backgroundImage: `
-            radial-gradient(circle at 18% 14%, rgba(248,244,231,0.32) 0%, transparent 18%),
-            radial-gradient(circle at 38% 34%, rgba(117,105,82,0.17) 0%, transparent 21%),
-            radial-gradient(circle at 72% 18%, rgba(244,239,224,0.25) 0%, transparent 18%),
-            radial-gradient(circle at 82% 48%, rgba(112,99,77,0.16) 0%, transparent 20%),
-            radial-gradient(circle at 28% 76%, rgba(83,73,57,0.14) 0%, transparent 25%),
-            radial-gradient(circle at 66% 72%, rgba(239,233,216,0.18) 0%, transparent 24%)
+            radial-gradient(circle at 18% 14%, rgba(230,236,226,0.28) 0%, transparent 18%),
+            radial-gradient(circle at 38% 34%, rgba(55,72,58,0.22) 0%, transparent 21%),
+            radial-gradient(circle at 72% 18%, rgba(221,230,218,0.22) 0%, transparent 18%),
+            radial-gradient(circle at 82% 48%, rgba(48,65,52,0.20) 0%, transparent 20%),
+            radial-gradient(circle at 28% 76%, rgba(31,47,36,0.18) 0%, transparent 25%),
+            radial-gradient(circle at 66% 72%, rgba(216,226,213,0.16) 0%, transparent 24%)
           `,
         }}
       />
@@ -63,8 +63,8 @@ export function DoorPanel({ side, isEntering }: DoorPanelProps) {
         className="absolute inset-0 opacity-[0.46]"
         style={{
           backgroundImage: `
-            linear-gradient(108deg, transparent 0 28%, rgba(84,74,57,0.25) 29%, rgba(239,233,217,0.18) 30%, transparent 32%),
-            linear-gradient(72deg, transparent 0 62%, rgba(91,79,60,0.20) 63%, rgba(244,239,225,0.14) 64%, transparent 66%)
+            linear-gradient(108deg, transparent 0 28%, rgba(41,57,45,0.30) 29%, rgba(222,230,218,0.16) 30%, transparent 32%),
+            linear-gradient(72deg, transparent 0 62%, rgba(45,61,49,0.26) 63%, rgba(229,235,224,0.13) 64%, transparent 66%)
           `,
         }}
       />
