@@ -2,7 +2,6 @@
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
-import { useRouter } from "next/navigation";
 import { track } from "@vercel/analytics";
 import { DoorFrame } from "./DoorFrame";
 import { GateCopy } from "./GateCopy";
@@ -73,7 +72,6 @@ const STARS: Star[] = [
 ];
 
 export function ShrineGate({ initialOpen = false }: { initialOpen?: boolean }) {
-  const router = useRouter();
   const prefersReducedMotion = useReducedMotion();
 
   const [isEntering, setIsEntering] = useState(initialOpen);
@@ -102,11 +100,10 @@ export function ShrineGate({ initialOpen = false }: { initialOpen?: boolean }) {
 
     const timer = window.setTimeout(() => {
       setHasEntered(true);
-      router.replace("/?interior=1", { scroll: false });
     }, ENTER_DURATION_MS);
 
     return () => window.clearTimeout(timer);
-  }, [isEntering, hasEntered, prefersReducedMotion, router]);
+  }, [isEntering, hasEntered, prefersReducedMotion]);
 
   const handleEnter = () => {
     if (isEntering) return;
@@ -116,7 +113,6 @@ export function ShrineGate({ initialOpen = false }: { initialOpen?: boolean }) {
 
     if (prefersReducedMotion) {
       setHasEntered(true);
-      router.replace("/?interior=1", { scroll: false });
     }
   };
 
