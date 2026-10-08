@@ -140,6 +140,10 @@ export function DoorPanel({ side, isEntering }: DoorPanelProps) {
       <div className="absolute inset-x-0 top-0 h-[14%] bg-[linear-gradient(180deg,rgba(255,255,255,0.14),transparent)] opacity-55" />
       <div className="absolute inset-x-0 bottom-0 h-[18%] bg-[linear-gradient(0deg,rgba(0,0,0,0.28),transparent)]" />
 
+      <div className="absolute inset-[7%] border border-[#d5ca9b]/24 shadow-[inset_0_0_18px_rgba(21,31,23,0.28)]" />
+      <div className="absolute inset-[10%] border border-black/12" />
+      <div className="absolute left-1/2 top-[8%] h-[84%] w-px -translate-x-1/2 bg-[linear-gradient(180deg,transparent,rgba(223,213,170,0.18)_18%,rgba(36,50,39,0.28)_82%,transparent)]" />
+
       <div className="absolute inset-y-0 left-0 w-px bg-white/10" />
       <div className="absolute inset-y-0 right-0 w-px bg-black/20" />
 
