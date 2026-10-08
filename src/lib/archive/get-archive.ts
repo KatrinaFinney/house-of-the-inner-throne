@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import matter from "gray-matter";
+import { parseFrontmatter } from "../frontmatter";
 import { getVolumeByKey, volumeMap } from "./volume-map";
 import type {
   ArchiveLesson,
@@ -62,7 +62,7 @@ function isValidStructureMeta(data: unknown): data is {
 
 async function readLessonFile(fullPath: string): Promise<ArchiveLesson | null> {
   const source = await fs.readFile(fullPath, "utf8");
-  const { data, content } = matter(normalizeSource(source));
+  const { data, content } = parseFrontmatter(normalizeSource(source));
 
   if (!isValidMeta(data)) {
     throw new Error(`Invalid frontmatter in file: ${fullPath}`);
@@ -85,7 +85,7 @@ async function readLessonFile(fullPath: string): Promise<ArchiveLesson | null> {
 
 async function readStructureFile(fullPath: string): Promise<ArchiveStructurePage | null> {
   const source = await fs.readFile(fullPath, "utf8");
-  const { data, content } = matter(normalizeSource(source));
+  const { data, content } = parseFrontmatter(normalizeSource(source));
 
   if (!isValidStructureMeta(data)) {
     return null;
