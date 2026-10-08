@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import "@fontsource-variable/cinzel";
+import "@fontsource-variable/cormorant-garamond";
 import "./globals.css";
 import { siteUrl } from "@/lib/site";
 import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
@@ -36,8 +40,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <SiteHeader />
         {children}
         <SiteFooter />
+        <Analytics />
       </body>
     </html>
   );
