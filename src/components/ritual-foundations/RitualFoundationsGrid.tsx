@@ -7,6 +7,9 @@ type RitualFoundationItem = {
   body: string;
   href: string;
   guideHref: string;
+  guideTitle: string;
+  guideSubtitle: string;
+  pdfHref: string;
 };
 
 type RitualFoundationsGridProps = {
@@ -23,7 +26,7 @@ export function RitualFoundationsGrid({ items }: RitualFoundationsGridProps) {
             <p className="mt-4 flex-1 text-base leading-8 text-(--muted)">{item.body}</p>
             <div className="mt-8 flex flex-col gap-3">
               <Link href={item.href} className="inline-flex w-fit rounded-full border border-(--gold) bg-(--gold) px-5 py-2.5 text-sm uppercase tracking-[0.12em] text-black transition hover:brightness-[1.04]">Read Introduction</Link>
-              <Link href={item.guideHref} className="inline-flex w-fit rounded-full border border-white/15 px-5 py-2.5 text-sm uppercase tracking-[0.12em] text-(--text) transition hover:bg-white/5">Receive Full Guide</Link>
+              <Link href={item.guideHref} className="inline-flex w-fit rounded-full border border-white/15 px-5 py-2.5 text-sm uppercase tracking-[0.12em] text-(--text) transition hover:bg-white/5">Open Full Guide</Link>
             </div>
           </div>
         </article>
