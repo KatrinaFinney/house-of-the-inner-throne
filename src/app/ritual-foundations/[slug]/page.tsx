@@ -43,7 +43,7 @@ export default async function FoundationPage({ params }: FoundationPageProps) {
           </p>
         </div>
         <div className="mt-10 flex flex-wrap gap-4">
-          <Link href={`${foundation.href}/full-guide`} className="rounded-full bg-(--gold) px-7 py-3 text-sm uppercase tracking-[0.14em] text-black">Receive the Full Guide</Link>
+          <Link href={`${foundation.href}/full-guide`} className="rounded-full bg-(--gold) px-7 py-3 text-sm uppercase tracking-[0.14em] text-black">Open the Full Guide</Link>
           <Link href="/ritual-foundations" className="rounded-full border border-white/20 px-7 py-3 text-sm uppercase tracking-[0.14em]">All Foundations</Link>
         </div>
       </article>
