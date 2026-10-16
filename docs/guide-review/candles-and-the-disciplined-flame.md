@@ -1,6 +1,6 @@
 # Candles & the Disciplined Flame
 
-Choose a color, prepare simply, and give your prayer a place
+Color, candle size, working duration, and the rhythm of your prayer
 
 **Review draft — awaiting editorial approval.**
 
@@ -16,12 +16,18 @@ Candle work is part of many devotional and magical traditions, including African
 
 Color uses below draw from contemporary Hoodoo practitioner sources. The short rituals are original Shrine adaptations. A candle supports spiritual practice without guaranteeing an outcome or taking another person's choice away.
 
-### Choose a Candle
+### Match the Candle to the Working
 
-- Tea light: a compact choice for a short sitting, in its proper holder.
-- Taper or small altar candle: useful for a focused prayer or repeated, supervised sessions.
-- Glass-encased candle: a devotional format that still needs supervision and an undamaged container.
-- Unlit candle or battery light: an alternative where open flame is unsuitable. Burning longer is not a measure of spiritual seriousness.
+- Birthday candle or other small candle: the Shrine's choice for a short, focused working and an immediate next step. Use a purpose-made holder that fits it.
+- Small altar candle or taper: useful for a defined prayer or several supervised sessions when the candle is designed to be relit.
+- Larger candle or glass-encased vigil: choose for a sustained working, an ongoing situation, or a prayer revisited over time.
+- Unlit candle or battery light: use when an open flame cannot be safely supervised. A prayer need not wait for ideal equipment.
+
+### A Spark or a Sustained Light
+
+In the Shrine's approach, smaller candles symbolize quick activation; larger candles make room for a longer, more involved working. Match the scale of the session to the purpose. A small candle does not make an urgent need unimportant, and a large need does not require unsafe burning.
+
+Burn time is not manifestation time. No candle size guarantees an immediate result or makes candle magic universally faster than every other method. Think of a quick flame as a beginning: give its momentum practical support so that easy come need not mean easy go.
 
 ## Color and Use
 
@@ -59,6 +65,12 @@ The most useful preparation is a clear, safe place to work.
 
 If the candle is designed to be relit, you may return to the same prayer over several sessions. Extinguishing it safely does not cancel the work. Never commit to an uninterrupted burn that would require leaving it unattended.
 
+### Birthday Candles and Vigil Candles
+
+A birthday candle belongs in a snug, purpose-made candle holder on a stable, heat-resistant surface, never balanced on paper or a jar lid. Do not use ritual papers as a holder or place a candle directly on a plate without a suitable holder.
+
+A 'seven-day' candle is a devotional format, not a promise of exactly seven days of burning or results. Never keep it lit unattended to satisfy its name. Check the label's maximum burn interval and cooling instructions; extinguish before leaving or sleeping.
+
 ## Five Ways to Begin
 
 These brief practices are Shrine adaptations, not fixed traditional formulas.
@@ -70,6 +82,11 @@ These brief practices are Shrine adaptations, not fixed traditional formulas.
 - Love: use pink. Ask for affection that is mutual and welcome. Pair the prayer with honest communication or a caring act.
 - Peace: use blue. Name the tone you want in your home. Afterward, make one change that supports it.
 - Clarity: use white. Write your question and three known facts. Sit quietly, then name your next step.
+
+### Two Examples of Scale
+
+- Need a clear voice before a conversation today? Use a small, safely held candle and one spoken declaration. Extinguish it safely, then prepare and have the conversation.
+- Working toward a sustained employment or business goal? Choose a larger candle designed for repeat sessions. Return to the petition as you take each application, follow-up, or service step. A short candle may also accompany this larger goal.
 
 ### A Short Session
 
@@ -100,6 +117,7 @@ Wax, soot, and flame behavior are interpreted in some rootwork traditions. Physi
 - [3. Lucky Mojo, Pink Colour Candles.](https://www.luckymojo.com/pinkcolourcandle.html)
 - [4. Lucky Mojo color reference, including black.](https://www.luckymojo.com/greycolourcandle.html)
 - [5. NFPA, candle safety.](https://www.nfpa.org/education-and-research/home-fire-safety/candles)
+- [6. Lucky Mojo, seven-day candle forms and ongoing workings.](https://www.luckymojo.com/sevenknobsevendaycandle.html) The small-candle/quick-activation framework is a Shrine interpretation, not a guarantee.
 
 ### Closing
 

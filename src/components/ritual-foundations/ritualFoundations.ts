@@ -14,7 +14,7 @@ export const ritualFoundations = [
     "href": "/ritual-foundations/candles",
     "guideHref": "/ritual-foundations/candles/full-guide",
     "guideTitle": "Candles & the Disciplined Flame",
-    "guideSubtitle": "Choose a color, prepare simply, and give your prayer a place.",
+    "guideSubtitle": "Color, candle size, working duration, and the rhythm of your prayer.",
     "pdfHref": "/guides/candles-and-the-disciplined-flame.pdf"
   },
   {
@@ -37,11 +37,11 @@ export const ritualFoundations = [
   },
   {
     "title": "Elemental Magic",
-    "body": "Work with water, fire, air, and earth.",
+    "body": "Explore water's depth, earth's endurance, fire's transformation, and words of power.",
     "href": "/ritual-foundations/elemental-magic",
     "guideHref": "/ritual-foundations/elemental-magic/full-guide",
     "guideTitle": "Elemental Magic & Everyday Practice",
-    "guideSubtitle": "Explore water, fire, air, and earth through simple ritual.",
+    "guideSubtitle": "The depth of water, the roots of earth, the spark of fire, and the power of the spoken word.",
     "pdfHref": "/guides/elemental-magic-and-everyday-practice.pdf"
   },
   {
@@ -70,6 +70,24 @@ export const ritualFoundations = [
     "guideTitle": "Petitions & Written Will",
     "guideSubtitle": "Clear words for prayer, protection, prosperity, and personal direction.",
     "pdfHref": "/guides/petition-papers-and-written-will.pdf"
+  },
+  {
+    "title": "Astrology & Ritual Timing",
+    "body": "Follow lunar rhythms, zodiac seasons, and planetary days in your practice.",
+    "href": "/ritual-foundations/astrology-ritual-timing",
+    "guideHref": "/ritual-foundations/astrology-ritual-timing/full-guide",
+    "guideTitle": "Astrology & Ritual Timing",
+    "guideSubtitle": "Work with lunar rhythms, zodiac seasons, and planetary days.",
+    "pdfHref": "/guides/astrology-and-ritual-timing.pdf"
+  },
+  {
+    "title": "The Opposite Mirror",
+    "body": "Explore your shadow through your opposite zodiac sign.",
+    "href": "/ritual-foundations/the-opposite-mirror",
+    "guideHref": "/ritual-foundations/the-opposite-mirror/full-guide",
+    "guideTitle": "The Opposite Mirror",
+    "guideSubtitle": "Shadow Work Through Zodiac Opposites.",
+    "pdfHref": "/guides/the-opposite-mirror-shadow-and-integration.pdf"
   }
 ] as const;
 

@@ -45,7 +45,7 @@ for (const volumeNumber of [1, 2, 3, 4]) {
   }
 }
 
-const ritualSlugs = ["herbs", "candles", "honey-jars", "sacred-geometry", "elemental-magic", "tree-magic", "petition-papers", "incense"];
+const ritualSlugs = ["herbs", "candles", "honey-jars", "sacred-geometry", "elemental-magic", "tree-magic", "petition-papers", "incense", "astrology-ritual-timing", "the-opposite-mirror"];
 for (const slug of ritualSlugs) {
   staticRoutes.add(`/ritual-foundations/${slug}`);
   staticRoutes.add(`/ritual-foundations/${slug}/full-guide`);
