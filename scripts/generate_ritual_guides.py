@@ -15,6 +15,7 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import (
     BaseDocTemplate,
+    CondPageBreak,
     Frame,
     HRFlowable,
     KeepTogether,
@@ -70,23 +71,23 @@ def styles():
         ),
         "chapter_kicker": ParagraphStyle(
             "ChapterKicker", parent=sheet["Normal"], fontName="ShrineSansBold",
-            fontSize=8, leading=11, textColor=GOLD, spaceAfter=9, tracking=1.8,
+            fontSize=8, leading=11, textColor=GOLD, spaceAfter=9, tracking=1.8, keepWithNext=True,
         ),
         "h1": ParagraphStyle(
             "HeadingOne", parent=sheet["Heading1"], fontName="ShrineSerif",
-            fontSize=25, leading=30, textColor=INK, spaceAfter=13,
+            fontSize=23, leading=28, textColor=INK, spaceAfter=11, keepWithNext=True,
         ),
         "h2": ParagraphStyle(
             "HeadingTwo", parent=sheet["Heading2"], fontName="ShrineSerifBold",
-            fontSize=14, leading=19, textColor=CHARCOAL, spaceBefore=12, spaceAfter=8,
+            fontSize=14, leading=18, textColor=CHARCOAL, spaceBefore=10, spaceAfter=6, keepWithNext=True,
         ),
         "lead": ParagraphStyle(
             "Lead", parent=sheet["Normal"], fontName="ShrineSerif",
-            fontSize=12.2, leading=19, textColor=SAGE, spaceAfter=13,
+            fontSize=12.2, leading=18, textColor=SAGE, spaceAfter=10,
         ),
         "body": ParagraphStyle(
             "Body", parent=sheet["BodyText"], fontName="ShrineSerif",
-            fontSize=10.1, leading=16.4, textColor=CHARCOAL, spaceAfter=9,
+            fontSize=10.1, leading=14.5, textColor=CHARCOAL, spaceAfter=6,
         ),
         "small": ParagraphStyle(
             "Small", parent=sheet["BodyText"], fontName="ShrineSans",
@@ -94,18 +95,18 @@ def styles():
         ),
         "bullet": ParagraphStyle(
             "Bullet", parent=sheet["BodyText"], fontName="ShrineSerif",
-            fontSize=9.8, leading=15.6, textColor=CHARCOAL,
-            leftIndent=16, firstLineIndent=-10, bulletIndent=4, spaceAfter=5,
+            fontSize=9.8, leading=14, textColor=CHARCOAL,
+            leftIndent=16, firstLineIndent=-10, bulletIndent=4, spaceAfter=4,
         ),
         "step": ParagraphStyle(
             "Step", parent=sheet["BodyText"], fontName="ShrineSerif",
-            fontSize=9.8, leading=15.6, textColor=CHARCOAL,
-            leftIndent=20, firstLineIndent=-16, spaceAfter=7,
+            fontSize=9.8, leading=14, textColor=CHARCOAL,
+            leftIndent=20, firstLineIndent=-16, spaceAfter=5,
         ),
         "quote": ParagraphStyle(
             "Quote", parent=sheet["BodyText"], fontName="ShrineSerif",
-            fontSize=12.3, leading=19, textColor=SAGE, leftIndent=24,
-            rightIndent=24, alignment=TA_CENTER, spaceBefore=9, spaceAfter=11,
+            fontSize=12.3, leading=18, textColor=SAGE, leftIndent=24,
+            rightIndent=24, alignment=TA_CENTER, spaceBefore=7, spaceAfter=9,
         ),
         "source": ParagraphStyle(
             "Source", parent=sheet["BodyText"], fontName="ShrineSans",
@@ -168,15 +169,17 @@ def chapter(story, s, number: str, title: str, lead: str | None = None):
 
 
 def add_section(story, s, section):
-    story.append(Paragraph(section["heading"], s["h2"]))
+    section_story = [Paragraph(section["heading"], s["h2"])]
     for paragraph in section.get("paragraphs", []):
-        story.append(Paragraph(paragraph, s["body"]))
+        section_story.append(Paragraph(paragraph, s["body"]))
+    bullet_style = s["source"] if section["heading"] in {"Sources", "Sources and Further Reading", "Sources and Further Study", "Sources and Scope", "Source and Scope"} else s["bullet"]
     for item in section.get("bullets", []):
-        story.append(Paragraph(item, s["bullet"], bulletText="•"))
+        section_story.append(Paragraph(item, bullet_style, bulletText="•"))
     for index, item in enumerate(section.get("steps", []), 1):
-        story.append(Paragraph(f"<b>{index}.</b> {item}", s["step"]))
+        section_story.append(Paragraph(f"<b>{index}.</b> {item}", s["step"]))
     if section.get("words"):
-        story.append(Paragraph(section["words"], s["quote"]))
+        section_story.append(Paragraph(section["words"], s["quote"]))
+    story.extend(section_story)
 
 
 def build_guide(guide, s):
@@ -189,15 +192,21 @@ def build_guide(guide, s):
     story.append(Paragraph(guide["subtitle"], s["cover_subtitle"]))
     story.append(Spacer(1, 0.35 * inch))
     story.append(Paragraph("SHRINE OF THE INNER THRONE", s["cover_kicker"]))
-    story.append(Paragraph("A sovereignty-led companion for disciplined, culturally careful practice.", s["cover_note"]))
+    story.append(Paragraph("Adorn the seat of your soul.", s["cover_note"]))
     story.append(PageBreak())
 
     for ci, chamber_data in enumerate(guide["chambers"], 1):
-        chapter(story, s, f"{ci:02d}", chamber_data["title"], chamber_data.get("lead"))
+        if ci > 1:
+            story.append(Spacer(1, 12))
+            story.append(CondPageBreak(160))
+        chamber_story = []
+        chapter(chamber_story, s, f"{ci:02d}", chamber_data["title"], chamber_data.get("lead"))
         for section in chamber_data.get("sections", []):
-            add_section(story, s, section)
-        if ci != len(guide["chambers"]):
-            story.append(PageBreak())
+            add_section(chamber_story, s, section)
+        if ci == len(guide["chambers"]):
+            story.append(KeepTogether(chamber_story))
+        else:
+            story.extend(chamber_story)
 
     doc.build(story)
     return path
