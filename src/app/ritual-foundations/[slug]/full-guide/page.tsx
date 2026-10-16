@@ -35,7 +35,7 @@ export default async function FullGuidePage({ params }: FullGuidePageProps) {
           <h1 className="mt-5 text-[2.8rem] leading-[0.98] sm:text-6xl">{foundation.guideTitle}</h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-(--muted)">{foundation.guideSubtitle}</p>
           <p className="mt-5 max-w-3xl text-base leading-7 text-(--muted)">
-            Five chambers of cultural context, ethical practice, material safety, discernment, and return to the Inner Throne. Read below or keep the six-page edition with you.
+            Practical uses, simple examples, and room to explore. Read the guide below or download a copy to keep. Start with what resonates with you.
           </p>
         </div>
 
