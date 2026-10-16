@@ -9,46 +9,191 @@
           "title": "Before the Hand Reaches",
           "lead": "A plant is not made sacred because it appears on a correspondence list. Practice begins with relationship, knowledge, and restraint.",
           "sections": [
-            {"heading": "The Inner Law", "paragraphs": ["Spiritual sovereignty asks the practitioner to know what they are touching, why they are touching it, and whether the chosen material belongs in the work at all. Herbs and roots can hold culinary, medicinal, ecological, ancestral, and symbolic meanings at once. Responsible practice does not collapse these meanings into a single promise.", "In African American Hoodoo and rootwork, plant knowledge developed through survival, healing, prayer, regional ecology, Black innovation, and the preservation of African diasporic ways of knowing. The tradition is living and varied. No single chart can speak for every family, region, church, worker, or lineage."]},
-            {"heading": "A Mirror for the Practitioner", "bullets": ["Am I choosing this plant because I know it, or because it looks impressive?", "Do I understand its physical risks as well as its symbolic reputation?", "Is this work strengthening my own clarity, boundaries, and responsibility?", "Can I begin with a local or familiar plant before seeking something rare?"]},
-            {"heading": "Cultural Ground", "paragraphs": ["Hoodoo is an African American tradition shaped under the conditions of slavery and its aftermath. Roots, leaves, minerals, household materials, Biblical prayer, ancestral knowledge, and regional exchange all appear within its history. Naming that history matters. It keeps the work from becoming a floating aesthetic detached from the people who protected and developed it.", "This guide is Hoodoo-informed, not a claim to contain the whole tradition. It offers a disciplined doorway for personal spiritual practice while directing the reader toward history, elders, family knowledge, and serious study."]}
+            {
+              "heading": "The Inner Law",
+              "paragraphs": [
+                "Spiritual sovereignty asks the practitioner to know what they are touching, why they are touching it, and whether the chosen material belongs in the work at all. Herbs and roots can hold culinary, medicinal, ecological, ancestral, and symbolic meanings at once. Responsible practice does not collapse these meanings into a single promise.",
+                "In African American Hoodoo and rootwork, plant knowledge developed through survival, healing, prayer, regional ecology, Black innovation, and the preservation of African diasporic ways of knowing. The tradition is living and varied. No single chart can speak for every family, region, church, worker, or lineage."
+              ]
+            },
+            {
+              "heading": "A Mirror for the Practitioner",
+              "bullets": [
+                "Am I choosing this plant because I know it, or because it looks impressive?",
+                "Do I understand its physical risks as well as its symbolic reputation?",
+                "Is this work strengthening my own clarity, boundaries, and responsibility?",
+                "Can I begin with a local or familiar plant before seeking something rare?"
+              ]
+            },
+            {
+              "heading": "Cultural Ground",
+              "paragraphs": [
+                "Hoodoo is an African American tradition shaped under the conditions of slavery and its aftermath. Roots, leaves, minerals, household materials, Biblical prayer, ancestral knowledge, and regional exchange all appear within its history. Naming that history matters. It keeps the work from becoming a floating aesthetic detached from the people who protected and developed it.",
+                "This guide is Hoodoo-informed, not a claim to contain the whole tradition. It offers a disciplined doorway for personal spiritual practice while directing the reader toward history, elders, family knowledge, and serious study."
+              ]
+            }
           ]
         },
         {
           "title": "The Intelligence of the Plant",
-          "lead": "Correspondence is a beginning hypothesis, not a substitute for observation.",
+          "lead": "Begin with familiar plants from the grocery store. Choose a material whose use fits your work.",
           "sections": [
-            {"heading": "How Meaning Gathers", "paragraphs": ["A plant's ritual meaning may emerge from its physical behavior, color, scent, common use, folklore, Biblical association, regional history, or the experience of a particular community. A thorn may suggest defense. A cleansing culinary herb may become part of a wash. A sweet-smelling flower may support tenderness or welcome. These are relationships to investigate, not mechanical guarantees."]},
-            {"heading": "A Small Working Materia", "bullets": ["Rosemary: remembrance, household clarity, blessing, and protection in many folk practices.", "Basil: prosperity, peace, welcome, and the tending of domestic well-being.", "Mint: freshness, movement, alertness, and the circulation of opportunity.", "Bay: focused petition, victory, and the disciplined naming of an aim.", "Rose: love, dignity, grief, beauty, and reconciliation - never permission to override another person's will.", "Salt: not an herb, but a frequent companion for boundary, preservation, and cleansing. Use with care around soil, plants, and animals."]},
-            {"heading": "Build Your Own Record", "paragraphs": ["Record the common and botanical name when possible, where the plant came from, its scent and physical qualities, the purpose for which you used it, and what actually changed. Over time, observation becomes a more trustworthy teacher than borrowed certainty."]}
+            {
+              "heading": "How Meaning Gathers",
+              "paragraphs": [
+                "Ritual meanings grow from plant qualities, folklore, and community practice. Learn the context behind a correspondence rather than treating it as a guarantee."
+              ]
+            },
+            {
+              "heading": "Grocery-Store Herbs & Spices",
+              "paragraphs": [
+                "Use means spiritual purpose in the sources below, not a medical claim or guaranteed effect. These folk-magic and modern-witchcraft correspondences are not all specifically Hoodoo. Examples and combinations are Shrine adaptations.",
+                "Look in the produce, spice, and tea aisles. Fresh or dried culinary herbs are enough; saffron is optional."
+              ],
+              "bullets": [
+                "Rosemary | Use: protection, cleansing, remembrance. Example: keep a dried sprig with a written household-protection prayer.",
+                "Basil | Use: prosperity, love, protection. Example: place dried basil in a sealed jar beside a petition for fairly paid work.",
+                "Bay leaf | Use: success, wishes, divination. Example: keep a leaf beside a written goal in your journal.",
+                "Thyme | Use: courage, strength, purification. Example: carry a dry sachet when preparing for a difficult conversation.",
+                "Culinary sage | Use: wisdom, cleansing, purification. Example: place a dried leaf beside a question you are considering. This means culinary sage, not white sage.",
+                "Spearmint | Use: purification, luck. Example: pair a dry sachet with a written fresh-start prayer.",
+                "Oregano | Use: joy, protection, luck. Example: place dried oregano in a closed jar beside a household blessing.",
+                "Parsley | Use: protection, purification, luck. Example: keep dried parsley in a small sealed container with a protection petition.",
+                "Dill | Use: love, luck, protection. Example: place dried dill in a sachet beside a prayer for a peaceful, loving home.",
+                "Fennel | Use: protection, purification, psychic awareness. Example: place a closed jar of seeds beside your reflection journal.",
+                "Cinnamon | Use: prosperity, success, power. Example: place a cinnamon stick beside a business petition; do not blow the powder.",
+                "Cloves | Use: protection, love, banishing negativity. Example: keep whole cloves in a closed jar beside a written boundary.",
+                "Ginger | Use: success, power, strengthening a working. Example: pair dried ginger in a sealed container with a project-completion petition.",
+                "Nutmeg | Use: luck, money, divination. Example: keep a whole nutmeg in a closed container beside a prosperity petition.",
+                "Cardamom | Use: love, passion, attraction. Example: add whole pods to a dry sachet for freely chosen, reciprocal love.",
+                "Black pepper | Use: protection, banishing negativity. Example: place whole peppercorns in a sealed jar with a boundary prayer.",
+                "Chamomile | Use: peace, tranquility, restful-sleep rituals. Example: place an unopened chamomile tea bag beside an evening reflection.",
+                "Saffron | Use: love, happiness, psychic awareness. Example: place a few culinary saffron threads in a closed vial beside a joy or love petition.",
+                "Allspice | Use: prosperity, business success, luck. Example: keep whole berries in a sealed jar beside your business goals."
+              ]
+            },
+            {
+              "heading": "A Few Simple Combinations",
+              "bullets": [
+                "Protection: rosemary and whole cloves in a dry sachet, paired with a household-protection prayer.",
+                "Prosperity: basil, a bay leaf, and a cinnamon stick in a closed jar beside a work petition.",
+                "Love: cardamom pods and a few saffron threads in a dry sachet, paired with a prayer for mutual affection."
+              ],
+              "paragraphs": [
+                "These are optional Shrine-designed combinations. Use dry ingredients in dry containers. Keep every preparation labeled, away from children, pets, and flame. Do not ingest ritual mixtures, scatter powders, or treat culinary availability as permission for burning or skin application."
+              ]
+            },
+            {
+              "heading": "Correspondence Sources",
+              "paragraphs": [
+                "<a href=\"https://witcheslore.com/bookofshadows/witches-workshop/magical-correspondences-a-witchs-guide/\">Witches' Lore, Magical Correspondences: A Witch's Guide</a> (modern witchcraft; not Hoodoo-specific).",
+                "<a href=\"https://www.luckymojo.com/mojocatherbs.html\">Lucky Mojo, Magic Herbs, Roots, Mineral Curios</a> (Hoodoo-oriented catalogue; allspice uses)."
+              ]
+            },
+            {
+              "heading": "Build Your Own Record",
+              "paragraphs": [
+                "Record the plant, source, purpose, method, and what changed. Let observation deepen your practice."
+              ]
+            }
           ]
         },
         {
           "title": "Preparing the Work",
           "lead": "Preparation is where reverence becomes visible.",
           "sections": [
-            {"heading": "Choose One Method", "bullets": ["Wash: steep a small amount, cool completely, strain well, and use on a safe surface or as a final household rinse.", "Sachet: place dry material in a breathable cloth for an altar, drawer, doorway, or pocket.", "Bowl: keep a small dry offering or symbolic arrangement in a dedicated vessel, away from children and animals.", "Floor preparation: add a strained infusion to cleaning water only after checking the surface and plant safety.", "Tea or ingestion: use only food-grade material that you have positively identified and that is appropriate for you. Ritual reputation is not medical clearance."]},
-            {"heading": "Safety Is Part of the Rite", "paragraphs": ["Never ingest an unknown plant. Check allergies, medication interactions, pregnancy considerations, skin sensitivity, and pet toxicity. Essential oils are concentrated substances and should not be treated as interchangeable with whole herbs. Keep labels. Patch test topical preparations. Avoid smoke when ventilation or health makes it unwise.", "Spiritual practice is not medical care. When the body needs a clinician, pharmacist, poison-control center, or veterinarian, sovereignty means seeking qualified help promptly."]}
+            {
+              "heading": "Choose One Method",
+              "bullets": [
+                "Wash: steep a small amount, cool completely, strain well, and use on a safe surface or as a final household rinse.",
+                "Sachet: place dry material in a breathable cloth for an altar, drawer, doorway, or pocket.",
+                "Bowl: keep a small dry offering or symbolic arrangement in a dedicated vessel, away from children and animals.",
+                "Floor preparation: add a strained infusion to cleaning water only after checking the surface and plant safety.",
+                "Tea or ingestion: use only food-grade material that you have positively identified and that is appropriate for you. Ritual reputation is not medical clearance."
+              ]
+            },
+            {
+              "heading": "Safety Is Part of the Rite",
+              "paragraphs": [
+                "Never ingest an unknown plant. Check allergies, medication interactions, pregnancy considerations, skin sensitivity, and pet toxicity. Essential oils are concentrated substances and should not be treated as interchangeable with whole herbs. Keep labels. Patch test topical preparations. Avoid smoke when ventilation or health makes it unwise.",
+                "Spiritual practice is not medical care. When the body needs a clinician, pharmacist, poison-control center, or veterinarian, sovereignty means seeking qualified help promptly."
+              ]
+            }
           ]
         },
         {
           "title": "A Sovereign Cleansing Wash",
           "lead": "This practice is designed to clear your space and restore your own authority, not to diagnose an enemy or dramatize fear.",
           "sections": [
-            {"heading": "You Will Need", "bullets": ["One familiar aromatic herb, such as rosemary or basil", "A heat-safe bowl or jar", "Hot water", "A strainer", "A clean cloth or a small amount of ordinary cleaning water", "Your written statement of purpose"]},
-            {"heading": "The Work", "steps": ["Name the purpose in one sentence: what are you restoring, clarifying, or releasing from your own space?", "Place a small amount of herb in the vessel. Pour hot water over it and let it steep while you breathe slowly.", "When cool, strain the liquid completely. Test it on a hidden surface before use.", "Clean from the interior of the room toward the threshold. Let the movement embody completion rather than panic.", "At the doorway, pause. State what may remain and what may not cross your boundary.", "Dispose of the spent plant material responsibly. Wash the vessel and record the date, purpose, and result."],
-             "words": "My space answers to clarity. My choices answer to wisdom. I return to the seat of my own soul."},
-            {"heading": "Discernment After the Work", "paragraphs": ["Look first for ordinary evidence: a calmer room, completed cleaning, a decision made, a boundary communicated, or better rest. Do not turn every coincidence into a sign. A sovereign practice makes you more capable of living, not more dependent on interpretation."]}
+            {
+              "heading": "You Will Need",
+              "bullets": [
+                "One familiar aromatic herb, such as rosemary or basil",
+                "A heat-safe bowl or jar",
+                "Hot water",
+                "A strainer",
+                "A clean cloth or a small amount of ordinary cleaning water",
+                "Your written statement of purpose"
+              ]
+            },
+            {
+              "heading": "The Work",
+              "steps": [
+                "Name the purpose in one sentence: what are you restoring, clarifying, or releasing from your own space?",
+                "Place a small amount of herb in the vessel. Pour hot water over it and let it steep while you breathe slowly.",
+                "When cool, strain the liquid completely. Test it on a hidden surface before use.",
+                "Clean from the interior of the room toward the threshold. Let the movement embody completion rather than panic.",
+                "At the doorway, pause. State what may remain and what may not cross your boundary.",
+                "Dispose of the spent plant material responsibly. Wash the vessel and record the date, purpose, and result."
+              ],
+              "words": "My space answers to clarity. My choices answer to wisdom. I return to the seat of my own soul."
+            },
+            {
+              "heading": "Discernment After the Work",
+              "paragraphs": [
+                "Look first for ordinary evidence: a calmer room, completed cleaning, a decision made, a boundary communicated, or better rest. Do not turn every coincidence into a sign. A sovereign practice makes you more capable of living, not more dependent on interpretation."
+              ]
+            }
           ]
         },
         {
           "title": "Return to the Inner Throne",
           "lead": "The root of the work is not the root in your hand. It is the quality of authority with which you choose, prepare, observe, and stop.",
           "sections": [
-            {"heading": "Journal the Practice", "bullets": ["What did I know directly, and what did I merely assume?", "What physical action accompanied the spiritual intention?", "Did the practice strengthen my boundaries and decision-making?", "What would restraint look like next time?", "What family, regional, or historical source should I study next?"]},
-            {"heading": "Common Missteps", "bullets": ["Buying many materials before understanding one", "Treating a correspondence chart as universal law", "Ingesting, burning, or applying a plant without safety research", "Using cultural language as decoration while ignoring cultural history", "Repeating a working compulsively instead of taking practical action"]},
-            {"heading": "Sources for Continued Study", "bullets": ["Katrina Hazzard-Donald, <i>Mojo Workin': The Old African American Hoodoo System</i>.", "Yvonne P. Chireau, <i>Black Magic: Religion and the African American Conjuring Tradition</i>.", "Zora Neale Hurston, 'Hoodoo in America,' <i>Journal of American Folklore</i> 44 (1931).", "Smithsonian Center for Folklife and Cultural Heritage, 'Ginseng, Hoodoo, and the Magic of Upholding African American Traditions.'", "ASPCA Animal Poison Control resources for plant and essential-oil safety."]},
-            {"heading": "Closing", "words": "Choose with knowledge. Prepare with care. Observe without fear. Let every material return you to responsibility."}
+            {
+              "heading": "Journal the Practice",
+              "bullets": [
+                "What did I know directly, and what did I merely assume?",
+                "What physical action accompanied the spiritual intention?",
+                "Did the practice strengthen my boundaries and decision-making?",
+                "What would restraint look like next time?",
+                "What family, regional, or historical source should I study next?"
+              ]
+            },
+            {
+              "heading": "Common Missteps",
+              "bullets": [
+                "Buying many materials before understanding one",
+                "Treating a correspondence chart as universal law",
+                "Ingesting, burning, or applying a plant without safety research",
+                "Using cultural language as decoration while ignoring cultural history",
+                "Repeating a working compulsively instead of taking practical action"
+              ]
+            },
+            {
+              "heading": "Sources for Continued Study",
+              "bullets": [
+                "Katrina Hazzard-Donald, <i>Mojo Workin': The Old African American Hoodoo System</i>.",
+                "Yvonne P. Chireau, <i>Black Magic: Religion and the African American Conjuring Tradition</i>.",
+                "Zora Neale Hurston, 'Hoodoo in America,' <i>Journal of American Folklore</i> 44 (1931).",
+                "Smithsonian Center for Folklife and Cultural Heritage, 'Ginseng, Hoodoo, and the Magic of Upholding African American Traditions.'",
+                "ASPCA Animal Poison Control resources for plant and essential-oil safety."
+              ]
+            },
+            {
+              "heading": "Closing",
+              "words": "Choose with knowledge. Prepare with care. Observe without fear. Let every material return you to responsibility."
+            }
           ]
         }
       ]
